@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import SalonCard from "@/components/SalonCard";
 import CityPhoto from "@/components/CityPhoto";
 import { MARKETS, getMarket } from "@/lib/locations";
+
+type MarketParams = { params: Promise<{ locale: string; market: string }> };
 
 export function generateStaticParams() {
   return MARKETS.map((m) => ({ market: m.slug }));
@@ -11,7 +14,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: PageProps<"/locations/[market]">): Promise<Metadata> {
+}: MarketParams): Promise<Metadata> {
   const { market } = await params;
   const m = getMarket(market);
   if (!m) return { title: "Locations | Love You Nail Salon" };
@@ -26,10 +29,9 @@ const bookingLabel: Record<string, string> = {
   fresha: "Fresha",
 };
 
-export default async function MarketPage({
-  params,
-}: PageProps<"/locations/[market]">) {
-  const { market } = await params;
+export default async function MarketPage({ params }: MarketParams) {
+  const { locale, market } = await params;
+  setRequestLocale(locale);
   const m = getMarket(market);
   if (!m) notFound();
 

@@ -1,5 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Button from "@/components/ui/Button";
 import VideoHero from "@/components/VideoHero";
 import Reveal from "@/components/Reveal";
@@ -7,10 +9,12 @@ import CityPhoto from "@/components/CityPhoto";
 import StatementShowcase from "@/components/StatementShowcase";
 import ProductImage from "@/components/ProductImage";
 import { MARKETS } from "@/lib/locations";
-import { SERVICES, ADVANTAGES, REVIEWS } from "@/lib/content";
+import { REVIEWS } from "@/lib/content";
 import { PRODUCTS } from "@/lib/products";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <VideoHero />
@@ -30,30 +34,24 @@ export default function Home() {
 
 /* --------------------------------- About -------------------------------- */
 function About() {
+  const t = useTranslations("About");
   return (
     <Section id="about">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal className="order-2 md:order-1">
-          <p className="eyebrow">About Love You</p>
+          <p className="eyebrow">{t("eyebrow")}</p>
           <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
-            Beauty, elevated to an art form
+            {t("title")}
           </h2>
           <div className="mt-6 space-y-4 text-brown leading-relaxed">
-            <p>
-              Female-founded with love, Love You Nail Studio grew from a passion
-              for artistry, perfection and client comfort.
-            </p>
-            <p>
-              Our signature Russian Manicure and Smart Pedicure are meticulously
-              crafted using the finest non-toxic materials — ensuring every
-              visit is a seamless blend of beauty, hygiene and well-being.
-            </p>
+            <p>{t("p1")}</p>
+            <p>{t("p2")}</p>
           </div>
         </Reveal>
         <Reveal className="order-1 md:order-2" delay={100}>
           <Media
             src="/media/photos/nails-milky-almond.png"
-            alt="A milky almond-shaped manicure resting on silk"
+            alt={t("title")}
             className="aspect-4/5"
           />
         </Reveal>
@@ -64,21 +62,22 @@ function About() {
 
 /* --------------------------- Statement showcase ------------------------- */
 function StatementBand() {
+  const t = useTranslations("Statement");
   const work = [
-    { src: "/media/photos/nails-nude-macro.png", alt: "Glossy nude manicure" },
-    { src: "/media/photos/nails-pink-pearls.png", alt: "Lilac square nails styled with pearls" },
-    { src: "/media/photos/nails-glossy-pink.png", alt: "Glossy pink square manicure" },
-    { src: "/media/photos/nails-pink-french.png", alt: "Soft pink French manicure" },
-    { src: "/media/photos/nails-red.png", alt: "Bold red manicure" },
-    { src: "/media/photos/nails-milky-almond.png", alt: "Milky almond manicure" },
+    { src: "/media/photos/nails-nude-macro.png", alt: "" },
+    { src: "/media/photos/nails-pink-pearls.png", alt: "" },
+    { src: "/media/photos/nails-glossy-pink.png", alt: "" },
+    { src: "/media/photos/nails-pink-french.png", alt: "" },
+    { src: "/media/photos/nails-red.png", alt: "" },
+    { src: "/media/photos/nails-milky-almond.png", alt: "" },
   ];
   return (
     <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-12">
       <StatementShowcase images={work}>
         <h2 className="max-w-3xl font-display text-4xl leading-[1.08] text-cream drop-shadow-sm md:text-6xl">
-          Every detail considered.
+          {t("line1")}
           <br />
-          Every finish flawless.
+          {t("line2")}
         </h2>
       </StatementShowcase>
     </div>
@@ -87,50 +86,45 @@ function StatementBand() {
 
 /* -------------------------------- Services ------------------------------ */
 function Services() {
+  const t = useTranslations("Services");
+  const tc = useTranslations("Common");
+  const list = t.raw("list") as { name: string; description: string }[];
   return (
     <Section id="services" tone="ivory">
       <Reveal>
-        <SectionHead
-          eyebrow="Professional Nail Care"
-          title="Services crafted to perfection"
-          intro="From flawless everyday manicures to intricate nail art, every service is delivered with precision and care."
-        />
+        <SectionHead eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       </Reveal>
 
-      {/* Feature rows */}
       <div className="mt-16 space-y-16">
         <Feature
           src="/media/photos/nails-glossy-pink.png"
-          alt="Glossy pink square manicure"
-          eyebrow="Manicure"
-          title="The signature Russian manicure"
-          body="A precise, painless dry manicure with immaculate cuticle work and a high-shine finish that lasts for weeks."
+          alt={t("manicureTitle")}
+          eyebrow={t("manicureEyebrow")}
+          title={t("manicureTitle")}
+          body={t("manicureBody")}
         />
         <Feature
           reverse
           src="/media/photos/pedicure-french.png"
-          alt="Neat French pedicure with a toe ring"
-          eyebrow="Pedicure"
-          title="The Smart Pedicure"
-          body="A meticulous, hygienic pedicure that leaves feet soft, healthy and beautifully groomed — down to the smallest detail."
+          alt={t("pedicureTitle")}
+          eyebrow={t("pedicureEyebrow")}
+          title={t("pedicureTitle")}
+          body={t("pedicureBody")}
         />
       </div>
 
-      {/* Everything else */}
       <Reveal>
         <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
+          {list.map((s) => (
             <div key={s.name} className="rounded-2xl border border-sand bg-cream p-7">
               <h3 className="text-2xl text-espresso">{s.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brown">
-                {s.description}
-              </p>
+              <p className="mt-3 text-sm leading-relaxed text-brown">{s.description}</p>
             </div>
           ))}
         </div>
         <div className="mt-12">
           <Button href="/prices" variant="outline">
-            View Full Price List
+            {tc("viewPriceList")}
           </Button>
         </div>
       </Reveal>
@@ -160,9 +154,7 @@ function Feature({
       </Reveal>
       <Reveal delay={100} className={reverse ? "md:order-1" : ""}>
         <p className="eyebrow">{eyebrow}</p>
-        <h3 className="mt-3 text-3xl leading-tight text-espresso md:text-4xl">
-          {title}
-        </h3>
+        <h3 className="mt-3 text-3xl leading-tight text-espresso md:text-4xl">{title}</h3>
         <p className="mt-4 text-brown leading-relaxed">{body}</p>
       </Reveal>
     </div>
@@ -171,25 +163,22 @@ function Feature({
 
 /* -------------------------------- Portfolio ----------------------------- */
 function Portfolio() {
+  const t = useTranslations("Portfolio");
   const shots = [
-    { src: "/media/photos/nails-pink-pearls.png", alt: "Lilac square nails styled with pearls" },
-    { src: "/media/photos/nails-red.png", alt: "Bold red manicure" },
-    { src: "/media/photos/nails-pink-french.png", alt: "Soft pink French manicure" },
-    { src: "/media/photos/nails-milky-almond.png", alt: "Milky almond manicure" },
+    "/media/photos/nails-pink-pearls.png",
+    "/media/photos/nails-red.png",
+    "/media/photos/nails-pink-french.png",
+    "/media/photos/nails-milky-almond.png",
   ];
   return (
     <Section id="portfolio">
       <Reveal>
-        <SectionHead
-          eyebrow="Portfolio"
-          title="The art of the perfect nail"
-          intro="Browse a glimpse of the beauty and creativity that define Love You Nail Salon."
-        />
+        <SectionHead eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       </Reveal>
       <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-        {shots.map((s, i) => (
-          <Reveal key={s.src} delay={i * 80}>
-            <Media src={s.src} alt={s.alt} className="aspect-4/5" rounded="rounded-2xl" />
+        {shots.map((src, i) => (
+          <Reveal key={src} delay={i * 80}>
+            <Media src={src} alt="" className="aspect-4/5" rounded="rounded-2xl" />
           </Reveal>
         ))}
       </div>
@@ -199,14 +188,13 @@ function Portfolio() {
 
 /* ---------------------------- Locations preview ------------------------- */
 function LocationsPreview() {
+  const t = useTranslations("LocationsPreview");
+  const tm = useTranslations("Markets");
+  const tc = useTranslations("Common");
   return (
     <Section id="locations" tone="ivory">
       <Reveal>
-        <SectionHead
-          eyebrow="Our Locations"
-          title="Find your nearest studio"
-          intro="One brand, several cities. Choose a location to see services, hours and book with the salon nearest you."
-        />
+        <SectionHead eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       </Reveal>
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {MARKETS.map((m, i) => {
@@ -223,14 +211,14 @@ function LocationsPreview() {
                 />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-2xl text-espresso">{m.name}</h3>
-                  <p className="mt-1 text-sm text-brown-soft">{m.state}</p>
+                  <p className="mt-1 text-sm text-brown-soft">{tm(`states.${m.slug}`)}</p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-brown">
-                    {m.tagline}
+                    {tm(`taglines.${m.slug}`)}
                   </p>
                   <span className="mt-5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-gold-dark">
                     {m.comingSoon
-                      ? "Coming soon"
-                      : `${count} ${count === 1 ? "studio" : "studios"} →`}
+                      ? tc("comingSoon")
+                      : `${t("viewStudios", { count })} →`}
                   </span>
                 </div>
               </Link>
@@ -244,13 +232,15 @@ function LocationsPreview() {
 
 /* --------------------------------- Why Us ------------------------------- */
 function WhyUs() {
+  const t = useTranslations("WhyUs");
+  const list = t.raw("list") as { title: string; description: string }[];
   return (
     <Section id="why-us">
       <Reveal>
-        <SectionHead eyebrow="What Makes Us Different" title="The Love You difference" />
+        <SectionHead eyebrow={t("eyebrow")} title={t("title")} />
       </Reveal>
       <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-        {ADVANTAGES.map((a, i) => (
+        {list.map((a, i) => (
           <Reveal key={a.title} delay={i * 80}>
             <span className="font-display text-3xl text-gold">
               {String(i + 1).padStart(2, "0")}
@@ -266,29 +256,24 @@ function WhyUs() {
 
 /* ---------------------------- Products teaser --------------------------- */
 function ProductsTeaser() {
+  const t = useTranslations("ProductsTeaser");
   return (
     <Section id="products" tone="ivory">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal>
-          <p className="eyebrow">Professional Products</p>
+          <p className="eyebrow">{t("eyebrow")}</p>
           <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
-            Your salon, at home
+            {t("title")}
           </h2>
-          <p className="mt-5 max-w-md text-brown leading-relaxed">
-            The Love You professional line brings salon-quality gel polish, nail
-            care and tools to your fingertips. Launching soon.
-          </p>
+          <p className="mt-5 max-w-md text-brown leading-relaxed">{t("body")}</p>
           <div className="mt-8">
-            <Button href="/shop">Preview the Line</Button>
+            <Button href="/shop">{t("cta")}</Button>
           </div>
         </Reveal>
         <Reveal delay={100}>
           <div className="grid grid-cols-3 gap-3">
             {PRODUCTS.slice(0, 3).map((p) => (
-              <div
-                key={p.slug}
-                className="overflow-hidden rounded-2xl border border-sand"
-              >
+              <div key={p.slug} className="overflow-hidden rounded-2xl border border-sand">
                 <ProductImage kind={p.kind} className="aspect-square w-full" />
               </div>
             ))}
@@ -301,29 +286,26 @@ function ProductsTeaser() {
 
 /* ------------------------------ Memberships ----------------------------- */
 function Memberships() {
+  const t = useTranslations("MembershipsTeaser");
   return (
     <Section id="memberships">
       <Reveal>
         <div className="overflow-hidden rounded-3xl bg-espresso px-6 py-14 text-center text-cream md:px-16 md:py-20">
-          <p className="eyebrow text-gold">Membership Program</p>
+          <p className="eyebrow text-gold">{t("eyebrow")}</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-4xl leading-tight md:text-5xl">
-            The ultimate Love You experience
+            {t("title")}
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-cream/70 leading-relaxed">
-            Join once a year for members-only savings on every service, plus
-            complimentary touch-ups between visits. Three tiers, tied to your
-            home studio.
-          </p>
+          <p className="mx-auto mt-5 max-w-xl text-cream/70 leading-relaxed">{t("body")}</p>
           <div className="mx-auto mt-9 flex max-w-2xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            <Perk value="Gold" label="10% off every service" />
+            <Perk value={t("gold")} label={t("goldPerk")} />
             <span className="hidden h-8 w-px bg-cream/20 sm:block" />
-            <Perk value="Diamond" label="15% off every service" />
+            <Perk value={t("diamond")} label={t("diamondPerk")} />
             <span className="hidden h-8 w-px bg-cream/20 sm:block" />
-            <Perk value="VIP" label="by invitation" />
+            <Perk value={t("vip")} label={t("vipPerk")} />
           </div>
           <div className="mt-10">
             <Button href="/memberships" variant="light">
-              Explore Memberships
+              {t("cta")}
             </Button>
           </div>
         </div>
@@ -336,19 +318,19 @@ function Perk({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
       <div className="font-display text-3xl text-gold">{value}</div>
-      <div className="mt-1 text-xs uppercase tracking-[0.14em] text-cream/60">
-        {label}
-      </div>
+      <div className="mt-1 text-xs uppercase tracking-[0.14em] text-cream/60">{label}</div>
     </div>
   );
 }
 
 /* -------------------------------- Reviews ------------------------------- */
 function Reviews() {
+  const t = useTranslations("Reviews");
+  const quotes = t.raw("list") as string[];
   return (
     <Section id="reviews" tone="ivory">
       <Reveal>
-        <SectionHead eyebrow="Feedback From Our Customers" title="Loved by many" />
+        <SectionHead eyebrow={t("eyebrow")} title={t("title")} />
       </Reveal>
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {REVIEWS.map((r, i) => {
@@ -365,7 +347,7 @@ function Reviews() {
                   ★★★★★
                 </div>
                 <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-brown">
-                  “{r.quote}”
+                  “{quotes[i]}”
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   {r.avatar ? (
@@ -399,19 +381,17 @@ function Reviews() {
 
 /* ------------------------------- Final CTA ------------------------------ */
 function FinalCta() {
+  const t = useTranslations("FinalCta");
   return (
     <Section id="contact">
       <Reveal className="text-center">
-        <p className="eyebrow">Your Style Begins Here</p>
+        <p className="eyebrow">{t("eyebrow")}</p>
         <h2 className="mx-auto mt-4 max-w-2xl text-4xl leading-tight text-espresso md:text-5xl">
-          The perfect nails for a flawless look
+          {t("title")}
         </h2>
-        <p className="mx-auto mt-5 max-w-lg text-brown leading-relaxed">
-          Book your appointment at the Love You studio nearest you and experience
-          the difference.
-        </p>
+        <p className="mx-auto mt-5 max-w-lg text-brown leading-relaxed">{t("body")}</p>
         <div className="mt-9">
-          <Button href="/locations">Choose a Location</Button>
+          <Button href="/locations">{t("cta")}</Button>
         </div>
       </Reveal>
     </Section>
@@ -432,13 +412,7 @@ function Media({
 }) {
   return (
     <div className={`relative w-full overflow-hidden ${rounded} ${className}`}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover"
-      />
+      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
     </div>
   );
 }

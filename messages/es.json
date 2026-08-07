@@ -1,0 +1,133 @@
+{
+  "Nav": {
+    "about": "Nosotros",
+    "locations": "Ubicaciones",
+    "prices": "Precios",
+    "shop": "Tienda",
+    "memberships": "Membresías",
+    "reviews": "Reseñas",
+    "book": "Reservar",
+    "bookAppointment": "Reservar cita"
+  },
+  "Common": {
+    "exploreServices": "Ver servicios",
+    "viewPriceList": "Ver lista de precios",
+    "chooseLocation": "Elegir ubicación",
+    "comingSoon": "Próximamente",
+    "studio": "estudio",
+    "studios": "estudios",
+    "from": "desde"
+  },
+  "Hero": {
+    "eyebrow": "Salón de belleza premium",
+    "title": "Love You Nail Salon",
+    "subtitle": "Manicura con torno, esterilidad impecable y un estilo que enamora a primera vista."
+  },
+  "About": {
+    "eyebrow": "Sobre Love You",
+    "title": "La belleza, elevada a arte",
+    "p1": "Fundado por mujeres y con amor, Love You Nail Studio nació de la pasión por el arte, la perfección y el bienestar de sus clientas.",
+    "p2": "Nuestra manicura rusa y el Smart Pedicure se realizan con esmero usando los mejores materiales no tóxicos, para que cada visita combine belleza, higiene y bienestar."
+  },
+  "Statement": {
+    "line1": "Cada detalle, cuidado.",
+    "line2": "Cada acabado, impecable."
+  },
+  "Services": {
+    "eyebrow": "Cuidado profesional de uñas",
+    "title": "Servicios hechos a la perfección",
+    "intro": "Desde una manicura impecable del día a día hasta el nail art más intrincado, cada servicio se realiza con precisión y cuidado.",
+    "manicureEyebrow": "Manicura",
+    "manicureTitle": "La manicura rusa insignia",
+    "manicureBody": "Una manicura en seco precisa e indolora, con un trabajo de cutícula impecable y un acabado brillante que dura semanas.",
+    "pedicureEyebrow": "Pedicura",
+    "pedicureTitle": "El Smart Pedicure",
+    "pedicureBody": "Una pedicura meticulosa e higiénica que deja los pies suaves, sanos y perfectamente cuidados, hasta el más mínimo detalle.",
+    "list": [
+      { "name": "Manicura rusa con torno", "description": "Nuestra manicura en seco insignia: trabajo de cutícula preciso e indoloro con un acabado impecable y duradero." },
+      { "name": "Smart Pedicure", "description": "Una pedicura meticulosa e higiénica que deja los pies suaves, sanos y perfectamente cuidados." },
+      { "name": "Gel y Shellac", "description": "Color brillante y resistente al desgaste que se mantiene perfecto durante semanas, en una paleta de tonos premium." },
+      { "name": "Nail art y diseño", "description": "Desde el elegante francés hasta el arte más audaz e intrincado: diseños a medida de técnicas con visión artística." },
+      { "name": "Extensiones de uñas", "description": "Longitud y resistencia de aspecto natural, esculpidas y moldeadas a tu estilo." },
+      { "name": "Extras de spa", "description": "Realza cualquier servicio con mascarillas nutritivas, masajes y tratamientos para manos y pies." }
+    ]
+  },
+  "Portfolio": {
+    "eyebrow": "Portafolio",
+    "title": "El arte de la uña perfecta",
+    "intro": "Descubre un adelanto de la belleza y la creatividad que definen a Love You Nail Salon."
+  },
+  "LocationsPreview": {
+    "eyebrow": "Nuestras ubicaciones",
+    "title": "Encuentra tu estudio más cercano",
+    "intro": "Una marca, varias ciudades. Elige una ubicación para ver servicios, horarios y reservar en el salón más cercano.",
+    "viewStudios": "{count, plural, one {# estudio} other {# estudios}}"
+  },
+  "WhyUs": {
+    "eyebrow": "Lo que nos hace diferentes",
+    "title": "La diferencia Love You",
+    "list": [
+      { "title": "Esterilidad de grado médico", "description": "Herramientas desechables o totalmente esterilizadas en cada servicio: una limpieza que se nota." },
+      { "title": "Técnicas expertas", "description": "Artistas con gran experiencia y una sensibilidad refinada y orientada al diseño." },
+      { "title": "Productos eco-seguros", "description": "Materiales no tóxicos y libres de crueldad, elegidos por tu salud y comodidad." },
+      { "title": "Una experiencia elevada", "description": "Un espacio tranquilo y hermoso, pensado para que cada visita sea una pequeña escapada." }
+    ]
+  },
+  "ProductsTeaser": {
+    "eyebrow": "Productos profesionales",
+    "title": "Tu salón, en casa",
+    "body": "La línea profesional de Love You lleva esmaltes en gel, cuidado y herramientas de calidad de salón a tus manos. Próximamente.",
+    "cta": "Ver la línea"
+  },
+  "MembershipsTeaser": {
+    "eyebrow": "Programa de membresías",
+    "title": "La experiencia Love You definitiva",
+    "body": "Únete una vez al año y disfruta de descuentos exclusivos para socios en cada servicio, además de retoques de cortesía entre visitas. Tres niveles, vinculados a tu estudio.",
+    "gold": "Gold",
+    "goldPerk": "10% de descuento en cada servicio",
+    "diamond": "Diamond",
+    "diamondPerk": "15% de descuento en cada servicio",
+    "vip": "VIP",
+    "vipPerk": "por invitación",
+    "cta": "Ver membresías"
+  },
+  "Reviews": {
+    "eyebrow": "Opiniones de nuestras clientas",
+    "title": "Nos adoran",
+    "list": [
+      "He probado muchísimos salones de uñas, pero nunca había vivido este nivel de atención al detalle. Todo se siente premium, desde la limpieza hasta la comodidad. ¡Mi manicura dura semanas y sigue como nueva!",
+      "Aquí me siento totalmente segura: las herramientas se esterilizan según estándares médicos y se nota de inmediato. El trabajo de cutícula es impecable, indoloro y preciso. Ya no confiaría mis uñas a nadie más.",
+      "Este lugar es más que un salón. El ambiente es maravilloso: un interior precioso y una música relajante me ayudan a desconectar. Cada visita me deja solo buenas impresiones.",
+      "Probé decenas de salones antes de encontrar Love You. Todo, desde el servicio hasta la técnica y el ambiente, está a otro nivel. Ahora sé que mis uñas siempre lucirán impecables.",
+      "Me daba nervio probar la manicura rusa con torno, pero aquí por fin lo hice y estoy encantada. Fue totalmente indolora y el trabajo de cutícula quedó perfecto. No imagino volver atrás.",
+      "Cada visita se siente como una pequeña escapada de mi rutina. Las técnicas siempre son delicadas y profesionales, y salgo no solo con uñas perfectas, sino de muy buen humor."
+    ]
+  },
+  "FinalCta": {
+    "eyebrow": "Tu estilo empieza aquí",
+    "title": "Las uñas perfectas para un look impecable",
+    "body": "Reserva tu cita en el estudio Love You más cercano y descubre la diferencia.",
+    "cta": "Elegir ubicación"
+  },
+  "Footer": {
+    "brandDesc": "Manicura rusa con torno y Smart Pedicure premium, con maestría y esterilidad de grado médico.",
+    "explore": "Explorar",
+    "aboutUs": "Nosotros",
+    "services": "Servicios",
+    "locations": "Ubicaciones",
+    "policies": "Políticas",
+    "privacy": "Política de privacidad",
+    "salon": "Política del salón",
+    "credits": "Créditos de imágenes",
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Beauty. Elevated."
+  },
+  "Markets": {
+    "states": { "chicago": "Illinois", "santa-monica": "California", "new-york": "Nueva York" },
+    "taglines": {
+      "chicago": "Cinco estudios por toda la ciudad, del West Loop a River North.",
+      "santa-monica": "Nuestro hogar en California, a pasos del 3rd Street Promenade.",
+      "new-york": "Nuestro estudio en Manhattan, en el corazón del Garment District."
+    }
+  }
+}

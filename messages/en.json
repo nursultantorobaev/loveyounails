@@ -1,0 +1,133 @@
+{
+  "Nav": {
+    "about": "About",
+    "locations": "Locations",
+    "prices": "Prices",
+    "shop": "Shop",
+    "memberships": "Memberships",
+    "reviews": "Reviews",
+    "book": "Book",
+    "bookAppointment": "Book Appointment"
+  },
+  "Common": {
+    "exploreServices": "Explore Services",
+    "viewPriceList": "View Full Price List",
+    "chooseLocation": "Choose a Location",
+    "comingSoon": "Coming soon",
+    "studio": "studio",
+    "studios": "studios",
+    "from": "from"
+  },
+  "Hero": {
+    "eyebrow": "Premium Beauty Salon",
+    "title": "Love You Nail Salon",
+    "subtitle": "E-file manicure, impeccable sterility and style that delights at first sight."
+  },
+  "About": {
+    "eyebrow": "About Love You",
+    "title": "Beauty, elevated to an art form",
+    "p1": "Female-founded with love, Love You Nail Studio grew from a passion for artistry, perfection and client comfort.",
+    "p2": "Our signature Russian Manicure and Smart Pedicure are meticulously crafted using the finest non-toxic materials — ensuring every visit is a seamless blend of beauty, hygiene and well-being."
+  },
+  "Statement": {
+    "line1": "Every detail considered.",
+    "line2": "Every finish flawless."
+  },
+  "Services": {
+    "eyebrow": "Professional Nail Care",
+    "title": "Services crafted to perfection",
+    "intro": "From flawless everyday manicures to intricate nail art, every service is delivered with precision and care.",
+    "manicureEyebrow": "Manicure",
+    "manicureTitle": "The signature Russian manicure",
+    "manicureBody": "A precise, painless dry manicure with immaculate cuticle work and a high-shine finish that lasts for weeks.",
+    "pedicureEyebrow": "Pedicure",
+    "pedicureTitle": "The Smart Pedicure",
+    "pedicureBody": "A meticulous, hygienic pedicure that leaves feet soft, healthy and beautifully groomed — down to the smallest detail.",
+    "list": [
+      { "name": "Russian E-File Manicure", "description": "Our signature dry manicure — precise, painless cuticle work with a flawless, long-lasting finish." },
+      { "name": "Smart Pedicure", "description": "A meticulous, hygienic pedicure that leaves feet soft, healthy and beautifully groomed." },
+      { "name": "Gel & Shellac", "description": "High-shine, chip-resistant color that stays perfect for weeks, in a palette of premium shades." },
+      { "name": "Nail Art & Design", "description": "From elegant French to bold, intricate art — custom designs by art-forward technicians." },
+      { "name": "Nail Extensions", "description": "Natural-looking length and strength, sculpted and shaped to suit your style." },
+      { "name": "Spa Add-Ons", "description": "Elevate any service with nourishing masks, massage and treatments for hands and feet." }
+    ]
+  },
+  "Portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "The art of the perfect nail",
+    "intro": "Browse a glimpse of the beauty and creativity that define Love You Nail Salon."
+  },
+  "LocationsPreview": {
+    "eyebrow": "Our Locations",
+    "title": "Find your nearest studio",
+    "intro": "One brand, several cities. Choose a location to see services, hours and book with the salon nearest you.",
+    "viewStudios": "{count, plural, one {# studio} other {# studios}}"
+  },
+  "WhyUs": {
+    "eyebrow": "What Makes Us Different",
+    "title": "The Love You difference",
+    "list": [
+      { "title": "Medical-Grade Sterility", "description": "Disposable or fully sterilized tools for every single service — cleanliness you can see." },
+      { "title": "Master Technicians", "description": "Highly experienced artists with a refined, design-forward sensibility." },
+      { "title": "Eco-Safe Products", "description": "Non-toxic, cruelty-free materials chosen for your health and comfort." },
+      { "title": "An Elevated Experience", "description": "A calm, beautiful space designed so every visit feels like a small escape." }
+    ]
+  },
+  "ProductsTeaser": {
+    "eyebrow": "Professional Products",
+    "title": "Your salon, at home",
+    "body": "The Love You professional line brings salon-quality gel polish, nail care and tools to your fingertips. Launching soon.",
+    "cta": "Preview the Line"
+  },
+  "MembershipsTeaser": {
+    "eyebrow": "Membership Program",
+    "title": "The ultimate Love You experience",
+    "body": "Join once a year for members-only savings on every service, plus complimentary touch-ups between visits. Three tiers, tied to your home studio.",
+    "gold": "Gold",
+    "goldPerk": "10% off every service",
+    "diamond": "Diamond",
+    "diamondPerk": "15% off every service",
+    "vip": "VIP",
+    "vipPerk": "by invitation",
+    "cta": "Explore Memberships"
+  },
+  "Reviews": {
+    "eyebrow": "Feedback From Our Customers",
+    "title": "Loved by many",
+    "list": [
+      "I've tried so many nail salons, but I've never experienced this level of attention to detail. Everything feels premium, from cleanliness to comfort. My manicure lasts weeks and still looks brand new!",
+      "I feel completely safe here — the tools are sterilized to medical standards, and it's immediately noticeable. The cuticle work is flawless, painless, and precise. I wouldn't trust my nails to anyone else now.",
+      "This place is more than just a salon. The atmosphere is wonderful: a beautiful interior and calming music help me relax. Every visit leaves me with only positive impressions.",
+      "I tried dozens of salons before finding Love You. Everything — from the service to the technique and the atmosphere — is on another level. Now I know my nails will always look flawless.",
+      "I was nervous about trying a Russian e-file manicure, but here I finally did — and I'm obsessed. It was completely painless, and the cuticle work was maximally neat. I can't imagine going back.",
+      "Every visit feels like a little escape from my busy schedule. The technicians are always gentle and professional, and I leave not only with perfect nails but also in a wonderful mood."
+    ]
+  },
+  "FinalCta": {
+    "eyebrow": "Your Style Begins Here",
+    "title": "The perfect nails for a flawless look",
+    "body": "Book your appointment at the Love You studio nearest you and experience the difference.",
+    "cta": "Choose a Location"
+  },
+  "Footer": {
+    "brandDesc": "Premium Russian e-file manicure and smart pedicure, crafted with artistry and medical-grade sterility.",
+    "explore": "Explore",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "locations": "Locations",
+    "policies": "Policies",
+    "privacy": "Privacy Policy",
+    "salon": "Salon Policy",
+    "credits": "Image Credits",
+    "rights": "All rights reserved.",
+    "tagline": "Beauty. Elevated."
+  },
+  "Markets": {
+    "states": { "chicago": "Illinois", "santa-monica": "California", "new-york": "New York" },
+    "taglines": {
+      "chicago": "Five studios across the city, from the West Loop to River North.",
+      "santa-monica": "Our California home, steps from 3rd Street Promenade.",
+      "new-york": "Our Manhattan studio in the heart of the Garment District."
+    }
+  }
+}

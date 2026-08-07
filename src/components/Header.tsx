@@ -1,45 +1,49 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Wordmark from "./Wordmark";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const NAV = [
-  { label: "About", href: "/#about" },
-  { label: "Locations", href: "/locations" },
-  { label: "Prices", href: "/prices" },
-  { label: "Shop", href: "/shop" },
-  { label: "Memberships", href: "/memberships" },
-  { label: "Reviews", href: "/#reviews" },
-];
+  { key: "about", href: "/#about" },
+  { key: "locations", href: "/locations" },
+  { key: "prices", href: "/prices" },
+  { key: "shop", href: "/shop" },
+  { key: "memberships", href: "/memberships" },
+  { key: "reviews", href: "/#reviews" },
+] as const;
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Nav");
 
   return (
     <header className="sticky top-0 z-50 border-b border-sand/70 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
         {/* Left: nav (desktop) */}
-        <nav className="hidden flex-1 items-center gap-7 md:flex">
+        <nav className="hidden flex-1 items-center gap-6 md:flex">
           {NAV.slice(0, 3).map((item) => (
-            <NavLink key={item.href} {...item} />
+            <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
         </nav>
 
         {/* Center: wordmark */}
         <Wordmark variant="black" kind="mark" className="h-12 md:h-16" />
 
-        {/* Right: nav + CTA (desktop) */}
-        <div className="hidden flex-1 items-center justify-end gap-7 md:flex">
+        {/* Right: nav + CTA + switcher (desktop) */}
+        <div className="hidden flex-1 items-center justify-end gap-6 md:flex">
           {NAV.slice(3).map((item) => (
-            <NavLink key={item.href} {...item} />
+            <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
           <Link
             href="/locations"
             className="rounded-full bg-espresso px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
           >
-            Book
+            {t("book")}
           </Link>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
@@ -80,7 +84,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="block border-b border-sand/50 py-3 text-sm uppercase tracking-[0.14em] text-brown"
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
           <Link
@@ -88,8 +92,9 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="mt-5 block rounded-full bg-espresso px-5 py-3 text-center text-[0.7rem] font-medium uppercase tracking-[0.18em] text-cream"
           >
-            Book Appointment
+            {t("bookAppointment")}
           </Link>
+          <LanguageSwitcher className="mt-6 justify-center" />
         </nav>
       )}
     </header>
