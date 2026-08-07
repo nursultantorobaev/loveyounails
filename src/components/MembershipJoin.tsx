@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { MEMBERSHIP_TERMS } from "@/lib/membershipTerms";
 
@@ -21,6 +22,8 @@ export default function MembershipJoin({
   tierName: string;
   cities: City[];
 }) {
+  const t = useTranslations("Memberships");
+  const tm = useTranslations("MembershipModal");
   const [target, setTarget] = useState<City | null>(null);
   const [agreed, setAgreed] = useState(false);
 
@@ -51,7 +54,7 @@ export default function MembershipJoin({
   return (
     <div>
       <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-brown-soft">
-        Join in your city
+        {t("joinInCity")}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
         {cities.map((c) =>
@@ -70,7 +73,7 @@ export default function MembershipJoin({
               title="Available in salon"
               className="inline-flex items-center rounded-full border border-sand px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-brown-soft"
             >
-              {c.name} — in salon
+              {t("inSalon", { city: c.name })}
             </span>
           ),
         )}
@@ -91,7 +94,9 @@ export default function MembershipJoin({
             {/* Header */}
             <div className="flex items-start justify-between gap-4 border-b border-sand px-6 py-5">
               <div>
-                <p className="eyebrow">{tierName} Membership · {target.name}</p>
+                <p className="eyebrow">
+                  {tm("subtitle", { tier: tierName, city: target.name })}
+                </p>
                 <h2 className="mt-1 font-display text-2xl text-espresso">
                   {MEMBERSHIP_TERMS.title}
                 </h2>
@@ -134,7 +139,7 @@ export default function MembershipJoin({
                 target="_blank"
                 className="mt-4 inline-block text-xs uppercase tracking-[0.14em] text-gold-dark underline underline-offset-4"
               >
-                Open full terms / download PDF
+                {tm("openFull")}
               </Link>
             </div>
 
@@ -147,7 +152,7 @@ export default function MembershipJoin({
                   onChange={(e) => setAgreed(e.target.checked)}
                   className="mt-0.5 h-5 w-5 shrink-0 accent-[var(--color-gold-dark)]"
                 />
-                <span>{MEMBERSHIP_TERMS.confirmLabel}</span>
+                <span>{tm("confirm")}</span>
               </label>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row-reverse">
                 <button
@@ -156,14 +161,14 @@ export default function MembershipJoin({
                   disabled={!agreed}
                   className="inline-flex items-center justify-center rounded-full bg-espresso px-7 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  Agree &amp; Continue
+                  {tm("agreeContinue")}
                 </button>
                 <button
                   type="button"
                   onClick={close}
                   className="inline-flex items-center justify-center rounded-full border border-espresso/25 px-7 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
                 >
-                  Cancel
+                  {tm("cancel")}
                 </button>
               </div>
             </div>

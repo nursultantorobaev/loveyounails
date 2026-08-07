@@ -129,5 +129,86 @@
       "santa-monica": "Our California home, steps from 3rd Street Promenade.",
       "new-york": "Our Manhattan studio in the heart of the Garment District."
     }
+  },
+  "LocationsPage": {
+    "eyebrow": "Our Locations",
+    "title": "One brand, many homes",
+    "intro": "Each Love You studio is independently run, so you always book with the salon nearest you. Choose a city to explore studios, hours and booking.",
+    "viewStudios": "View {count, plural, one {# studio} other {# studios}}",
+    "openingSoon": "Opening soon"
+  },
+  "MarketPage": {
+    "allLocations": "All Locations",
+    "bookingThrough": "Booking through {system}.",
+    "openingSoon": "Opening soon",
+    "openingSoonBody": "We're bringing Love You Nail Salon to {city}. Check back shortly — or explore our other studios in the meantime.",
+    "viewOther": "View Other Locations",
+    "memberships": "Memberships",
+    "giftCard": "Gift Card"
+  },
+  "SalonCard": {
+    "workingHours": "Working Hours",
+    "bookNow": "Book Now",
+    "callToBook": "Call to Book",
+    "directions": "Directions",
+    "days": { "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "sun": "Sun" }
+  },
+  "Shop": {
+    "eyebrow": "Professional Products",
+    "title": "The Love You line",
+    "intro": "Salon-quality nail care, crafted to the same standard as our services. Our professional product line is launching soon — here's a first look.",
+    "notify": "Notify me at launch",
+    "comingSoon": "Coming soon",
+    "notifyMe": "Notify Me",
+    "note": "Prices shown are indicative and subject to change at launch. Online ordering will be available soon.",
+    "categories": { "Gel Polish": "Gel Polish", "Nail Care": "Nail Care", "Tools": "Tools" },
+    "products": {
+      "signature-gel-polish-ballet-blush": { "name": "Signature Gel Polish", "variant": "Ballet Blush", "description": "Long-wear, high-shine gel colour in a soft, flattering nude pink. Chip-resistant for weeks." },
+      "high-shine-top-coat": { "name": "High-Shine Top Coat", "variant": "", "description": "A glass-like finishing coat that locks in colour and adds mirror shine to any manicure." },
+      "nourishing-cuticle-oil": { "name": "Nourishing Cuticle Oil", "variant": "", "description": "A lightweight blend of jojoba and vitamin E that softens cuticles and conditions the nail." },
+      "crystal-glass-nail-file": { "name": "Crystal Glass Nail File", "variant": "", "description": "A gentle, precise glass file that shapes without splitting — a salon essential for home." },
+      "repair-hand-nail-cream": { "name": "Repair Hand & Nail Cream", "variant": "", "description": "A rich, fast-absorbing cream that nourishes hands and strengthens nails between visits." }
+    }
+  },
+  "Credits": {
+    "eyebrow": "Credits",
+    "title": "Image Credits",
+    "intro": "City photography is used under the licenses below, via Wikimedia Commons.",
+    "source": "Source"
+  },
+  "Memberships": {
+    "eyebrow": "Membership Program",
+    "title": "Beauty, rewarded",
+    "intro": "Join once a year and enjoy members-only savings on every visit. Your membership is tied to your home studio, and your discount is applied automatically at checkout.",
+    "tiers": {
+      "gold": { "tagline": "Perfect for maintaining your beauty routine with added savings.", "perk0": "10% off every service", "perk1": "Complimentary nail fix within 10 days of your appointment" },
+      "diamond": { "tagline": "Elevated perks for clients who want the ultimate Love You experience.", "perk0": "15% off every service", "perk1": "Complimentary nail fix within 2 weeks of your appointment" },
+      "vip": { "tagline": "Our most exclusive tier — by invitation only.", "perk0": "By invitation only", "perk1": "Individual, personalized terms" }
+    },
+    "howItWorksTitle": "How it works",
+    "step0Title": "Purchase",
+    "step0Body": "Buy your membership online or in the salon — billed once a year.",
+    "step1Title": "Linked to your studio",
+    "step1Body": "Your membership is tied to the city where you bought it.",
+    "step2Title": "Check in",
+    "step2Body": "On your visit, we find you by name, phone or email.",
+    "step3Title": "Discount applied",
+    "step3Body": "Square automatically applies your member discount at checkout.",
+    "tiedTitle": "Tied to your location.",
+    "tiedBody": "A membership is valid only at the city where you purchased it — a Chicago membership can't be used in New York or Santa Monica, and vice versa. Billed once per year.",
+    "giftEyebrow": "Gift Cards",
+    "giftTitle": "Give the gift of Love You",
+    "giftBody": "A Love You gift card is always the perfect choice. Purchase one for your city below.",
+    "cityGiftCard": "{city} gift card",
+    "joinInCity": "Join in your city",
+    "inSalon": "{city} — in salon",
+    "contactUs": "Contact Us"
+  },
+  "MembershipModal": {
+    "subtitle": "{tier} Membership · {city}",
+    "confirm": "I have read and agree to the Membership Terms & Conditions above.",
+    "openFull": "Open full terms / download PDF",
+    "agreeContinue": "Agree & Continue",
+    "cancel": "Cancel"
   }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Image Credits | Love You Nail Salon",
@@ -39,15 +40,14 @@ const CREDITS: Credit[] = [
 ];
 
 export default function CreditsPage() {
+  const t = useTranslations("Credits");
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-24">
-      <p className="eyebrow">Credits</p>
+      <p className="eyebrow">{t("eyebrow")}</p>
       <h1 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
-        Image Credits
+        {t("title")}
       </h1>
-      <p className="mt-6 text-brown leading-relaxed">
-        City photography is used under the licenses below, via Wikimedia Commons.
-      </p>
+      <p className="mt-6 text-brown leading-relaxed">{t("intro")}</p>
       <ul className="mt-8 space-y-5">
         {CREDITS.map((c) => (
           <li key={c.subject} className="text-brown">
@@ -71,7 +71,7 @@ export default function CreditsPage() {
               rel="noopener noreferrer"
               className="text-gold-dark underline underline-offset-4"
             >
-              Source
+              {t("source")}
             </a>
           </li>
         ))}

@@ -1,9 +1,10 @@
+import { useTranslations } from "next-intl";
 import { bookingHref, mapsUrl, type DayHours, type Salon } from "@/lib/locations";
 
-/** Collapse consecutive days that share the same hours into a single row. */
+/** Collapse consecutive days that share the same hours; returns day-key ranges. */
 function groupHours(hours: DayHours[]) {
-  const short = (d: string) => d.slice(0, 3);
-  const out: { label: string; time: string }[] = [];
+  const key = (d: string) => d.slice(0, 3).toLowerCase();
+  const out: { startKey: string; endKey: string | null; time: string }[] = [];
   let i = 0;
   while (i < hours.length) {
     const time = `${hours[i].open} – ${hours[i].close}`;
@@ -15,7 +16,8 @@ function groupHours(hours: DayHours[]) {
       j++;
     }
     out.push({
-      label: i === j ? short(hours[i].day) : `${short(hours[i].day)} – ${short(hours[j].day)}`,
+      startKey: key(hours[i].day),
+      endKey: i === j ? null : key(hours[j].day),
       time,
     });
     i = j + 1;
@@ -24,6 +26,7 @@ function groupHours(hours: DayHours[]) {
 }
 
 export default function SalonCard({ salon }: { salon: Salon }) {
+  const t = useTranslations("SalonCard");
   const href = bookingHref(salon);
   const isLink = href.startsWith("http");
   const hourRows = groupHours(salon.hours);
@@ -62,12 +65,19 @@ export default function SalonCard({ salon }: { salon: Salon }) {
         {/* Hours */}
         <div className="mt-6">
           <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-gold-dark">
-            Working Hours
+            {t("workingHours")}
           </p>
           <dl className="mt-3 space-y-1.5">
             {hourRows.map((row) => (
-              <div key={row.label} className="flex justify-between gap-6 text-sm text-brown">
-                <dt>{row.label}</dt>
+              <div
+                key={row.startKey}
+                className="flex justify-between gap-6 text-sm text-brown"
+              >
+                <dt>
+                  {row.endKey
+                    ? `${t(`days.${row.startKey}`)} – ${t(`days.${row.endKey}`)}`
+                    : t(`days.${row.startKey}`)}
+                </dt>
                 <dd className="tabular-nums">{row.time}</dd>
               </div>
             ))}
@@ -84,14 +94,14 @@ export default function SalonCard({ salon }: { salon: Salon }) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
           >
-            Book Now
+            {t("bookNow")}
           </a>
         ) : (
           <a
             href={href}
             className="inline-flex items-center justify-center rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
           >
-            Call to Book
+            {t("callToBook")}
           </a>
         )}
         <a
@@ -100,7 +110,7 @@ export default function SalonCard({ salon }: { salon: Salon }) {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full border border-espresso/25 px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
         >
-          Directions
+          {t("directions")}
         </a>
       </div>
     </article>

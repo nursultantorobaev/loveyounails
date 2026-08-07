@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import SalonCard from "@/components/SalonCard";
 import CityPhoto from "@/components/CityPhoto";
@@ -35,6 +35,9 @@ export default async function MarketPage({ params }: MarketParams) {
   const m = getMarket(market);
   if (!m) notFound();
 
+  const t = await getTranslations("MarketPage");
+  const tm = await getTranslations("Markets");
+
   return (
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       {/* Breadcrumb */}
@@ -42,7 +45,7 @@ export default async function MarketPage({ params }: MarketParams) {
         href="/locations"
         className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-brown-soft transition-colors hover:text-gold-dark"
       >
-        ← All Locations
+        ← {t("allLocations")}
       </Link>
 
       {/* City banner */}
@@ -55,7 +58,7 @@ export default async function MarketPage({ params }: MarketParams) {
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-espresso/45 to-transparent p-6 md:p-9">
           <div>
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.24em] text-cream/85">
-              {m.state}
+              {tm(`states.${m.slug}`)}
             </p>
             <h1 className="mt-2 font-display text-4xl leading-tight text-cream md:text-6xl">
               {m.name}
@@ -66,11 +69,12 @@ export default async function MarketPage({ params }: MarketParams) {
 
       {/* Intro */}
       <header className="mt-8 max-w-2xl">
-        <p className="text-brown leading-relaxed">{m.tagline}</p>
+        <p className="text-brown leading-relaxed">{tm(`taglines.${m.slug}`)}</p>
         {!m.comingSoon && (
           <p className="mt-4 text-sm text-brown-soft">
-            Booking through{" "}
-            <span className="text-espresso">{bookingLabel[m.bookingSystem]}</span>.
+            <span className="text-espresso">
+              {t("bookingThrough", { system: bookingLabel[m.bookingSystem] })}
+            </span>
           </p>
         )}
         {!m.comingSoon && (
@@ -79,7 +83,7 @@ export default async function MarketPage({ params }: MarketParams) {
               href="/memberships"
               className="inline-flex items-center rounded-full border border-espresso/25 px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
             >
-              Memberships
+              {t("memberships")}
             </Link>
             {m.giftCardUrl && (
               <a
@@ -88,7 +92,7 @@ export default async function MarketPage({ params }: MarketParams) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-full border border-espresso/25 px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
               >
-                Gift Card
+                {t("giftCard")}
               </a>
             )}
           </div>
@@ -98,16 +102,15 @@ export default async function MarketPage({ params }: MarketParams) {
       {/* Salons */}
       {m.comingSoon || m.salons.length === 0 ? (
         <div className="mt-14 rounded-3xl border border-dashed border-sand bg-ivory p-12 text-center">
-          <h2 className="text-3xl text-espresso">Opening soon</h2>
+          <h2 className="text-3xl text-espresso">{t("openingSoon")}</h2>
           <p className="mx-auto mt-4 max-w-md text-brown leading-relaxed">
-            We're bringing Love You Nail Salon to {m.name}. Check back shortly —
-            or explore our other studios in the meantime.
+            {t("openingSoonBody", { city: m.name })}
           </p>
           <Link
             href="/locations"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-espresso px-7 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
           >
-            View Other Locations
+            {t("viewOther")}
           </Link>
         </div>
       ) : (

@@ -129,5 +129,86 @@
       "santa-monica": "Nuestro hogar en California, a pasos del 3rd Street Promenade.",
       "new-york": "Nuestro estudio en Manhattan, en el corazón del Garment District."
     }
+  },
+  "LocationsPage": {
+    "eyebrow": "Nuestras ubicaciones",
+    "title": "Una marca, muchos hogares",
+    "intro": "Cada estudio Love You se gestiona de forma independiente, así que siempre reservas en el salón más cercano a ti. Elige una ciudad para ver estudios, horarios y reservas.",
+    "viewStudios": "Ver {count, plural, one {# estudio} other {# estudios}}",
+    "openingSoon": "Próxima apertura"
+  },
+  "MarketPage": {
+    "allLocations": "Todas las ubicaciones",
+    "bookingThrough": "Reservas a través de {system}.",
+    "openingSoon": "Próxima apertura",
+    "openingSoonBody": "Estamos llevando Love You Nail Salon a {city}. Vuelve pronto o explora nuestros otros estudios mientras tanto.",
+    "viewOther": "Ver otras ubicaciones",
+    "memberships": "Membresías",
+    "giftCard": "Tarjeta regalo"
+  },
+  "SalonCard": {
+    "workingHours": "Horario",
+    "bookNow": "Reservar",
+    "callToBook": "Llamar para reservar",
+    "directions": "Cómo llegar",
+    "days": { "mon": "Lun", "tue": "Mar", "wed": "Mié", "thu": "Jue", "fri": "Vie", "sat": "Sáb", "sun": "Dom" }
+  },
+  "Shop": {
+    "eyebrow": "Productos profesionales",
+    "title": "La línea Love You",
+    "intro": "Cuidado de uñas de calidad de salón, con el mismo estándar que nuestros servicios. Nuestra línea profesional llega pronto: aquí tienes un primer vistazo.",
+    "notify": "Avísame en el lanzamiento",
+    "comingSoon": "Próximamente",
+    "notifyMe": "Avísame",
+    "note": "Los precios mostrados son orientativos y pueden cambiar en el lanzamiento. La compra en línea estará disponible pronto.",
+    "categories": { "Gel Polish": "Esmalte en gel", "Nail Care": "Cuidado de uñas", "Tools": "Herramientas" },
+    "products": {
+      "signature-gel-polish-ballet-blush": { "name": "Esmalte en gel insignia", "variant": "Ballet Blush", "description": "Color en gel de larga duración y alto brillo en un rosa nude suave y favorecedor. Resistente al desgaste durante semanas." },
+      "high-shine-top-coat": { "name": "Top coat de alto brillo", "variant": "", "description": "Una capa final tipo cristal que fija el color y aporta un brillo espejo a cualquier manicura." },
+      "nourishing-cuticle-oil": { "name": "Aceite nutritivo para cutículas", "variant": "", "description": "Una mezcla ligera de jojoba y vitamina E que suaviza las cutículas y acondiciona la uña." },
+      "crystal-glass-nail-file": { "name": "Lima de cristal", "variant": "", "description": "Una lima de cristal suave y precisa que da forma sin astillar: un imprescindible de salón para casa." },
+      "repair-hand-nail-cream": { "name": "Crema reparadora de manos y uñas", "variant": "", "description": "Una crema rica y de rápida absorción que nutre las manos y fortalece las uñas entre visitas." }
+    }
+  },
+  "Credits": {
+    "eyebrow": "Créditos",
+    "title": "Créditos de imágenes",
+    "intro": "La fotografía urbana se usa bajo las licencias indicadas abajo, vía Wikimedia Commons.",
+    "source": "Fuente"
+  },
+  "Memberships": {
+    "eyebrow": "Programa de membresías",
+    "title": "La belleza, recompensada",
+    "intro": "Únete una vez al año y disfruta de descuentos exclusivos para socios en cada visita. Tu membresía está vinculada a tu estudio y el descuento se aplica automáticamente al pagar.",
+    "tiers": {
+      "gold": { "tagline": "Perfecta para mantener tu rutina de belleza y ahorrar.", "perk0": "10% de descuento en cada servicio", "perk1": "Retoque de cortesía dentro de los 10 días de tu cita" },
+      "diamond": { "tagline": "Ventajas superiores para quienes quieren la experiencia Love You definitiva.", "perk0": "15% de descuento en cada servicio", "perk1": "Retoque de cortesía dentro de las 2 semanas de tu cita" },
+      "vip": { "tagline": "Nuestro nivel más exclusivo: solo por invitación.", "perk0": "Solo por invitación", "perk1": "Condiciones personalizadas" }
+    },
+    "howItWorksTitle": "Cómo funciona",
+    "step0Title": "Compra",
+    "step0Body": "Adquiere tu membresía en línea o en el salón: se cobra una vez al año.",
+    "step1Title": "Vinculada a tu estudio",
+    "step1Body": "Tu membresía está vinculada a la ciudad donde la compraste.",
+    "step2Title": "Regístrate",
+    "step2Body": "En tu visita te localizamos por nombre, teléfono o email.",
+    "step3Title": "Descuento aplicado",
+    "step3Body": "Square aplica tu descuento de socio automáticamente al pagar.",
+    "tiedTitle": "Vinculada a tu ubicación.",
+    "tiedBody": "Una membresía solo es válida en la ciudad donde la compraste: una membresía de Chicago no puede usarse en Nueva York ni en Santa Monica, y viceversa. Se cobra una vez al año.",
+    "giftEyebrow": "Tarjetas regalo",
+    "giftTitle": "Regala Love You",
+    "giftBody": "Una tarjeta regalo de Love You siempre es un acierto. Compra una para tu ciudad abajo.",
+    "cityGiftCard": "Tarjeta regalo — {city}",
+    "joinInCity": "Únete en tu ciudad",
+    "inSalon": "{city} — en el salón",
+    "contactUs": "Contáctanos"
+  },
+  "MembershipModal": {
+    "subtitle": "Membresía {tier} · {city}",
+    "confirm": "He leído y acepto los Términos y Condiciones de la membresía anteriores.",
+    "openFull": "Ver términos completos / descargar PDF",
+    "agreeContinue": "Aceptar y continuar",
+    "cancel": "Cancelar"
   }
 }
