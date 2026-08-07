@@ -70,13 +70,15 @@ function StatementBand() {
     { src: "/media/photos/nails-milky-almond.png", alt: "Milky almond manicure" },
   ];
   return (
-    <StatementShowcase images={work}>
-      <h2 className="max-w-3xl font-display text-4xl leading-[1.08] text-cream drop-shadow-sm md:text-6xl">
-        Every detail considered.
-        <br />
-        Every finish flawless.
-      </h2>
-    </StatementShowcase>
+    <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-12">
+      <StatementShowcase images={work}>
+        <h2 className="max-w-3xl font-display text-4xl leading-[1.08] text-cream drop-shadow-sm md:text-6xl">
+          Every detail considered.
+          <br />
+          Every finish flawless.
+        </h2>
+      </StatementShowcase>
+    </div>
   );
 }
 

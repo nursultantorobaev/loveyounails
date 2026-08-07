@@ -35,7 +35,7 @@ export default function StatementShowcase({
 
   return (
     <section
-      className="relative h-[56vh] min-h-[360px] max-h-[560px] w-full overflow-hidden bg-espresso"
+      className="relative h-[64vh] min-h-[420px] max-h-[680px] w-full overflow-hidden rounded-3xl bg-espresso"
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
