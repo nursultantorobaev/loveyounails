@@ -167,7 +167,7 @@ export const MARKETS: Market[] = [
   },
   {
     slug: "new-york",
-    name: "New York",
+    name: "Manhattan",
     state: "New York",
     bookingSystem: "square",
     tagline: "Our Manhattan studio in the heart of the Garment District.",
