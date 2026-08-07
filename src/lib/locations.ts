@@ -57,6 +57,12 @@ export const STANDARD_HOURS: DayHours[] = [
   { day: "Sunday", open: "9:00 AM", close: "7:00 PM" },
 ];
 
+// Santa Monica keeps later Sunday hours (closes 8 PM instead of 7 PM).
+export const SANTA_MONICA_HOURS: DayHours[] = [
+  ...STANDARD_HOURS.slice(0, 6),
+  { day: "Sunday", open: "9:00 AM", close: "8:00 PM" },
+];
+
 export const MARKETS: Market[] = [
   {
     slug: "chicago",
@@ -153,7 +159,7 @@ export const MARKETS: Market[] = [
         state: "CA",
         zip: "90401",
         phones: ["+1 424-508-5044"],
-        hours: STANDARD_HOURS,
+        hours: SANTA_MONICA_HOURS,
         bookingUrl:
           "https://www.fresha.com/a/love-you-nail-salon-santa-monica-1422-2nd-street-l6llnycz",
       },
