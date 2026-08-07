@@ -26,6 +26,7 @@ export default function Footer() {
           <FooterCol title="Explore">
             <FooterLink href="/#about">About Us</FooterLink>
             <FooterLink href="/#services">Services</FooterLink>
+            <FooterLink href="/shop">Shop</FooterLink>
             <FooterLink href="/memberships">Memberships</FooterLink>
             <FooterLink href="/#reviews">Reviews</FooterLink>
           </FooterCol>

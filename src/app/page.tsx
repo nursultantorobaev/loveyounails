@@ -5,8 +5,10 @@ import VideoHero from "@/components/VideoHero";
 import Reveal from "@/components/Reveal";
 import CityScene from "@/components/CityScene";
 import StatementShowcase from "@/components/StatementShowcase";
+import ProductImage from "@/components/ProductImage";
 import { MARKETS } from "@/lib/locations";
 import { SERVICES, ADVANTAGES, REVIEWS } from "@/lib/content";
+import { PRODUCTS } from "@/lib/products";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
       <Portfolio />
       <LocationsPreview />
       <WhyUs />
+      <ProductsTeaser />
       <Memberships />
       <Reviews />
       <FinalCta />
@@ -256,6 +259,41 @@ function WhyUs() {
             <p className="mt-2 text-sm leading-relaxed text-brown">{a.description}</p>
           </Reveal>
         ))}
+      </div>
+    </Section>
+  );
+}
+
+/* ---------------------------- Products teaser --------------------------- */
+function ProductsTeaser() {
+  return (
+    <Section id="products" tone="ivory">
+      <div className="grid items-center gap-12 md:grid-cols-2">
+        <Reveal>
+          <p className="eyebrow">Professional Products</p>
+          <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
+            Your salon, at home
+          </h2>
+          <p className="mt-5 max-w-md text-brown leading-relaxed">
+            The Love You professional line brings salon-quality gel polish, nail
+            care and tools to your fingertips. Launching soon.
+          </p>
+          <div className="mt-8">
+            <Button href="/shop">Preview the Line</Button>
+          </div>
+        </Reveal>
+        <Reveal delay={100}>
+          <div className="grid grid-cols-3 gap-3">
+            {PRODUCTS.slice(0, 3).map((p) => (
+              <div
+                key={p.slug}
+                className="overflow-hidden rounded-2xl border border-sand"
+              >
+                <ProductImage kind={p.kind} className="aspect-square w-full" />
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </Section>
   );
