@@ -210,5 +210,85 @@
     "openFull": "Open full terms / download PDF",
     "agreeContinue": "Agree & Continue",
     "cancel": "Cancel"
+  },
+  "Prices": {
+    "eyebrow": "Services & Pricing",
+    "title": "The price of perfect nails",
+    "intro": "Every service is crafted with premium, non-toxic products and medical-grade sterility. Prices marked \"from\" start at the listed amount and vary with length and detail.",
+    "from": "from",
+    "note": "Same-time combos are performed by two technicians. Prices may vary slightly by location; your final quote is confirmed at booking. Have a question? Your nearest studio is happy to help.",
+    "bookCta": "Book at a Studio",
+    "categories": { "manicures": "Manicures", "pedicures": "Pedicures", "combos": "Mani & Pedi Combos", "extensions": "Extensions & Add-Ons" },
+    "items": {
+      "russian-gel-mani": { "name": "Russian Gel Manicure", "note": "Gel removal included" },
+      "hard-gel-mani": { "name": "Hard Gel Manicure", "note": "" },
+      "regular-mani": { "name": "Regular Manicure", "note": "Dazzle Dry brand" },
+      "mani-men": { "name": "Manicure for Men", "note": "" },
+      "russian-gel-pedi": { "name": "Russian Gel Pedicure", "note": "" },
+      "regular-pedi": { "name": "Regular Pedicure", "note": "Dazzle-Dry brand" },
+      "combo-russian-smart": { "name": "Russian Gel Mani & Smart Pedi", "note": "Same time — two technicians" },
+      "combo-russian-regular": { "name": "Russian Gel Mani & Regular Pedi", "note": "" },
+      "combo-polish-smart": { "name": "Regular Polish Mani & Smart Pedi", "note": "Same time, Russian technique" },
+      "combo-dazzle": { "name": "Combo Mani & Pedi", "note": "Dazzle-Dry brand" },
+      "kids": { "name": "Kids Mani & Pedi", "note": "" },
+      "gel-extension": { "name": "Gel Extension", "note": "" },
+      "nail-art": { "name": "Nail Art", "note": "" },
+      "gel-removal": { "name": "Gel Removal", "note": "" }
+    }
+  },
+  "Terms": {
+    "eyebrow": "Membership",
+    "title": "Salon Membership Terms & Conditions",
+    "downloadPdf": "Download PDF",
+    "intro": "Thank you for choosing Love You Nail Salon. Our membership program is designed to provide ongoing beauty and wellness services at exclusive member pricing. By purchasing a membership, you acknowledge that you have read, understood, and agree to the following Terms & Conditions.",
+    "sections": [
+      { "title": "One-Year Membership Commitment", "paragraphs": ["All salon memberships are sold as a 12-month (one-year) commitment beginning on the date of purchase.", "By enrolling, you are entering into a binding membership agreement for the full membership term.", "Membership benefits are intended for use throughout the one-year commitment and are available only to the enrolled member."] },
+      { "title": "No Refund Policy", "paragraphs": ["ALL MEMBERSHIP SALES ARE FINAL.", "Once a membership agreement has been executed, the member is financially responsible for the full one-year commitment.", "Purchasing a membership constitutes your acknowledgment and acceptance of this strict no-refund policy."] },
+      { "title": "Membership Payments", "paragraphs": ["Members are responsible for making all scheduled membership payments as agreed at the time of enrollment.", "If the membership is financed through monthly installments, the payment obligation remains in effect for the entire 12-month term.", "Failure to use membership services does not relieve the member of their payment obligations."] },
+      { "title": "Non-Transferable Membership", "paragraphs": ["Memberships are issued to the individual purchaser only and cannot be transferred, shared, or assigned to another individual, and have no cash value."] },
+      { "title": "Appointment Policy", "paragraphs": ["Membership services are provided by appointment only and are subject to salon availability. Members are encouraged to schedule appointments in advance.", "Our standard cancellation and no-show policies apply to all membership appointments."] },
+      { "title": "Salon Rights", "paragraphs": ["The salon reserves the right to suspend or terminate membership privileges for misuse of benefits, fraudulent activity, abusive behavior toward staff or clients, or violations of salon policies. Such termination does not entitle the member to any refund, credit, or release from any remaining payment obligations."] },
+      { "title": "Policy Changes", "paragraphs": ["The salon reserves the right to amend these policies at any time to comply with operational, legal, or business requirements. Any changes will apply in accordance with applicable law."] }
+    ],
+    "acknowledgmentTitle": "Acknowledgment",
+    "acknowledgmentIntro": "By checking the box below, I acknowledge and agree that:",
+    "acknowledgments": [
+      "I am voluntarily enrolling in a 12-month salon membership.",
+      "I understand that all membership sales are final.",
+      "I understand that no refunds, partial refunds, credits, or cancellations will be granted once the membership has been purchased, except where required by applicable law.",
+      "I understand that my failure to use the membership does not entitle me to a refund or release me from my payment obligations.",
+      "I have read, understood, and agree to abide by all terms and conditions of this Membership Agreement."
+    ]
+  },
+  "Privacy": {
+    "eyebrow": "Policies",
+    "title": "Privacy Policy",
+    "intro": "At Love You Nail Salon, we value your privacy and are committed to protecting your personal information.",
+    "sections": [
+      { "title": "Information We Collect", "paragraphs": ["We collect personal details such as your name, phone number, and email address when you book an appointment or contact us. This information is used solely to manage your appointments, send confirmations and reminders (via email or SMS), and provide the best possible service."] },
+      { "title": "Text Messaging", "paragraphs": ["By providing your phone number, you consent to receive SMS messages regarding your appointments, including confirmations, reminders, and updates. You may opt out of SMS communications at any time by replying “STOP.”"] },
+      { "title": "Data Sharing", "paragraphs": ["We do not sell or share your personal information with third parties, except as necessary to operate our booking systems (such as Square and Fresha) or as required by law."] },
+      { "title": "Security", "paragraphs": ["We implement appropriate technical and organizational measures to safeguard your data."] },
+      { "title": "Your Rights", "paragraphs": ["You have the right to access, update, or delete your personal information. Please contact us at loveyounailsalon@gmail.com for any data-related inquiries."] },
+      { "title": "Policy Updates", "paragraphs": ["We may update this policy from time to time. The most recent version will always be available on our website."] },
+      { "title": "Contact", "paragraphs": ["If you have any questions about this policy, please email us at loveyounailsalon@gmail.com."] }
+    ]
+  },
+  "Salon": {
+    "eyebrow": "Policies",
+    "title": "Salon Policy",
+    "intro": "At Love You, we strive to provide our clients with exceptional service in a professional and welcoming environment. To ensure a smooth experience for everyone, please review our salon policies.",
+    "sections": [
+      { "title": "Appointments", "paragraphs": ["Scheduling: Appointments can be made online, via phone, or in-person. We recommend booking in advance, especially during peak times."] },
+      { "title": "No-Show, Late Cancellation & Rescheduling", "paragraphs": ["Please cancel or reschedule your appointment at least 24 hours in advance to avoid being charged. Appointments canceled or rescheduled within 24 hours will be charged 100%. If you are more than 15 minutes late for your appointment, you will be considered a no-show and charged in full for the services you reserved. All sales are final."] },
+      { "title": "Payment", "paragraphs": ["Accepted Payments: We accept credit/debit cards and gift certificates. Payment is due at the time of service.", "Gratuity: Gratuity is not included in the service price. If you enjoyed your service, a tip for your technician is appreciated.", "A deposit may be required for certain services or appointments.", "Prices are non-negotiable and subject to change without prior notice.", "Gift cards and vouchers must be presented at the time of payment."] },
+      { "title": "Refund Policy", "paragraphs": ["Refunds will only be issued in the form of store credit.", "Refund requests must be made within 24 hours of the service being rendered.", "Refunds will not be provided for gift cards, vouchers, or products purchased."] },
+      { "title": "Services", "paragraphs": ["Consultations: We encourage consultations before any service to discuss your preferences and expectations.", "Satisfaction Guarantee: Your satisfaction is our priority. If you are not satisfied with your service, please let us know within 7 days so we can address your concerns.", "Service Modifications: We reserve the right to modify services based on the condition of your nails and skin. Your technician will provide recommendations."] },
+      { "title": "Health & Safety", "paragraphs": ["Health Concerns: Please inform us of any allergies, sensitivities, or medical conditions prior to your appointment.", "We adhere to all local health and safety guidelines to ensure the well-being of our clients and staff."] },
+      { "title": "Children", "paragraphs": ["For the comfort and safety of all our clients, we ask that children are supervised at all times. We cannot be responsible for any accidents."] },
+      { "title": "Behavior", "paragraphs": ["Respectful Environment: We maintain a respectful and professional environment. Any inappropriate behavior or language will not be tolerated and may result in termination of services.", "Personal Belongings: Please keep your belongings with you. We are not responsible for lost or stolen items."] },
+      { "title": "Changes to Policy", "paragraphs": ["We reserve the right to amend our policies at any time. Any changes will be communicated to our clients."] },
+      { "title": "Contact", "paragraphs": ["For any questions or clarifications regarding our policies, please contact your nearest studio or email us at loveyounailsalon@gmail.com. Thank you for choosing Love You Nail Salon — we look forward to serving you!"] }
+    ]
   }
 }

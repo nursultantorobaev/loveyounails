@@ -5,17 +5,19 @@ export interface PolicySection {
 
 /** Shared layout for legal / policy pages. */
 export default function Policy({
+  eyebrow = "Policies",
   title,
   intro,
   sections,
 }: {
+  eyebrow?: string;
   title: string;
   intro?: string;
   sections: PolicySection[];
 }) {
   return (
     <>
-      <p className="eyebrow">Policies</p>
+      <p className="eyebrow">{eyebrow}</p>
       <h1 className="mt-4 text-5xl leading-tight text-espresso">{title}</h1>
       {intro && (
         <p className="mt-6 text-lg text-brown leading-relaxed">{intro}</p>

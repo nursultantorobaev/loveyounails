@@ -3,31 +3,36 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { MEMBERSHIP_TERMS } from "@/lib/membershipTerms";
+import type { PolicySection } from "@/components/Policy";
 
-interface City {
-  name: string;
+export interface JoinOption {
+  key: string;
+  /** Button text (e.g. a city on the memberships page, or a tier on a city page). */
+  label: string;
   url?: string;
+  /** For the terms modal subtitle. */
+  tierName: string;
+  cityName: string;
 }
 
 /**
- * Per-city "Join" buttons for a paid tier. Clicking a city opens the Membership
- * Terms & Conditions; the customer must tick acknowledgment before "Agree &
- * Continue" sends them to that city's checkout link.
+ * "Join" buttons that gate checkout behind the Membership Terms & Conditions:
+ * clicking an option opens the terms; the customer must acknowledge before
+ * "Agree & Continue" opens that option's checkout link.
  */
 export default function MembershipJoin({
-  tierName,
-  cities,
+  heading,
+  options,
 }: {
-  tierName: string;
-  cities: City[];
+  heading: string;
+  options: JoinOption[];
 }) {
   const t = useTranslations("Memberships");
   const tm = useTranslations("MembershipModal");
-  const [target, setTarget] = useState<City | null>(null);
+  const tt = useTranslations("Terms");
+  const [target, setTarget] = useState<JoinOption | null>(null);
   const [agreed, setAgreed] = useState(false);
 
-  // lock body scroll while modal is open
   useEffect(() => {
     if (target) {
       const prev = document.body.style.overflow;
@@ -38,12 +43,11 @@ export default function MembershipJoin({
     }
   }, [target]);
 
-  const open = (c: City) => {
+  const open = (o: JoinOption) => {
     setAgreed(false);
-    setTarget(c);
+    setTarget(o);
   };
   const close = () => setTarget(null);
-
   const proceed = () => {
     if (target?.url && agreed) {
       window.open(target.url, "_blank", "noopener,noreferrer");
@@ -51,29 +55,32 @@ export default function MembershipJoin({
     }
   };
 
+  const sections = tt.raw("sections") as PolicySection[];
+  const acknowledgments = tt.raw("acknowledgments") as string[];
+
   return (
     <div>
       <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-brown-soft">
-        {t("joinInCity")}
+        {heading}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
-        {cities.map((c) =>
-          c.url ? (
+        {options.map((o) =>
+          o.url ? (
             <button
-              key={c.name}
+              key={o.key}
               type="button"
-              onClick={() => open(c)}
+              onClick={() => open(o)}
               className="inline-flex items-center rounded-full bg-espresso px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
             >
-              {c.name}
+              {o.label}
             </button>
           ) : (
             <span
-              key={c.name}
+              key={o.key}
               title="Available in salon"
               className="inline-flex items-center rounded-full border border-sand px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-brown-soft"
             >
-              {t("inSalon", { city: c.name })}
+              {t("inSalon", { city: o.cityName })}
             </span>
           ),
         )}
@@ -84,7 +91,7 @@ export default function MembershipJoin({
           className="fixed inset-0 z-[100] flex items-end justify-center bg-espresso/60 p-0 backdrop-blur-sm sm:items-center sm:p-6"
           role="dialog"
           aria-modal="true"
-          aria-label="Membership Terms and Conditions"
+          aria-label={tt("title")}
           onClick={close}
         >
           <div
@@ -95,10 +102,10 @@ export default function MembershipJoin({
             <div className="flex items-start justify-between gap-4 border-b border-sand px-6 py-5">
               <div>
                 <p className="eyebrow">
-                  {tm("subtitle", { tier: tierName, city: target.name })}
+                  {tm("subtitle", { tier: target.tierName, city: target.cityName })}
                 </p>
                 <h2 className="mt-1 font-display text-2xl text-espresso">
-                  {MEMBERSHIP_TERMS.title}
+                  {tt("title")}
                 </h2>
               </div>
               <button
@@ -113,8 +120,8 @@ export default function MembershipJoin({
 
             {/* Scrollable terms */}
             <div className="flex-1 overflow-y-auto px-6 py-5 text-sm leading-relaxed text-brown">
-              <p>{MEMBERSHIP_TERMS.intro}</p>
-              {MEMBERSHIP_TERMS.sections.map((s) => (
+              <p>{tt("intro")}</p>
+              {sections.map((s) => (
                 <section key={s.title} className="mt-5">
                   <h3 className="text-base font-medium text-espresso">{s.title}</h3>
                   {s.paragraphs.map((p, i) => (
@@ -126,9 +133,9 @@ export default function MembershipJoin({
               ))}
 
               <section className="mt-6 rounded-2xl bg-ivory p-4">
-                <p className="text-espresso">{MEMBERSHIP_TERMS.acknowledgmentIntro}</p>
+                <p className="text-espresso">{tt("acknowledgmentIntro")}</p>
                 <ul className="mt-2 list-disc space-y-1 pl-5">
-                  {MEMBERSHIP_TERMS.acknowledgments.map((a, i) => (
+                  {acknowledgments.map((a, i) => (
                     <li key={i}>{a}</li>
                   ))}
                 </ul>

@@ -153,9 +153,12 @@ function TierCard({ tier }: { tier: MembershipTier }) {
         </a>
       ) : (
         <MembershipJoin
-          tierName={tier.name}
-          cities={MARKETS.map((m) => ({
-            name: m.name,
+          heading={t("joinInCity")}
+          options={MARKETS.map((m) => ({
+            key: m.slug,
+            label: m.name,
+            cityName: m.name,
+            tierName: tier.name,
             url: m.membership?.[tier.key as "gold" | "diamond"],
           }))}
         />

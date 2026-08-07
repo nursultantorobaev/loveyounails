@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import SalonCard from "@/components/SalonCard";
 import CityPhoto from "@/components/CityPhoto";
+import MembershipJoin, { type JoinOption } from "@/components/MembershipJoin";
 import { MARKETS, getMarket } from "@/lib/locations";
 
 type MarketParams = { params: Promise<{ locale: string; market: string }> };
@@ -78,22 +79,44 @@ export default async function MarketPage({ params }: MarketParams) {
           </p>
         )}
         {!m.comingSoon && (
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              href="/memberships"
-              className="inline-flex items-center rounded-full border border-espresso/25 px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
-            >
-              {t("memberships")}
-            </Link>
+          <div className="mt-8 space-y-5">
+            {(m.membership?.gold || m.membership?.diamond) && (
+              <MembershipJoin
+                heading={t("memberships")}
+                options={
+                  [
+                    m.membership?.gold && {
+                      key: "gold",
+                      label: "Gold",
+                      cityName: m.name,
+                      tierName: "Gold",
+                      url: m.membership.gold,
+                    },
+                    m.membership?.diamond && {
+                      key: "diamond",
+                      label: "Diamond",
+                      cityName: m.name,
+                      tierName: "Diamond",
+                      url: m.membership.diamond,
+                    },
+                  ].filter(Boolean) as JoinOption[]
+                }
+              />
+            )}
             {m.giftCardUrl && (
-              <a
-                href={m.giftCardUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-espresso/25 px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
-              >
-                {t("giftCard")}
-              </a>
+              <div>
+                <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-brown-soft">
+                  {t("giftCard")}
+                </p>
+                <a
+                  href={m.giftCardUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center rounded-full bg-espresso px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
+                >
+                  {t("giftCard")}
+                </a>
+              </div>
             )}
           </div>
         )}
