@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Love You Nail Salon — Unified Brand Website
 
-## Getting Started
+A single, premium brand website that unifies all **Love You Nail Salon** locations
+under one identity while each location keeps its own operations and booking system.
 
-First, run the development server:
+> Independent project. Not affiliated with or dependent on any other codebase.
+
+## Stack
+
+- **Next.js 16** (App Router) + **React 19** + **TypeScript**
+- **Tailwind CSS v4** (CSS `@theme` tokens in `src/app/globals.css`)
+- **next/font** — Cormorant Garamond (display serif) + Montserrat (body)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 (this repo's dev preview has been run on 3005 during setup).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Brand
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Official logo (`public/brand/`): `logo-{gold,black}.png` (full lockup) and
+  `mark-{gold,black}.png` (monogram). Black on light, gold on dark. Rendered via
+  `components/Wordmark.tsx`; gold mark is the favicon.
+- Palette: cream / ivory, champagne **gold** accents, warm espresso brown text.
+- Voice: modern, premium, luxury, clean, friendly.
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+Locations are the core data model — **markets contain multiple salons**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/lib/locations.ts` — `MARKETS` (source of truth) + helpers (`getMarket`,
+  `mapsUrl`, `bookingHref`). Add a location by adding an object; pages update
+  automatically.
+- `src/lib/content.ts` — services, advantages, reviews copy.
+- `src/lib/pricing.ts` — categorized brand price list (verified identical on SM +
+  NY sites; Chicago publishes no prices, inherits this until confirmed).
+- `src/components/` — `Header`, `Footer`, `Wordmark`, `SalonCard`, `ui/Button`,
+  `ui/ImagePlaceholder`.
+- `src/app/page.tsx` — home: **full-bleed video hero** (`/media/hero.mp4`) with
+  scrim, about, full-bleed statement band, service feature rows, portfolio grid,
+  locations preview, why-us, memberships, reviews, CTA. Apple-style: big type,
+  generous spacing, scroll-reveal (`components/Reveal.tsx`).
+- `public/media/` — real brand assets reused from the client's existing sites:
+  `hero.mp4` (intro video) + curated nail photos in `photos/`. Served via
+  `next/image`.
+- `src/app/locations/` — index + `[market]` detail pages (`generateStaticParams`).
+- `src/app/prices/` — Services & Pricing page (from `pricing.ts`).
+- `src/app/memberships/` — Gold / Diamond / VIP tiers, "how it works", gift
+  cards. Per-city purchase links live in `locations.ts` (`membership`,
+  `giftCardUrl`); membership is tied to its city.
+  - **Agreement gate:** every "Join" (Gold/Diamond, all cities) opens
+    `components/MembershipJoin.tsx` — a modal with the full T&C
+    (`lib/membershipTerms.ts`); customer must tick acknowledgment before
+    "Agree & Continue" opens checkout. Full terms at `/memberships/terms` +
+    `public/membership-terms.pdf`. NOTE: consent is a front-end gate only (no
+    backend record of acceptance).
+- `src/app/(legal)/` — Privacy Policy + Salon Policy (real content, via
+  `components/Policy.tsx`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Booking (location-specific by design)
 
-## Deploy on Vercel
+Each salon carries its own `bookingUrl`. The Book button deep-links out to that
+salon's system:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Market        | Booking system      | Status                         |
+| ------------- | ------------------- | ------------------------------ |
+| Chicago       | Square Appointments | ✅ 5 salons, per-salon deep-links |
+| New York      | Square Appointments | ✅ Manhattan, deep-link          |
+| Santa Monica  | Fresha              | ✅ live deep-link                |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When a salon has no `bookingUrl` yet, the button falls back to **Call to Book**
+(`tel:`).
+
+## Status — MVP built (2026-08-06)
+
+Home + Locations (Chicago 5 studios, New York 1, Santa Monica 1) +
+per-location pages + deep-link/redirect booking (all 7 salons wired) + reviews +
+policies. Verified in-browser, responsive, no console errors.
+
+## TODO / needed from client
+
+- [ ] Distinct per-location emails if they exist (only one shared gmail is
+      published online; per-location phones are already in the data)
+- [ ] Real per-city pricing when ready (currently one general list; note says
+      "prices may vary by location")
+- [ ] Optional: real studio/city photos to replace the `CityScene` skyline art
+- [ ] Shop / e-commerce (professional product line)
+- [ ] Memberships detail, gift cards, loyalty
+- [ ] Cutover plan from the existing Tilda sites
+
+## Roadmap (post-MVP)
+
+Product Shop / e-commerce, membership management, gift cards, loyalty, careers,
+franchise, blog. Architecture is data-driven to add locations/markets without a
+redesign.
