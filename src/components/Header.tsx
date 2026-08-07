@@ -9,10 +9,9 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const NAV = [
   { key: "about", href: "/#about" },
   { key: "locations", href: "/locations" },
-  { key: "prices", href: "/prices" },
+  { key: "services", href: "/#services" },
   { key: "shop", href: "/shop" },
   { key: "memberships", href: "/memberships" },
-  { key: "reviews", href: "/#reviews" },
 ] as const;
 
 export default function Header() {

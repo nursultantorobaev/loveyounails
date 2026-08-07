@@ -87,7 +87,6 @@ function StatementBand() {
 /* -------------------------------- Services ------------------------------ */
 function Services() {
   const t = useTranslations("Services");
-  const tc = useTranslations("Common");
   const list = t.raw("list") as { name: string; description: string }[];
   return (
     <Section id="services" tone="ivory">
@@ -121,11 +120,6 @@ function Services() {
               <p className="mt-3 text-sm leading-relaxed text-brown">{s.description}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-12">
-          <Button href="/prices" variant="outline">
-            {tc("viewPriceList")}
-          </Button>
         </div>
       </Reveal>
     </Section>
