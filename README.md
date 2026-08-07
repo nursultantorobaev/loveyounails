@@ -84,19 +84,30 @@ Home + Locations (Chicago 5 studios, New York 1, Santa Monica 1) +
 per-location pages + deep-link/redirect booking (all 7 salons wired) + reviews +
 policies. Verified in-browser, responsive, no console errors.
 
-## TODO / needed from client
+## TODO — resume list (updated 2026-08-07)
 
-- [ ] Distinct per-location emails if they exist (only one shared gmail is
-      published online; per-location phones are already in the data)
-- [ ] Real per-city pricing when ready (currently one general list; note says
-      "prices may vary by location")
-- [ ] Optional: real studio/city photos to replace the `CityScene` skyline art
-- [ ] Shop / e-commerce (professional product line)
-- [ ] Memberships detail, gift cards, loyalty
-- [ ] Cutover plan from the existing Tilda sites
+Site is fully built, trilingual (EN/RU/ES), deployed (loveyou-nails.vercel.app)
+and on GitHub. Remaining:
 
-## Roadmap (post-MVP)
+**Needs client input / decision**
+- [ ] Confirm **New York gift-card link** (used `MLQ7DM9VW6BZ0`; old NY site had a
+      conflicting one, `ML14XS3Q5DCGJ`, which is actually Santa Monica's). See
+      `src/lib/locations.ts` → new-york `giftCardUrl`.
+- [ ] **Legal review** of the RU/ES Membership T&C + Privacy + Salon policies by a
+      native speaker / lawyer (machine-translated; in `messages/{ru,es}.json`
+      under `Terms` / `Privacy` / `Salon`).
+- [ ] Confirm **Chicago pricing** (Chicago publishes none → inherits SM/NY list).
+- [ ] Distinct **per-location emails** if they exist (only one shared gmail found).
 
-Product Shop / e-commerce, membership management, gift cards, loyalty, careers,
-franchise, blog. Architecture is data-driven to add locations/markets without a
-redesign.
+**Production-grade / features**
+- [ ] Real **product line**: names/photos/prices + real **checkout**
+      (Square/Stripe/Shopify). `/shop` is a "coming soon" preview (`src/lib/products.ts`).
+- [ ] **Custom domain** (e.g. loveyounails.com) → point at Vercel.
+- [ ] **Membership consent record** — the T&C gate is front-end only; a legal
+      record of who/when accepted needs a backend/DB.
+
+**Polish (optional)**
+- [ ] Localized **Terms PDF** (on-page terms are translated;
+      `public/membership-terms.pdf` still English-only).
+- [ ] Real **studio/interior + team photos** (have nail close-ups + Wikimedia city photos).
+- [ ] **Cutover plan**: retire the 3 old Tilda sites → point to this.
