@@ -60,6 +60,9 @@ Locations are the core data model — **markets contain multiple salons**.
     backend record of acceptance).
 - `src/app/(legal)/` — Privacy Policy + Salon Policy (real content, via
   `components/Policy.tsx`).
+- `src/app/shop/` — product line preview: 5 sample products from
+  `lib/products.ts`, "coming soon" state (no checkout yet), brand line-art
+  illustrations (`components/ProductImage.tsx`). Home teaser + nav/footer links.
 
 ### Booking (location-specific by design)
 

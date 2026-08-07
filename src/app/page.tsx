@@ -3,7 +3,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import VideoHero from "@/components/VideoHero";
 import Reveal from "@/components/Reveal";
-import CityScene from "@/components/CityScene";
+import CityPhoto from "@/components/CityPhoto";
 import StatementShowcase from "@/components/StatementShowcase";
 import ProductImage from "@/components/ProductImage";
 import { MARKETS } from "@/lib/locations";
@@ -217,7 +217,7 @@ function LocationsPreview() {
                 href={`/locations/${m.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-sand bg-cream transition-shadow hover:shadow-lg hover:shadow-espresso/5"
               >
-                <CityScene
+                <CityPhoto
                   city={m.slug}
                   className="aspect-4/3 transition-transform duration-700 group-hover:scale-[1.03]"
                 />

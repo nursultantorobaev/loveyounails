@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CityScene from "@/components/CityScene";
+import CityPhoto from "@/components/CityPhoto";
 import { MARKETS } from "@/lib/locations";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function LocationsPage() {
           const count = m.salons.length;
           const inner = (
             <>
-              <CityScene city={m.slug} className="aspect-4/3 w-full" />
+              <CityPhoto city={m.slug} className="aspect-4/3 w-full" />
               <div className="flex flex-1 flex-col p-7">
                 <h2 className="text-3xl text-espresso">{m.name}</h2>
                 <p className="mt-1 text-sm text-brown-soft">{m.state}</p>

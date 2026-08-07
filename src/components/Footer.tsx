@@ -45,6 +45,7 @@ export default function Footer() {
           <FooterCol title="Policies">
             <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
             <FooterLink href="/salon-policy">Salon Policy</FooterLink>
+            <FooterLink href="/credits">Image Credits</FooterLink>
           </FooterCol>
         </div>
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import SalonCard from "@/components/SalonCard";
-import CityScene from "@/components/CityScene";
+import CityPhoto from "@/components/CityPhoto";
 import { MARKETS, getMarket } from "@/lib/locations";
 
 export function generateStaticParams() {
@@ -45,7 +45,11 @@ export default async function MarketPage({
 
       {/* City banner */}
       <div className="relative mt-6 overflow-hidden rounded-3xl">
-        <CityScene city={m.slug} className="h-52 w-full md:h-72" />
+        <CityPhoto
+          city={m.slug}
+          sizes="100vw"
+          className="h-52 w-full md:h-72"
+        />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-espresso/45 to-transparent p-6 md:p-9">
           <div>
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.24em] text-cream/85">
