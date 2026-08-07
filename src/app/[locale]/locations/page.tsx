@@ -39,7 +39,10 @@ function LocationsContent() {
           const count = m.salons.length;
           const inner = (
             <>
-              <CityPhoto city={m.slug} className="aspect-4/3 w-full" />
+              <CityPhoto
+                city={m.slug}
+                className="aspect-4/3 w-full transition-transform duration-700 ease-out group-hover:scale-105"
+              />
               <div className="flex flex-1 flex-col p-7">
                 <h2 className="text-3xl text-espresso">{m.name}</h2>
                 <p className="mt-1 text-sm text-brown-soft">

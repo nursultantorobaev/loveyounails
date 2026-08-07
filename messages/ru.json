@@ -18,6 +18,11 @@
     "studios": "студии",
     "from": "от"
   },
+  "Stats": {
+    "clients": "Довольных клиентов",
+    "studios": "Студий",
+    "rating": "Средний рейтинг"
+  },
   "Hero": {
     "eyebrow": "Премиальный салон красоты",
     "title": "Love You Nail Salon",

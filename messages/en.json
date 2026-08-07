@@ -18,6 +18,11 @@
     "studios": "studios",
     "from": "from"
   },
+  "Stats": {
+    "clients": "Happy clients",
+    "studios": "Studios",
+    "rating": "Average rating"
+  },
   "Hero": {
     "eyebrow": "Premium Beauty Salon",
     "title": "Love You Nail Salon",

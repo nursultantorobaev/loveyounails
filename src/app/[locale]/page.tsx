@@ -8,6 +8,8 @@ import Reveal from "@/components/Reveal";
 import CityPhoto from "@/components/CityPhoto";
 import StatementShowcase from "@/components/StatementShowcase";
 import ProductImage from "@/components/ProductImage";
+import ParallaxImage from "@/components/ParallaxImage";
+import Stats from "@/components/Stats";
 import { MARKETS } from "@/lib/locations";
 import { REVIEWS } from "@/lib/content";
 import { PRODUCTS } from "@/lib/products";
@@ -19,6 +21,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <>
       <VideoHero />
       <About />
+      <Stats />
       <StatementBand />
       <Services />
       <Portfolio />
@@ -49,7 +52,7 @@ function About() {
           </div>
         </Reveal>
         <Reveal className="order-1 md:order-2" delay={100}>
-          <Media
+          <ParallaxImage
             src="/media/photos/nails-milky-almond.png"
             alt={t("title")}
             className="aspect-4/5"
@@ -144,7 +147,7 @@ function Feature({
   return (
     <div className="grid items-center gap-10 md:grid-cols-2">
       <Reveal className={reverse ? "md:order-2" : ""}>
-        <Media src={src} alt={alt} className="aspect-4/3" />
+        <ParallaxImage src={src} alt={alt} className="aspect-4/3" />
       </Reveal>
       <Reveal delay={100} className={reverse ? "md:order-1" : ""}>
         <p className="eyebrow">{eyebrow}</p>
@@ -405,8 +408,14 @@ function Media({
   rounded?: string;
 }) {
   return (
-    <div className={`relative w-full overflow-hidden ${rounded} ${className}`}>
-      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+    <div className={`group relative w-full overflow-hidden ${rounded} ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+      />
     </div>
   );
 }

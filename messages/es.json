@@ -18,6 +18,11 @@
     "studios": "estudios",
     "from": "desde"
   },
+  "Stats": {
+    "clients": "Clientas felices",
+    "studios": "Estudios",
+    "rating": "Valoración media"
+  },
   "Hero": {
     "eyebrow": "Salón de belleza premium",
     "title": "Love You Nail Salon",
