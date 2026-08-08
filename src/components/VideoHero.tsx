@@ -33,7 +33,7 @@ export default function VideoHero() {
         <p className="text-[0.72rem] font-medium uppercase tracking-[0.28em] text-cream/80">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.02] text-cream md:text-8xl">
+        <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold uppercase leading-[1.02] text-cream md:text-8xl">
           {t("title")}
         </h1>
         <p className="mt-5 max-w-md text-base leading-relaxed text-cream/85 md:text-lg">
