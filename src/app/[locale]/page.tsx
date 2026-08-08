@@ -10,6 +10,7 @@ import StatementShowcase from "@/components/StatementShowcase";
 import ProductImage from "@/components/ProductImage";
 import ParallaxImage from "@/components/ParallaxImage";
 import Stats from "@/components/Stats";
+import InstagramFeed from "@/components/InstagramFeed";
 import AdvantagesVideo from "@/components/AdvantagesVideo";
 import { MARKETS } from "@/lib/locations";
 import { REVIEWS } from "@/lib/content";
@@ -31,6 +32,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <ProductsTeaser />
       <Memberships />
       <Reviews />
+      <InstagramFeed />
       <FinalCta />
     </>
   );
