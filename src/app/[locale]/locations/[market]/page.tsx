@@ -61,7 +61,7 @@ export default async function MarketPage({ params }: MarketParams) {
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.24em] text-cream/85">
               {tm(`states.${m.slug}`)}
             </p>
-            <h1 className="mt-2 font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="mt-2 font-display text-4xl uppercase leading-tight text-cream md:text-6xl">
               {m.name}
             </h1>
           </div>

@@ -58,7 +58,8 @@ export default function AdvantagesVideo() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[82vh] min-h-[540px] w-full overflow-hidden bg-espresso"
+      id="advantages"
+      className="relative h-[82vh] min-h-[540px] w-full scroll-mt-20 overflow-hidden bg-espresso"
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
@@ -84,7 +85,7 @@ export default function AdvantagesVideo() {
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-5 md:px-8">
         <p className="eyebrow !text-gold">{t("eyebrow")}</p>
-        <h2 className="mt-4 font-display text-5xl leading-[1.05] text-cream md:text-7xl">
+        <h2 className="mt-4 font-display text-5xl uppercase leading-[1.05] text-cream md:text-7xl">
           {t("title")}
         </h2>
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">

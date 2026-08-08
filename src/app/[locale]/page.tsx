@@ -44,7 +44,7 @@ function About() {
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal className="order-2 md:order-1">
           <p className="eyebrow">{t("eyebrow")}</p>
-          <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
+          <h2 className="mt-4 text-4xl uppercase leading-tight text-espresso md:text-5xl">
             {t("title")}
           </h2>
           <div className="mt-6 space-y-4 text-brown leading-relaxed">
@@ -78,7 +78,7 @@ function StatementBand() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-12">
       <StatementShowcase images={work}>
-        <h2 className="max-w-3xl font-display text-4xl leading-[1.08] text-cream drop-shadow-sm md:text-6xl">
+        <h2 className="max-w-3xl font-display text-4xl uppercase leading-[1.08] text-cream drop-shadow-sm md:text-6xl">
           {t("line1")}
           <br />
           {t("line2")}
@@ -237,7 +237,7 @@ function ProductsTeaser() {
       <div className="grid items-center gap-12 md:grid-cols-2">
         <Reveal>
           <p className="eyebrow">{t("eyebrow")}</p>
-          <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">
+          <h2 className="mt-4 text-4xl uppercase leading-tight text-espresso md:text-5xl">
             {t("title")}
           </h2>
           <p className="mt-5 max-w-md text-brown leading-relaxed">{t("body")}</p>
@@ -267,7 +267,7 @@ function Memberships() {
       <Reveal>
         <div className="overflow-hidden rounded-3xl bg-espresso px-6 py-14 text-center text-cream md:px-16 md:py-20">
           <p className="eyebrow text-gold">{t("eyebrow")}</p>
-          <h2 className="mx-auto mt-4 max-w-2xl text-4xl leading-tight md:text-5xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-4xl uppercase leading-tight md:text-5xl">
             {t("title")}
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-cream/70 leading-relaxed">{t("body")}</p>
@@ -361,7 +361,7 @@ function FinalCta() {
     <Section id="contact">
       <Reveal className="text-center">
         <p className="eyebrow">{t("eyebrow")}</p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-4xl leading-tight text-espresso md:text-5xl">
+        <h2 className="mx-auto mt-4 max-w-2xl text-4xl uppercase leading-tight text-espresso md:text-5xl">
           {t("title")}
         </h2>
         <p className="mx-auto mt-5 max-w-lg text-brown leading-relaxed">{t("body")}</p>
@@ -426,7 +426,7 @@ function SectionHead({
   return (
     <div className="max-w-2xl">
       <p className="eyebrow">{eyebrow}</p>
-      <h2 className="mt-4 text-4xl leading-tight text-espresso md:text-5xl">{title}</h2>
+      <h2 className="mt-4 text-4xl uppercase leading-tight text-espresso md:text-5xl">{title}</h2>
       {intro && <p className="mt-5 text-brown leading-relaxed">{intro}</p>}
     </div>
   );

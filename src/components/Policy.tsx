@@ -18,7 +18,7 @@ export default function Policy({
   return (
     <>
       <p className="eyebrow">{eyebrow}</p>
-      <h1 className="mt-4 text-5xl leading-tight text-espresso">{title}</h1>
+      <h1 className="mt-4 text-5xl uppercase leading-tight text-espresso">{title}</h1>
       {intro && (
         <p className="mt-6 text-lg text-brown leading-relaxed">{intro}</p>
       )}

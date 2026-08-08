@@ -30,7 +30,7 @@ function MembershipsContent() {
       {/* Header */}
       <header className="max-w-2xl">
         <p className="eyebrow">{t("eyebrow")}</p>
-        <h1 className="mt-4 text-5xl leading-tight text-espresso md:text-6xl">
+        <h1 className="mt-4 text-5xl uppercase leading-tight text-espresso md:text-6xl">
           {t("title")}
         </h1>
         <p className="mt-5 text-brown leading-relaxed">{t("intro")}</p>
