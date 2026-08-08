@@ -3,11 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import {
-  BEHOLD_FEED_ID,
-  INSTAGRAM_FALLBACK,
-  INSTAGRAM_URL,
-} from "@/lib/instagram";
+import { INSTAGRAM_FALLBACK, INSTAGRAM_URL } from "@/lib/instagram";
 import { MARKETS } from "@/lib/locations";
 
 interface Tile {
@@ -16,21 +12,32 @@ interface Tile {
   remote: boolean;
 }
 
-export default function InstagramFeed() {
+export default function InstagramFeed({
+  feedId,
+  profileUrl,
+  showStudios = false,
+}: {
+  /** Behold feed ID for this section's live grid (falls back to salon work). */
+  feedId?: string;
+  /** Single "Follow" target when not showing the multi-studio buttons. */
+  profileUrl?: string;
+  /** Home page: show a button per studio instead of a single Follow. */
+  showStudios?: boolean;
+}) {
   const t = useTranslations("Instagram");
 
   // Fallback tiles (real salon work, link to the profile) until Behold is set.
   const fallback: Tile[] = INSTAGRAM_FALLBACK.map((src) => ({
     src,
-    href: INSTAGRAM_URL,
+    href: profileUrl || INSTAGRAM_URL,
     remote: false,
   }));
   const [tiles, setTiles] = useState<Tile[]>(fallback);
 
   useEffect(() => {
-    if (!BEHOLD_FEED_ID) return;
+    if (!feedId) return;
     let cancelled = false;
-    fetch(`https://feeds.behold.so/${BEHOLD_FEED_ID}`)
+    fetch(`https://feeds.behold.so/${feedId}`)
       .then((r) => r.json())
       .then((data) => {
         const posts = Array.isArray(data) ? data : data.posts || [];
@@ -53,7 +60,7 @@ export default function InstagramFeed() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [feedId]);
 
   return (
     <section id="instagram" className="scroll-mt-24 bg-ivory">
@@ -102,18 +109,30 @@ export default function InstagramFeed() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {MARKETS.filter((m) => m.instagram).map((m) => (
-            <a
-              key={m.slug}
-              href={m.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-cream transition-colors hover:bg-gold-dark"
-            >
-              <InstagramGlyph className="h-4 w-4" />
-              {m.name}
-            </a>
-          ))}
+          {showStudios
+            ? MARKETS.filter((m) => m.instagram).map((m) => (
+                <a
+                  key={m.slug}
+                  href={m.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-cream transition-colors hover:bg-gold-dark"
+                >
+                  <InstagramGlyph className="h-4 w-4" />
+                  {m.name}
+                </a>
+              ))
+            : profileUrl && (
+                <a
+                  href={profileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-cream transition-colors hover:bg-gold-dark"
+                >
+                  <InstagramGlyph className="h-4 w-4" />
+                  {t("follow")}
+                </a>
+              )}
         </div>
       </div>
     </section>

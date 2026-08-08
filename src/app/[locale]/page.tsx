@@ -32,7 +32,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <ProductsTeaser />
       <Memberships />
       <Reviews />
-      <InstagramFeed />
+      <InstagramFeed
+        feedId={MARKETS.find((m) => m.slug === "chicago")?.beholdFeedId}
+        showStudios
+      />
       <FinalCta />
     </>
   );

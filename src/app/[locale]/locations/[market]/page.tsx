@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import SalonCard from "@/components/SalonCard";
 import CityPhoto from "@/components/CityPhoto";
 import MembershipJoin, { type JoinOption } from "@/components/MembershipJoin";
+import InstagramFeed from "@/components/InstagramFeed";
 import { MARKETS, getMarket } from "@/lib/locations";
 
 type MarketParams = { params: Promise<{ locale: string; market: string }> };
@@ -40,6 +41,7 @@ export default async function MarketPage({ params }: MarketParams) {
   const tm = await getTranslations("Markets");
 
   return (
+    <>
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       {/* Breadcrumb */}
       <Link
@@ -156,5 +158,9 @@ export default async function MarketPage({ params }: MarketParams) {
         </div>
       )}
     </div>
+    {!m.comingSoon && (
+      <InstagramFeed feedId={m.beholdFeedId} profileUrl={m.instagram} />
+    )}
+    </>
   );
 }

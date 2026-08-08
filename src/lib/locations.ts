@@ -45,6 +45,8 @@ export interface Market {
   membership?: { gold?: string; diamond?: string };
   /** This market's own Instagram profile URL. */
   instagram?: string;
+  /** Behold feed ID (behold.so) for this market's live Instagram grid. */
+  beholdFeedId?: string;
   salons: Salon[];
 }
 
@@ -73,6 +75,7 @@ export const MARKETS: Market[] = [
     bookingSystem: "square",
     tagline: "Five studios across the city, from the West Loop to River North.",
     instagram: "https://www.instagram.com/loveyou_nailsalon/",
+    beholdFeedId: "rLsqUBaXF9f71VPYIOfl",
     giftCardUrl: "https://app.squareup.com/gift/MLV2JAY2QBKBB/order",
     membership: {
       gold: "https://square.link/u/SXAVkqH4",
@@ -176,6 +179,7 @@ export const MARKETS: Market[] = [
     bookingSystem: "square",
     tagline: "Our Manhattan studio in the heart of the Garment District.",
     instagram: "https://www.instagram.com/loveyou_new_york/",
+    beholdFeedId: "QPg0MHyIrjBTLGJG4tMx",
     // NOTE: NY gift-card link is the best of two conflicting ones on the old site — verify.
     giftCardUrl: "https://app.squareup.com/gift/MLQ7DM9VW6BZ0/order",
     membership: {
