@@ -103,21 +103,33 @@ export default async function MarketPage({ params }: MarketParams) {
                 }
               />
             )}
-            {m.giftCardUrl && (
-              <div>
-                <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-brown-soft">
-                  {t("giftCard")}
-                </p>
+            <div className="flex flex-wrap gap-3">
+              {m.giftCardUrl && (
                 <a
                   href={m.giftCardUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center rounded-full bg-espresso px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
+                  className="inline-flex items-center rounded-full bg-espresso px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
                 >
                   {t("giftCard")}
                 </a>
-              </div>
-            )}
+              )}
+              {m.instagram && (
+                <a
+                  href={m.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                  @{m.instagram.replace(/\/+$/, "").split("/").pop()}
+                </a>
+              )}
+            </div>
           </div>
         )}
       </header>

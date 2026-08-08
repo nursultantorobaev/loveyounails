@@ -6,9 +6,9 @@ import { useTranslations } from "next-intl";
 import {
   BEHOLD_FEED_ID,
   INSTAGRAM_FALLBACK,
-  INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
 } from "@/lib/instagram";
+import { MARKETS } from "@/lib/locations";
 
 interface Tile {
   src: string;
@@ -60,14 +60,9 @@ export default function InstagramFeed() {
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <div className="flex flex-col items-center text-center">
           <p className="eyebrow">{t("eyebrow")}</p>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 font-display text-4xl uppercase text-espresso transition-colors hover:text-gold-dark md:text-5xl"
-          >
-            @{INSTAGRAM_HANDLE}
-          </a>
+          <h2 className="mt-4 font-display text-4xl uppercase leading-tight text-espresso md:text-5xl">
+            {t("title")}
+          </h2>
           <p className="mt-4 max-w-md text-brown leading-relaxed">{t("intro")}</p>
         </div>
 
@@ -106,16 +101,19 @@ export default function InstagramFeed() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
-          >
-            <InstagramGlyph className="h-4 w-4" />
-            {t("follow")}
-          </a>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          {MARKETS.filter((m) => m.instagram).map((m) => (
+            <a
+              key={m.slug}
+              href={m.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-espresso px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-cream transition-colors hover:bg-gold-dark"
+            >
+              <InstagramGlyph className="h-4 w-4" />
+              {m.name}
+            </a>
+          ))}
         </div>
       </div>
     </section>

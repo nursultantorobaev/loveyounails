@@ -43,6 +43,8 @@ export interface Market {
    * VIP is invitation-only (contact, no link). Empty/undefined = not published.
    */
   membership?: { gold?: string; diamond?: string };
+  /** This market's own Instagram profile URL. */
+  instagram?: string;
   salons: Salon[];
 }
 
@@ -70,6 +72,7 @@ export const MARKETS: Market[] = [
     state: "Illinois",
     bookingSystem: "square",
     tagline: "Five studios across the city, from the West Loop to River North.",
+    instagram: "https://www.instagram.com/loveyou_nailsalon/",
     giftCardUrl: "https://app.squareup.com/gift/MLV2JAY2QBKBB/order",
     membership: {
       gold: "https://square.link/u/SXAVkqH4",
@@ -144,6 +147,7 @@ export const MARKETS: Market[] = [
     state: "California",
     bookingSystem: "fresha",
     tagline: "Our California home, steps from 3rd Street Promenade.",
+    instagram: "https://www.instagram.com/loveyou_santamonica/",
     // Santa Monica sells memberships & gift cards through Fresha (not Square).
     giftCardUrl: "https://www.fresha.com/en/buy-fresha-gift-card",
     membership: {
@@ -171,6 +175,7 @@ export const MARKETS: Market[] = [
     state: "New York",
     bookingSystem: "square",
     tagline: "Our Manhattan studio in the heart of the Garment District.",
+    instagram: "https://www.instagram.com/loveyou_new_york/",
     // NOTE: NY gift-card link is the best of two conflicting ones on the old site — verify.
     giftCardUrl: "https://app.squareup.com/gift/MLQ7DM9VW6BZ0/order",
     membership: {
