@@ -23,6 +23,18 @@
     "studios": "Студий",
     "rating": "Средний рейтинг"
   },
+  "BestSalon": {
+    "eyebrow": "Что нас отличает",
+    "title": "Ваш лучший салон",
+    "words": {
+      "accuracy": "Точность",
+      "palette": "Палитра",
+      "technique": "Техника",
+      "details": "Детали",
+      "sterility": "Стерильность",
+      "manicure": "Маникюр"
+    }
+  },
   "Hero": {
     "eyebrow": "Премиальный салон красоты",
     "title": "Love You Nail Salon",

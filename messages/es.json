@@ -23,6 +23,18 @@
     "studios": "Estudios",
     "rating": "Valoración media"
   },
+  "BestSalon": {
+    "eyebrow": "Lo que nos distingue",
+    "title": "Tu mejor salón",
+    "words": {
+      "accuracy": "Precisión",
+      "palette": "Paleta",
+      "technique": "Técnica",
+      "details": "Detalles",
+      "sterility": "Esterilidad",
+      "manicure": "Manicura"
+    }
+  },
   "Hero": {
     "eyebrow": "Salón de belleza premium",
     "title": "Love You Nail Salon",

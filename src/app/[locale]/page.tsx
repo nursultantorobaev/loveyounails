@@ -10,6 +10,7 @@ import StatementShowcase from "@/components/StatementShowcase";
 import ProductImage from "@/components/ProductImage";
 import ParallaxImage from "@/components/ParallaxImage";
 import Stats from "@/components/Stats";
+import AdvantagesVideo from "@/components/AdvantagesVideo";
 import { MARKETS } from "@/lib/locations";
 import { REVIEWS } from "@/lib/content";
 import { PRODUCTS } from "@/lib/products";
@@ -26,7 +27,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Services />
       <Portfolio />
       <LocationsPreview />
-      <WhyUs />
+      <AdvantagesVideo />
       <ProductsTeaser />
       <Memberships />
       <Reviews />
@@ -228,29 +229,6 @@ function LocationsPreview() {
 }
 
 /* --------------------------------- Why Us ------------------------------- */
-function WhyUs() {
-  const t = useTranslations("WhyUs");
-  const list = t.raw("list") as { title: string; description: string }[];
-  return (
-    <Section id="why-us">
-      <Reveal>
-        <SectionHead eyebrow={t("eyebrow")} title={t("title")} />
-      </Reveal>
-      <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-        {list.map((a, i) => (
-          <Reveal key={a.title} delay={i * 80}>
-            <span className="font-display text-3xl text-gold">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="mt-3 text-xl text-espresso">{a.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-brown">{a.description}</p>
-          </Reveal>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
 /* ---------------------------- Products teaser --------------------------- */
 function ProductsTeaser() {
   const t = useTranslations("ProductsTeaser");
