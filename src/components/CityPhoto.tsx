@@ -40,6 +40,7 @@ export default function CityPhoto({
         alt={photo.alt}
         fill
         sizes={sizes}
+        quality={90}
         className="object-cover"
         style={photo.position ? { objectPosition: photo.position } : undefined}
       />

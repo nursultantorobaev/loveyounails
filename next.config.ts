@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  images: {
+    // AVIF (then WebP) — noticeably crisper than the default at the same weight.
+    formats: ["image/avif", "image/webp"],
+    // Allow a higher-quality setting for photography.
+    qualities: [75, 90],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");

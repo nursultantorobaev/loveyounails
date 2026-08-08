@@ -73,7 +73,7 @@ function StatementBand() {
     { src: "/media/photos/nails-glossy-pink.png", alt: "" },
     { src: "/media/photos/nails-pink-french.png", alt: "" },
     { src: "/media/photos/nails-red.png", alt: "" },
-    { src: "/media/photos/nails-milky-almond.png", alt: "" },
+    { src: "/media/photos/pedicure-french.png", alt: "" },
   ];
   return (
     <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-12">
@@ -392,6 +392,7 @@ function Media({
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
+        quality={90}
         className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
       />
     </div>

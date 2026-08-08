@@ -53,6 +53,7 @@ export default function StatementShowcase({
             fill
             priority={i === 0}
             sizes="100vw"
+            quality={90}
             className="ken-burns object-cover"
           />
         </div>

@@ -64,6 +64,7 @@ export default function ParallaxImage({
           alt={alt}
           fill
           sizes={sizes}
+          quality={90}
           className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
         />
       </div>
