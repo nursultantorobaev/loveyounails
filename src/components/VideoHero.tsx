@@ -25,12 +25,12 @@ export default function VideoHero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(28,20,14,0.68) 0%, rgba(28,20,14,0.30) 38%, rgba(28,20,14,0.10) 70%, rgba(28,20,14,0.18) 100%)",
+            "linear-gradient(to top, rgba(28,20,14,0.88) 0%, rgba(28,20,14,0.58) 45%, rgba(28,20,14,0.28) 72%, rgba(28,20,14,0.20) 100%)",
         }}
       />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-5 pb-16 md:px-8 md:pb-24">
-        <p className="text-[0.72rem] font-medium uppercase tracking-[0.28em] text-cream/80">
+        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-gold [text-shadow:0_1px_12px_rgba(0,0,0,0.7)]">
           {t("eyebrow")}
         </p>
         <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold uppercase leading-[1.02] text-cream md:text-8xl">

@@ -81,10 +81,13 @@ export default function AdvantagesVideo() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-espresso/35 to-espresso/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-espresso/90 via-espresso/55 to-espresso/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-5 md:px-8">
-        <p className="eyebrow !text-gold">{t("eyebrow")}</p>
+        <p className="eyebrow !text-gold [text-shadow:0_1px_12px_rgba(0,0,0,0.75)]">
+          {t("eyebrow")}
+        </p>
         <h2 className="mt-4 font-display text-5xl uppercase leading-[1.05] text-cream md:text-7xl">
           {t("title")}
         </h2>
