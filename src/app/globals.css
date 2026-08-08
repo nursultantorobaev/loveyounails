@@ -73,3 +73,33 @@ h3,
     animation: none;
   }
 }
+
+/* Brand intro reveal */
+@keyframes intro-mark {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(8px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes intro-line {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes intro-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

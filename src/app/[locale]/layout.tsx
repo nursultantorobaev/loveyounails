@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BrandIntro from "@/components/BrandIntro";
 
 // Match the original Love You sites: Cormorant (display) + Manrope (body/nav).
 const cormorant = Cormorant({
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
+          <BrandIntro />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
