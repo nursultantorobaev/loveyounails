@@ -90,6 +90,14 @@ Site is fully built, trilingual (EN/RU/ES), deployed (loveyou-nails.vercel.app)
 and on GitHub. Remaining:
 
 **Needs client input / decision**
+- [ ] **Instagram live feed** — the home "Follow your studio" grid + each location
+      page currently show nail work as a stand-in. To make it pull **real posts
+      automatically**: at **behold.so** sign up (free) → connect an Instagram
+      account → copy the **feed ID** → send it over → paste into `BEHOLD_FEED_ID`
+      in `src/lib/instagram.ts` (one line) and real posts flow in, styled to match.
+      Each studio has its own account (`@loveyou_nailsalon` Chicago,
+      `@loveyou_santamonica`, `@loveyou_new_york`), so we can wire **three feeds**
+      (one per location page) — set up a Behold feed per account and send all three IDs.
 - [ ] Confirm **New York gift-card link** (used `MLQ7DM9VW6BZ0`; old NY site had a
       conflicting one, `ML14XS3Q5DCGJ`, which is actually Santa Monica's). See
       `src/lib/locations.ts` → new-york `giftCardUrl`.
