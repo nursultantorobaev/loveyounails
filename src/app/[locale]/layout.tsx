@@ -32,10 +32,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://loveyou.club"),
   title: SITE_TITLE,
   description: SITE_DESC,
-  icons: {
-    icon: "/brand/mark-gold.png",
-    apple: "/brand/mark-gold.png",
-  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESC,
