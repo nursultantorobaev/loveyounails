@@ -49,6 +49,8 @@ export interface Market {
   email?: string;
   /** This market's own Instagram profile URL. */
   instagram?: string;
+  /** This market's own TikTok profile URL. */
+  tiktok?: string;
   /** Behold feed ID (behold.so) for this market's live Instagram grid. */
   beholdFeedId?: string;
   salons: Salon[];
@@ -80,6 +82,7 @@ export const MARKETS: Market[] = [
     tagline: "Five studios across the city, from the West Loop to River North.",
     email: "loveyounailsalon@gmail.com",
     instagram: "https://www.instagram.com/loveyou_nailsalon/",
+    tiktok: "https://www.tiktok.com/@loveyou_nailsalon",
     beholdFeedId: "rLsqUBaXF9f71VPYIOfl",
     giftCardUrl: "https://app.squareup.com/gift/MLV2JAY2QBKBB/order",
     membership: {
@@ -158,6 +161,7 @@ export const MARKETS: Market[] = [
     tagline: "Our California home, steps from 3rd Street Promenade.",
     email: "lynailsalonsantamonica@gmail.com",
     instagram: "https://www.instagram.com/loveyou_santamonica/",
+    tiktok: "https://www.tiktok.com/@loveyou_santamonica",
     // Santa Monica sells memberships & gift cards through Fresha (not Square).
     giftCardUrl: "https://www.fresha.com/en/buy-fresha-gift-card",
     membership: {
@@ -187,9 +191,10 @@ export const MARKETS: Market[] = [
     tagline: "Our Manhattan studio in the heart of the Garment District.",
     email: "loveyounailsalon4@gmail.com",
     instagram: "https://www.instagram.com/loveyou_new_york/",
+    tiktok: "https://www.tiktok.com/@loveyou_newyork",
     beholdFeedId: "QPg0MHyIrjBTLGJG4tMx",
     // NOTE: NY gift-card link is the best of two conflicting ones on the old site — verify.
-    giftCardUrl: "https://app.squareup.com/gift/MLQ7DM9VW6BZ0/order",
+    giftCardUrl: "https://app.squareup.com/gift/ML14XS3Q5DCGJ/order",
     membership: {
       gold: "https://square.link/u/VACEQ93Z",
       diamond: "https://square.link/u/82Qp1F4w",

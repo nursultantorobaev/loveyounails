@@ -139,6 +139,19 @@ export default async function MarketPage({ params }: MarketParams) {
                   @{m.instagram.replace(/\/+$/, "").split("/").pop()}
                 </a>
               )}
+              {m.tiktok && (
+                <a
+                  href={m.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                    <path d="M16.5 3c.3 2.1 1.6 3.6 3.5 3.9v2.5c-1.3.1-2.5-.3-3.5-1v5.9c0 3.3-2.4 5.7-5.5 5.7A5.4 5.4 0 0 1 5.5 14c0-3 2.3-5.4 5.5-5.4.3 0 .6 0 .9.1v2.6a2.9 2.9 0 0 0-1-.2 2.8 2.8 0 0 0 0 5.6c1.6 0 2.7-1.2 2.7-2.9V3h2.9z" />
+                  </svg>
+                  TikTok
+                </a>
+              )}
             </div>
           </div>
         )}
