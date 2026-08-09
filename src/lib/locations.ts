@@ -161,6 +161,7 @@ export const MARKETS: Market[] = [
     tagline: "Our California home, steps from 3rd Street Promenade.",
     email: "lynailsalonsantamonica@gmail.com",
     instagram: "https://www.instagram.com/loveyou_santamonica/",
+    beholdFeedId: "ZLHTmMwoF1FoS3CWpbgt",
     tiktok: "https://www.tiktok.com/@loveyou_santamonica",
     // Santa Monica sells memberships & gift cards through Fresha (not Square).
     giftCardUrl: "https://www.fresha.com/en/buy-fresha-gift-card",
