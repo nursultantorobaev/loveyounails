@@ -123,28 +123,10 @@ export const REVIEWS: Review[] = [
       "I feel completely safe here — the tools are sterilized to medical standards, and it's immediately noticeable. The cuticle work is flawless, painless, and precise. I wouldn't trust my nails to anyone else now.",
   },
   {
-    name: "Sofia M.",
-    avatar: "/media/reviews/sofia.jpg",
-    quote:
-      "This place is more than just a salon. The atmosphere is wonderful: a beautiful interior and calming music help me relax. Every visit leaves me with only positive impressions.",
-  },
-  {
     name: "Natalie C.",
     avatar: "/media/reviews/natalie.webp",
     quote:
       "I tried dozens of salons before finding Love You. Everything — from the service to the technique and the atmosphere — is on another level. Now I know my nails will always look flawless.",
-  },
-  {
-    name: "Jessica L.",
-    avatar: "/media/reviews/jessica.webp",
-    quote:
-      "I was nervous about trying a Russian e-file manicure, but here I finally did — and I'm obsessed. It was completely painless, and the cuticle work was maximally neat. I can't imagine going back.",
-  },
-  {
-    name: "Emily T.",
-    avatar: "/media/reviews/emily.jpg",
-    quote:
-      "Every visit feels like a little escape from my busy schedule. The technicians are always gentle and professional, and I leave not only with perfect nails but also in a wonderful mood.",
   },
   {
     name: "Marcus J.",
