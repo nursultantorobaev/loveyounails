@@ -4,15 +4,19 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-// 301-redirect the retired Tilda domains to the matching page on loveyou.club.
-const HOST_REDIRECTS: Record<string, string> = {
-  "loveyounailsalon.com": "https://loveyou.club/en/locations/chicago",
-  "www.loveyounailsalon.com": "https://loveyou.club/en/locations/chicago",
-  "loveyouny.com": "https://loveyou.club/en/locations/new-york",
-  "www.loveyouny.com": "https://loveyou.club/en/locations/new-york",
-  "loveyousantamonica.com": "https://loveyou.club/en/locations/santa-monica",
-  "www.loveyousantamonica.com": "https://loveyou.club/en/locations/santa-monica",
-};
+// 301-redirect the retired Tilda domains to the main site.
+const NEW_SITE = "https://loveyou.club/en";
+const OLD_HOSTS = [
+  "loveyounailsalon.com",
+  "www.loveyounailsalon.com",
+  "loveyouny.com",
+  "www.loveyouny.com",
+  "loveyousantamonica.com",
+  "www.loveyousantamonica.com",
+];
+const HOST_REDIRECTS: Record<string, string> = Object.fromEntries(
+  OLD_HOSTS.map((h) => [h, NEW_SITE]),
+);
 
 export default function middleware(req: NextRequest) {
   const host = (req.headers.get("host") || "").toLowerCase().split(":")[0];
