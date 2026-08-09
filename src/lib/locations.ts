@@ -25,6 +25,8 @@ export interface Salon {
   hours: DayHours[];
   /** Deep link to the salon's booking system. Empty string = not yet provided. */
   bookingUrl: string;
+  /** Optional exact Google Maps link (overrides the address-based search). */
+  mapUrl?: string;
 }
 
 export interface Market {
@@ -43,6 +45,8 @@ export interface Market {
    * VIP is invitation-only (contact, no link). Empty/undefined = not published.
    */
   membership?: { gold?: string; diamond?: string };
+  /** This market's own contact email. */
+  email?: string;
   /** This market's own Instagram profile URL. */
   instagram?: string;
   /** Behold feed ID (behold.so) for this market's live Instagram grid. */
@@ -74,6 +78,7 @@ export const MARKETS: Market[] = [
     state: "Illinois",
     bookingSystem: "square",
     tagline: "Five studios across the city, from the West Loop to River North.",
+    email: "loveyounailsalon@gmail.com",
     instagram: "https://www.instagram.com/loveyou_nailsalon/",
     beholdFeedId: "rLsqUBaXF9f71VPYIOfl",
     giftCardUrl: "https://app.squareup.com/gift/MLV2JAY2QBKBB/order",
@@ -141,6 +146,7 @@ export const MARKETS: Market[] = [
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/LYVY53FF244JH/services",
+        mapUrl: "https://maps.app.goo.gl/Y6Sk5n19KmD1t4Z29",
       },
     ],
   },
@@ -150,6 +156,7 @@ export const MARKETS: Market[] = [
     state: "California",
     bookingSystem: "fresha",
     tagline: "Our California home, steps from 3rd Street Promenade.",
+    email: "lynailsalonsantamonica@gmail.com",
     instagram: "https://www.instagram.com/loveyou_santamonica/",
     // Santa Monica sells memberships & gift cards through Fresha (not Square).
     giftCardUrl: "https://www.fresha.com/en/buy-fresha-gift-card",
@@ -178,6 +185,7 @@ export const MARKETS: Market[] = [
     state: "New York",
     bookingSystem: "square",
     tagline: "Our Manhattan studio in the heart of the Garment District.",
+    email: "loveyounailsalon4@gmail.com",
     instagram: "https://www.instagram.com/loveyou_new_york/",
     beholdFeedId: "QPg0MHyIrjBTLGJG4tMx",
     // NOTE: NY gift-card link is the best of two conflicting ones on the old site — verify.
@@ -207,8 +215,9 @@ export function getMarket(slug: string): Market | undefined {
   return MARKETS.find((m) => m.slug === slug);
 }
 
-/** Google Maps directions link built from a salon's address (no API key needed). */
+/** Google Maps directions link — exact override if set, else built from address. */
 export function mapsUrl(salon: Salon): string {
+  if (salon.mapUrl) return salon.mapUrl;
   const q = encodeURIComponent(
     `Love You Nail Salon, ${salon.address}, ${salon.city}, ${salon.state} ${salon.zip}`,
   );

@@ -45,7 +45,8 @@
     "eyebrow": "Sobre Love You",
     "title": "La belleza, elevada a arte",
     "p1": "Fundado por mujeres y con amor, Love You Nail Studio nació de la pasión por el arte, la perfección y el bienestar de sus clientas.",
-    "p2": "Nuestra manicura rusa y el Smart Pedicure se realizan con esmero usando los mejores materiales no tóxicos, para que cada visita combine belleza, higiene y bienestar."
+    "p2": "Nuestra manicura rusa y el Smart Pedicure se realizan con esmero usando los mejores materiales no tóxicos, para que cada visita combine belleza, higiene y bienestar.",
+    "inclusive": "Love You es un espacio inclusivo donde todas las personas son bienvenidas, respetadas y libres de expresarse."
   },
   "Statement": {
     "line1": "Cada detalle, cuidado.",
@@ -62,12 +63,30 @@
     "pedicureTitle": "El Smart Pedicure",
     "pedicureBody": "Una pedicura meticulosa e higiénica que deja los pies suaves, sanos y perfectamente cuidados, hasta el más mínimo detalle.",
     "list": [
-      { "name": "Manicura rusa con torno", "description": "Nuestra manicura en seco insignia: trabajo de cutícula preciso e indoloro con un acabado impecable y duradero." },
-      { "name": "Smart Pedicure", "description": "Una pedicura meticulosa e higiénica que deja los pies suaves, sanos y perfectamente cuidados." },
-      { "name": "Gel y Shellac", "description": "Color brillante y resistente al desgaste que se mantiene perfecto durante semanas, en una paleta de tonos premium." },
-      { "name": "Nail art y diseño", "description": "Desde el elegante francés hasta el arte más audaz e intrincado: diseños a medida de técnicas con visión artística." },
-      { "name": "Extensiones de uñas", "description": "Longitud y resistencia de aspecto natural, esculpidas y moldeadas a tu estilo." },
-      { "name": "Extras de spa", "description": "Realza cualquier servicio con mascarillas nutritivas, masajes y tratamientos para manos y pies." }
+      {
+        "name": "Manicura rusa con torno",
+        "description": "Nuestra manicura en seco insignia: trabajo de cutícula preciso e indoloro con un acabado impecable y duradero."
+      },
+      {
+        "name": "Smart Pedicure",
+        "description": "Una pedicura meticulosa e higiénica que deja los pies suaves, sanos y perfectamente cuidados."
+      },
+      {
+        "name": "Gel y Shellac",
+        "description": "Color brillante y resistente al desgaste que se mantiene perfecto durante semanas, en una paleta de tonos premium."
+      },
+      {
+        "name": "Nail art y diseño",
+        "description": "Desde el elegante francés hasta el arte más audaz e intrincado: diseños a medida de técnicas con visión artística."
+      },
+      {
+        "name": "Extensiones de uñas",
+        "description": "Longitud y resistencia de aspecto natural, esculpidas y moldeadas a tu estilo."
+      },
+      {
+        "name": "Extras de spa",
+        "description": "Realza cualquier servicio con mascarillas nutritivas, masajes y tratamientos para manos y pies."
+      }
     ]
   },
   "Portfolio": {
@@ -85,10 +104,22 @@
     "eyebrow": "Lo que nos hace diferentes",
     "title": "La diferencia Love You",
     "list": [
-      { "title": "Esterilidad de grado médico", "description": "Herramientas desechables o totalmente esterilizadas en cada servicio: una limpieza que se nota." },
-      { "title": "Técnicas expertas", "description": "Artistas con gran experiencia y una sensibilidad refinada y orientada al diseño." },
-      { "title": "Productos eco-seguros", "description": "Materiales no tóxicos y libres de crueldad, elegidos por tu salud y comodidad." },
-      { "title": "Una experiencia elevada", "description": "Un espacio tranquilo y hermoso, pensado para que cada visita sea una pequeña escapada." }
+      {
+        "title": "Esterilidad de grado médico",
+        "description": "Herramientas desechables o totalmente esterilizadas en cada servicio: una limpieza que se nota."
+      },
+      {
+        "title": "Técnicas expertas",
+        "description": "Artistas con gran experiencia y una sensibilidad refinada y orientada al diseño."
+      },
+      {
+        "title": "Productos eco-seguros",
+        "description": "Materiales no tóxicos y libres de crueldad, elegidos por tu salud y comodidad."
+      },
+      {
+        "title": "Una experiencia elevada",
+        "description": "Un espacio tranquilo y hermoso, pensado para que cada visita sea una pequeña escapada."
+      }
     ]
   },
   "ProductsTeaser": {
@@ -118,7 +149,10 @@
       "Este lugar es más que un salón. El ambiente es maravilloso: un interior precioso y una música relajante me ayudan a desconectar. Cada visita me deja solo buenas impresiones.",
       "Probé decenas de salones antes de encontrar Love You. Todo, desde el servicio hasta la técnica y el ambiente, está a otro nivel. Ahora sé que mis uñas siempre lucirán impecables.",
       "Me daba nervio probar la manicura rusa con torno, pero aquí por fin lo hice y estoy encantada. Fue totalmente indolora y el trabajo de cutícula quedó perfecto. No imagino volver atrás.",
-      "Cada visita se siente como una pequeña escapada de mi rutina. Las técnicas siempre son delicadas y profesionales, y salgo no solo con uñas perfectas, sino de muy buen humor."
+      "Cada visita se siente como una pequeña escapada de mi rutina. Las técnicas siempre son delicadas y profesionales, y salgo no solo con uñas perfectas, sino de muy buen humor.",
+      "Reservé mi primera manicura aquí y me enganché: estudio impecable, un equipo realmente experto y mis uñas nunca se vieron tan pulcras. Volveré.",
+      "La precisión es increíble. Mi gel duró casi un mes sin una sola astilla. Sin duda el mejor trabajo de la ciudad.",
+      "Desde la bienvenida hasta el resultado final, todo se sintió tranquilo y premium. El equipo me hizo sentir como en casa."
     ]
   },
   "FinalCta": {
@@ -141,7 +175,11 @@
     "tagline": "Beauty. Elevated."
   },
   "Markets": {
-    "states": { "chicago": "Illinois", "santa-monica": "California", "new-york": "Nueva York" },
+    "states": {
+      "chicago": "Illinois",
+      "santa-monica": "California",
+      "new-york": "Nueva York"
+    },
     "taglines": {
       "chicago": "Cinco estudios por toda la ciudad, del West Loop a River North.",
       "santa-monica": "Nuestro hogar en California, a pasos del 3rd Street Promenade.",
@@ -169,7 +207,15 @@
     "bookNow": "Reservar",
     "callToBook": "Llamar para reservar",
     "directions": "Cómo llegar",
-    "days": { "mon": "Lun", "tue": "Mar", "wed": "Mié", "thu": "Jue", "fri": "Vie", "sat": "Sáb", "sun": "Dom" }
+    "days": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mié",
+      "thu": "Jue",
+      "fri": "Vie",
+      "sat": "Sáb",
+      "sun": "Dom"
+    }
   },
   "Shop": {
     "eyebrow": "Productos profesionales",
@@ -179,13 +225,37 @@
     "comingSoon": "Próximamente",
     "notifyMe": "Avísame",
     "note": "Los precios mostrados son orientativos y pueden cambiar en el lanzamiento. La compra en línea estará disponible pronto.",
-    "categories": { "Gel Polish": "Esmalte en gel", "Nail Care": "Cuidado de uñas", "Tools": "Herramientas" },
+    "categories": {
+      "Gel Polish": "Esmalte en gel",
+      "Nail Care": "Cuidado de uñas",
+      "Tools": "Herramientas"
+    },
     "products": {
-      "signature-gel-polish-ballet-blush": { "name": "Esmalte en gel insignia", "variant": "Ballet Blush", "description": "Color en gel de larga duración y alto brillo en un rosa nude suave y favorecedor. Resistente al desgaste durante semanas." },
-      "high-shine-top-coat": { "name": "Top coat de alto brillo", "variant": "", "description": "Una capa final tipo cristal que fija el color y aporta un brillo espejo a cualquier manicura." },
-      "nourishing-cuticle-oil": { "name": "Aceite nutritivo para cutículas", "variant": "", "description": "Una mezcla ligera de jojoba y vitamina E que suaviza las cutículas y acondiciona la uña." },
-      "crystal-glass-nail-file": { "name": "Lima de cristal", "variant": "", "description": "Una lima de cristal suave y precisa que da forma sin astillar: un imprescindible de salón para casa." },
-      "repair-hand-nail-cream": { "name": "Crema reparadora de manos y uñas", "variant": "", "description": "Una crema rica y de rápida absorción que nutre las manos y fortalece las uñas entre visitas." }
+      "signature-gel-polish-ballet-blush": {
+        "name": "Esmalte en gel insignia",
+        "variant": "Ballet Blush",
+        "description": "Color en gel de larga duración y alto brillo en un rosa nude suave y favorecedor. Resistente al desgaste durante semanas."
+      },
+      "high-shine-top-coat": {
+        "name": "Top coat de alto brillo",
+        "variant": "",
+        "description": "Una capa final tipo cristal que fija el color y aporta un brillo espejo a cualquier manicura."
+      },
+      "nourishing-cuticle-oil": {
+        "name": "Aceite nutritivo para cutículas",
+        "variant": "",
+        "description": "Una mezcla ligera de jojoba y vitamina E que suaviza las cutículas y acondiciona la uña."
+      },
+      "crystal-glass-nail-file": {
+        "name": "Lima de cristal",
+        "variant": "",
+        "description": "Una lima de cristal suave y precisa que da forma sin astillar: un imprescindible de salón para casa."
+      },
+      "repair-hand-nail-cream": {
+        "name": "Crema reparadora de manos y uñas",
+        "variant": "",
+        "description": "Una crema rica y de rápida absorción que nutre las manos y fortalece las uñas entre visitas."
+      }
     }
   },
   "Credits": {
@@ -206,9 +276,21 @@
     "title": "La belleza, recompensada",
     "intro": "Únete una vez al año y disfruta de descuentos exclusivos para socios en cada visita. Tu membresía está vinculada a tu estudio y el descuento se aplica automáticamente al pagar.",
     "tiers": {
-      "gold": { "tagline": "Perfecta para mantener tu rutina de belleza y ahorrar.", "perk0": "10% de descuento en cada servicio", "perk1": "Retoque de cortesía dentro de los 10 días de tu cita" },
-      "diamond": { "tagline": "Ventajas superiores para quienes quieren la experiencia Love You definitiva.", "perk0": "15% de descuento en cada servicio", "perk1": "Retoque de cortesía dentro de las 2 semanas de tu cita" },
-      "vip": { "tagline": "Nuestro nivel más exclusivo: solo por invitación.", "perk0": "Solo por invitación", "perk1": "Condiciones personalizadas" }
+      "gold": {
+        "tagline": "Perfecta para mantener tu rutina de belleza y ahorrar.",
+        "perk0": "10% de descuento en cada servicio",
+        "perk1": "Retoque de cortesía dentro de los 10 días de tu cita"
+      },
+      "diamond": {
+        "tagline": "Ventajas superiores para quienes quieren la experiencia Love You definitiva.",
+        "perk0": "15% de descuento en cada servicio",
+        "perk1": "Retoque de cortesía dentro de las 2 semanas de tu cita"
+      },
+      "vip": {
+        "tagline": "Nuestro nivel más exclusivo: solo por invitación.",
+        "perk0": "Solo por invitación",
+        "perk1": "Condiciones personalizadas"
+      }
     },
     "howItWorksTitle": "Cómo funciona",
     "step0Title": "Compra",
@@ -243,22 +325,69 @@
     "from": "desde",
     "note": "Los combos simultáneos los realizan dos técnicas. Los precios pueden variar ligeramente según la ubicación; el precio final se confirma al reservar. ¿Tienes una pregunta? Tu estudio más cercano estará encantado de ayudarte.",
     "bookCta": "Reservar en un estudio",
-    "categories": { "manicures": "Manicuras", "pedicures": "Pedicuras", "combos": "Combos mani y pedi", "extensions": "Extensiones y extras" },
+    "categories": {
+      "manicures": "Manicuras",
+      "pedicures": "Pedicuras",
+      "combos": "Combos mani y pedi",
+      "extensions": "Extensiones y extras"
+    },
     "items": {
-      "russian-gel-mani": { "name": "Manicura rusa en gel", "note": "Incluye retirada de gel" },
-      "hard-gel-mani": { "name": "Manicura Hard Gel", "note": "" },
-      "regular-mani": { "name": "Manicura clásica", "note": "Marca Dazzle Dry" },
-      "mani-men": { "name": "Manicura para hombre", "note": "" },
-      "russian-gel-pedi": { "name": "Pedicura rusa en gel", "note": "" },
-      "regular-pedi": { "name": "Pedicura clásica", "note": "Marca Dazzle-Dry" },
-      "combo-russian-smart": { "name": "Manicura rusa en gel y Smart Pedi", "note": "Simultáneo: dos técnicas" },
-      "combo-russian-regular": { "name": "Manicura rusa en gel y pedicura clásica", "note": "" },
-      "combo-polish-smart": { "name": "Manicura con esmalte normal y Smart Pedi", "note": "Simultáneo, técnica rusa" },
-      "combo-dazzle": { "name": "Combo mani y pedi", "note": "Marca Dazzle-Dry" },
-      "kids": { "name": "Mani y pedi infantil", "note": "" },
-      "gel-extension": { "name": "Extensión de gel", "note": "" },
-      "nail-art": { "name": "Nail art", "note": "" },
-      "gel-removal": { "name": "Retirada de gel", "note": "" }
+      "russian-gel-mani": {
+        "name": "Manicura rusa en gel",
+        "note": "Incluye retirada de gel"
+      },
+      "hard-gel-mani": {
+        "name": "Manicura Hard Gel",
+        "note": ""
+      },
+      "regular-mani": {
+        "name": "Manicura clásica",
+        "note": "Marca Dazzle Dry"
+      },
+      "mani-men": {
+        "name": "Manicura para hombre",
+        "note": ""
+      },
+      "russian-gel-pedi": {
+        "name": "Pedicura rusa en gel",
+        "note": ""
+      },
+      "regular-pedi": {
+        "name": "Pedicura clásica",
+        "note": "Marca Dazzle-Dry"
+      },
+      "combo-russian-smart": {
+        "name": "Manicura rusa en gel y Smart Pedi",
+        "note": "Simultáneo: dos técnicas"
+      },
+      "combo-russian-regular": {
+        "name": "Manicura rusa en gel y pedicura clásica",
+        "note": ""
+      },
+      "combo-polish-smart": {
+        "name": "Manicura con esmalte normal y Smart Pedi",
+        "note": "Simultáneo, técnica rusa"
+      },
+      "combo-dazzle": {
+        "name": "Combo mani y pedi",
+        "note": "Marca Dazzle-Dry"
+      },
+      "kids": {
+        "name": "Mani y pedi infantil",
+        "note": ""
+      },
+      "gel-extension": {
+        "name": "Extensión de gel",
+        "note": ""
+      },
+      "nail-art": {
+        "name": "Nail art",
+        "note": ""
+      },
+      "gel-removal": {
+        "name": "Retirada de gel",
+        "note": ""
+      }
     }
   },
   "Terms": {
@@ -267,13 +396,55 @@
     "downloadPdf": "Descargar PDF",
     "intro": "Gracias por elegir Love You Nail Salon. Nuestro programa de membresías está diseñado para ofrecer servicios de belleza y bienestar de forma continua a precios exclusivos para socios. Al adquirir una membresía, reconoces que has leído, entendido y aceptado los siguientes Términos y Condiciones.",
     "sections": [
-      { "title": "Compromiso de un año", "paragraphs": ["Todas las membresías del salón se venden como un compromiso de 12 meses (un año) a partir de la fecha de compra.", "Al inscribirte, celebras un acuerdo de membresía vinculante por todo el plazo de la membresía.", "Los beneficios de la membresía están pensados para usarse durante todo el año y solo están disponibles para el socio inscrito."] },
-      { "title": "Política de no reembolso", "paragraphs": ["TODAS LAS VENTAS DE MEMBRESÍA SON DEFINITIVAS.", "Una vez formalizado el acuerdo de membresía, el socio es responsable económicamente del compromiso completo de un año.", "Adquirir una membresía constituye tu reconocimiento y aceptación de esta estricta política de no reembolso."] },
-      { "title": "Pagos de la membresía", "paragraphs": ["El socio es responsable de realizar todos los pagos de la membresía según lo acordado al momento de la inscripción.", "Si la membresía se financia en cuotas mensuales, la obligación de pago se mantiene durante todo el plazo de 12 meses.", "No utilizar los servicios de la membresía no exime al socio de sus obligaciones de pago."] },
-      { "title": "Membresía intransferible", "paragraphs": ["Las membresías se emiten únicamente al comprador individual y no pueden transferirse, compartirse ni cederse a otra persona, y no tienen valor en efectivo."] },
-      { "title": "Política de citas", "paragraphs": ["Los servicios de la membresía se prestan únicamente con cita previa y están sujetos a la disponibilidad del salón. Se recomienda a los socios reservar con antelación.", "Nuestras políticas estándar de cancelación y ausencia se aplican a todas las citas de la membresía."] },
-      { "title": "Derechos del salón", "paragraphs": ["El salón se reserva el derecho de suspender o cancelar los privilegios de la membresía por uso indebido de los beneficios, actividad fraudulenta, comportamiento abusivo hacia el personal o los clientes, o incumplimiento de las políticas del salón. Dicha cancelación no da derecho al socio a reembolso, crédito ni exención de las obligaciones de pago pendientes."] },
-      { "title": "Cambios en las políticas", "paragraphs": ["El salón se reserva el derecho de modificar estas políticas en cualquier momento para cumplir con requisitos operativos, legales o comerciales. Cualquier cambio se aplicará conforme a la ley vigente."] }
+      {
+        "title": "Compromiso de un año",
+        "paragraphs": [
+          "Todas las membresías del salón se venden como un compromiso de 12 meses (un año) a partir de la fecha de compra.",
+          "Al inscribirte, celebras un acuerdo de membresía vinculante por todo el plazo de la membresía.",
+          "Los beneficios de la membresía están pensados para usarse durante todo el año y solo están disponibles para el socio inscrito."
+        ]
+      },
+      {
+        "title": "Política de no reembolso",
+        "paragraphs": [
+          "TODAS LAS VENTAS DE MEMBRESÍA SON DEFINITIVAS.",
+          "Una vez formalizado el acuerdo de membresía, el socio es responsable económicamente del compromiso completo de un año.",
+          "Adquirir una membresía constituye tu reconocimiento y aceptación de esta estricta política de no reembolso."
+        ]
+      },
+      {
+        "title": "Pagos de la membresía",
+        "paragraphs": [
+          "El socio es responsable de realizar todos los pagos de la membresía según lo acordado al momento de la inscripción.",
+          "Si la membresía se financia en cuotas mensuales, la obligación de pago se mantiene durante todo el plazo de 12 meses.",
+          "No utilizar los servicios de la membresía no exime al socio de sus obligaciones de pago."
+        ]
+      },
+      {
+        "title": "Membresía intransferible",
+        "paragraphs": [
+          "Las membresías se emiten únicamente al comprador individual y no pueden transferirse, compartirse ni cederse a otra persona, y no tienen valor en efectivo."
+        ]
+      },
+      {
+        "title": "Política de citas",
+        "paragraphs": [
+          "Los servicios de la membresía se prestan únicamente con cita previa y están sujetos a la disponibilidad del salón. Se recomienda a los socios reservar con antelación.",
+          "Nuestras políticas estándar de cancelación y ausencia se aplican a todas las citas de la membresía."
+        ]
+      },
+      {
+        "title": "Derechos del salón",
+        "paragraphs": [
+          "El salón se reserva el derecho de suspender o cancelar los privilegios de la membresía por uso indebido de los beneficios, actividad fraudulenta, comportamiento abusivo hacia el personal o los clientes, o incumplimiento de las políticas del salón. Dicha cancelación no da derecho al socio a reembolso, crédito ni exención de las obligaciones de pago pendientes."
+        ]
+      },
+      {
+        "title": "Cambios en las políticas",
+        "paragraphs": [
+          "El salón se reserva el derecho de modificar estas políticas en cualquier momento para cumplir con requisitos operativos, legales o comerciales. Cualquier cambio se aplicará conforme a la ley vigente."
+        ]
+      }
     ],
     "acknowledgmentTitle": "Reconocimiento",
     "acknowledgmentIntro": "Al marcar la casilla siguiente, reconozco y acepto que:",
@@ -290,13 +461,48 @@
     "title": "Política de privacidad",
     "intro": "En Love You Nail Salon valoramos tu privacidad y nos comprometemos a proteger tu información personal.",
     "sections": [
-      { "title": "Qué información recopilamos", "paragraphs": ["Recopilamos datos personales como tu nombre, número de teléfono y correo electrónico cuando reservas una cita o te pones en contacto con nosotros. Esta información se usa únicamente para gestionar tus citas, enviar confirmaciones y recordatorios (por correo o SMS) y ofrecerte el mejor servicio posible."] },
-      { "title": "Mensajes de texto", "paragraphs": ["Al proporcionar tu número de teléfono, aceptas recibir mensajes SMS sobre tus citas, incluidas confirmaciones, recordatorios y actualizaciones. Puedes darte de baja de los SMS en cualquier momento respondiendo «STOP»."] },
-      { "title": "Compartir datos", "paragraphs": ["No vendemos ni compartimos tu información personal con terceros, salvo lo necesario para operar nuestros sistemas de reservas (como Square y Fresha) o según lo exija la ley."] },
-      { "title": "Seguridad", "paragraphs": ["Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos."] },
-      { "title": "Tus derechos", "paragraphs": ["Tienes derecho a acceder, actualizar o eliminar tu información personal. Para cualquier consulta sobre tus datos, escríbenos a loveyounailsalon@gmail.com."] },
-      { "title": "Actualizaciones de la política", "paragraphs": ["Podemos actualizar esta política de vez en cuando. La versión más reciente siempre estará disponible en nuestro sitio web."] },
-      { "title": "Contacto", "paragraphs": ["Si tienes alguna pregunta sobre esta política, escríbenos a loveyounailsalon@gmail.com."] }
+      {
+        "title": "Qué información recopilamos",
+        "paragraphs": [
+          "Recopilamos datos personales como tu nombre, número de teléfono y correo electrónico cuando reservas una cita o te pones en contacto con nosotros. Esta información se usa únicamente para gestionar tus citas, enviar confirmaciones y recordatorios (por correo o SMS) y ofrecerte el mejor servicio posible."
+        ]
+      },
+      {
+        "title": "Mensajes de texto",
+        "paragraphs": [
+          "Al proporcionar tu número de teléfono, aceptas recibir mensajes SMS sobre tus citas, incluidas confirmaciones, recordatorios y actualizaciones. Puedes darte de baja de los SMS en cualquier momento respondiendo «STOP»."
+        ]
+      },
+      {
+        "title": "Compartir datos",
+        "paragraphs": [
+          "No vendemos ni compartimos tu información personal con terceros, salvo lo necesario para operar nuestros sistemas de reservas (como Square y Fresha) o según lo exija la ley."
+        ]
+      },
+      {
+        "title": "Seguridad",
+        "paragraphs": [
+          "Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos."
+        ]
+      },
+      {
+        "title": "Tus derechos",
+        "paragraphs": [
+          "Tienes derecho a acceder, actualizar o eliminar tu información personal. Para cualquier consulta sobre tus datos, escríbenos a loveyounailsalon@gmail.com."
+        ]
+      },
+      {
+        "title": "Actualizaciones de la política",
+        "paragraphs": [
+          "Podemos actualizar esta política de vez en cuando. La versión más reciente siempre estará disponible en nuestro sitio web."
+        ]
+      },
+      {
+        "title": "Contacto",
+        "paragraphs": [
+          "Si tienes alguna pregunta sobre esta política, escríbenos a loveyounailsalon@gmail.com."
+        ]
+      }
     ]
   },
   "Salon": {
@@ -304,16 +510,88 @@
     "title": "Política del salón",
     "intro": "En Love You nos esforzamos por ofrecer a nuestros clientes un servicio excepcional en un ambiente profesional y acogedor. Para asegurar una buena experiencia para todos, revisa nuestras políticas del salón.",
     "sections": [
-      { "title": "Citas", "paragraphs": ["Reservas: las citas pueden hacerse en línea, por teléfono o en persona. Recomendamos reservar con antelación, especialmente en horas de mayor demanda."] },
-      { "title": "Ausencia, cancelación tardía y cambios", "paragraphs": ["Cancela o reprograma tu cita con al menos 24 horas de antelación para evitar cargos. Las citas canceladas o reprogramadas dentro de las 24 horas se cobrarán al 100%. Si llegas más de 15 minutos tarde, se considerará una ausencia y se cobrará el total de los servicios reservados. Todas las ventas son definitivas."] },
-      { "title": "Pago", "paragraphs": ["Formas de pago aceptadas: tarjetas de crédito/débito y certificados de regalo. El pago se realiza en el momento del servicio.", "Propinas: la propina no está incluida en el precio del servicio. Si disfrutaste tu servicio, una propina para tu técnica es de agradecer.", "Puede requerirse un depósito para ciertos servicios o citas.", "Los precios no son negociables y pueden cambiar sin previo aviso.", "Las tarjetas y vales de regalo deben presentarse en el momento del pago."] },
-      { "title": "Política de reembolsos", "paragraphs": ["Los reembolsos solo se emitirán en forma de crédito en tienda.", "Las solicitudes de reembolso deben realizarse dentro de las 24 horas posteriores al servicio.", "No se realizarán reembolsos por tarjetas de regalo, vales o productos comprados."] },
-      { "title": "Servicios", "paragraphs": ["Consultas: recomendamos una consulta antes de cualquier servicio para conversar sobre tus preferencias y expectativas.", "Garantía de satisfacción: tu satisfacción es nuestra prioridad. Si no quedas satisfecha con tu servicio, avísanos dentro de los 7 días para resolverlo.", "Modificación de servicios: nos reservamos el derecho de modificar los servicios según el estado de tus uñas y tu piel. Tu técnica te dará recomendaciones."] },
-      { "title": "Salud y seguridad", "paragraphs": ["Salud: infórmanos de cualquier alergia, sensibilidad o condición médica antes de tu cita.", "Cumplimos todas las normas locales de salud y seguridad para el bienestar de nuestros clientes y personal."] },
-      { "title": "Niños", "paragraphs": ["Por la comodidad y seguridad de todos nuestros clientes, pedimos que los niños estén supervisados en todo momento. No nos hacemos responsables de accidentes."] },
-      { "title": "Comportamiento", "paragraphs": ["Ambiente respetuoso: mantenemos un ambiente respetuoso y profesional. No se tolerará ningún comportamiento o lenguaje inapropiado y podrá suponer la terminación de los servicios.", "Objetos personales: por favor, guarda tus pertenencias contigo. No nos hacemos responsables de objetos perdidos o robados."] },
-      { "title": "Cambios en las políticas", "paragraphs": ["Nos reservamos el derecho de modificar nuestras políticas en cualquier momento. Cualquier cambio se comunicará a nuestros clientes."] },
-      { "title": "Contacto", "paragraphs": ["Para cualquier pregunta o aclaración sobre nuestras políticas, contacta con tu estudio más cercano o escríbenos a loveyounailsalon@gmail.com. ¡Gracias por elegir Love You Nail Salon, esperamos atenderte!"] }
+      {
+        "title": "Citas",
+        "paragraphs": [
+          "Reservas: las citas pueden hacerse en línea, por teléfono o en persona. Recomendamos reservar con antelación, especialmente en horas de mayor demanda."
+        ]
+      },
+      {
+        "title": "Ausencia, cancelación tardía y cambios",
+        "paragraphs": [
+          "Cancela o reprograma tu cita con al menos 24 horas de antelación para evitar cargos. Las citas canceladas o reprogramadas dentro de las 24 horas se cobrarán al 100%. Si llegas más de 15 minutos tarde, se considerará una ausencia y se cobrará el total de los servicios reservados. Todas las ventas son definitivas."
+        ]
+      },
+      {
+        "title": "Pago",
+        "paragraphs": [
+          "Formas de pago aceptadas: tarjetas de crédito/débito y certificados de regalo. El pago se realiza en el momento del servicio.",
+          "Propinas: la propina no está incluida en el precio del servicio. Si disfrutaste tu servicio, una propina para tu técnica es de agradecer.",
+          "Puede requerirse un depósito para ciertos servicios o citas.",
+          "Los precios no son negociables y pueden cambiar sin previo aviso.",
+          "Las tarjetas y vales de regalo deben presentarse en el momento del pago."
+        ]
+      },
+      {
+        "title": "Política de reembolsos",
+        "paragraphs": [
+          "Los reembolsos solo se emitirán en forma de crédito en tienda.",
+          "Las solicitudes de reembolso deben realizarse dentro de las 24 horas posteriores al servicio.",
+          "No se realizarán reembolsos por tarjetas de regalo, vales o productos comprados."
+        ]
+      },
+      {
+        "title": "Servicios",
+        "paragraphs": [
+          "Consultas: recomendamos una consulta antes de cualquier servicio para conversar sobre tus preferencias y expectativas.",
+          "Garantía de satisfacción: tu satisfacción es nuestra prioridad. Si no quedas satisfecha con tu servicio, avísanos dentro de los 7 días para resolverlo.",
+          "Modificación de servicios: nos reservamos el derecho de modificar los servicios según el estado de tus uñas y tu piel. Tu técnica te dará recomendaciones."
+        ]
+      },
+      {
+        "title": "Salud y seguridad",
+        "paragraphs": [
+          "Salud: infórmanos de cualquier alergia, sensibilidad o condición médica antes de tu cita.",
+          "Cumplimos todas las normas locales de salud y seguridad para el bienestar de nuestros clientes y personal."
+        ]
+      },
+      {
+        "title": "Niños",
+        "paragraphs": [
+          "Por la comodidad y seguridad de todos nuestros clientes, pedimos que los niños estén supervisados en todo momento. No nos hacemos responsables de accidentes."
+        ]
+      },
+      {
+        "title": "Comportamiento",
+        "paragraphs": [
+          "Ambiente respetuoso: mantenemos un ambiente respetuoso y profesional. No se tolerará ningún comportamiento o lenguaje inapropiado y podrá suponer la terminación de los servicios.",
+          "Objetos personales: por favor, guarda tus pertenencias contigo. No nos hacemos responsables de objetos perdidos o robados."
+        ]
+      },
+      {
+        "title": "Cambios en las políticas",
+        "paragraphs": [
+          "Nos reservamos el derecho de modificar nuestras políticas en cualquier momento. Cualquier cambio se comunicará a nuestros clientes."
+        ]
+      },
+      {
+        "title": "Contacto",
+        "paragraphs": [
+          "Para cualquier pregunta o aclaración sobre nuestras políticas, contacta con tu estudio más cercano o escríbenos a loveyounailsalon@gmail.com. ¡Gracias por elegir Love You Nail Salon, esperamos atenderte!"
+        ]
+      },
+      {
+        "title": "Derecho de admisión",
+        "paragraphs": [
+          "Nos reservamos el derecho de rechazar el servicio a cualquier persona que se encuentre bajo los efectos del alcohol o las drogas, se comporte de forma agresiva o inapropiada, o cree condiciones inseguras para nuestro personal u otros clientes."
+        ]
+      },
+      {
+        "title": "Reservas de grupo y depósito",
+        "paragraphs": [
+          "Para grupos de 3 o más personas, requerimos un depósito equivalente al 50% del total de todos los servicios, o al precio de varios servicios. Cuál de estas políticas se aplica se decide de forma individual en cada caso. El depósito se descuenta del total final una vez completados los servicios."
+        ]
+      }
     ]
   }
 }

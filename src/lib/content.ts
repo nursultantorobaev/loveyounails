@@ -146,4 +146,19 @@ export const REVIEWS: Review[] = [
     quote:
       "Every visit feels like a little escape from my busy schedule. The technicians are always gentle and professional, and I leave not only with perfect nails but also in a wonderful mood.",
   },
+  {
+    name: "Marcus J.",
+    quote:
+      "Booked my first-ever manicure here and I'm hooked — spotless studio, a genuinely skilled team, and my nails have never looked sharper. I'll be back.",
+  },
+  {
+    name: "Mei L.",
+    quote:
+      "The precision is unreal. My gel lasted almost a month without a single chip. Easily the best work I've had in the city.",
+  },
+  {
+    name: "Aaliyah W.",
+    quote:
+      "From the welcome to the final result, everything felt calm and premium. The team made me feel completely at home.",
+  },
 ];

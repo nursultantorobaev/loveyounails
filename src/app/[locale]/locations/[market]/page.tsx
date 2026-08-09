@@ -80,6 +80,14 @@ export default async function MarketPage({ params }: MarketParams) {
             </span>
           </p>
         )}
+        {m.email && (
+          <a
+            href={`mailto:${m.email}`}
+            className="mt-2 inline-block text-sm text-gold-dark transition-colors hover:text-espresso"
+          >
+            {m.email}
+          </a>
+        )}
         {!m.comingSoon && (
           <div className="mt-8 space-y-5">
             {(m.membership?.gold || m.membership?.diamond) && (

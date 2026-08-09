@@ -56,6 +56,9 @@ function About() {
             <p>{t("p1")}</p>
             <p>{t("p2")}</p>
           </div>
+          <p className="mt-6 border-l-2 border-gold pl-4 font-display text-xl italic leading-snug text-espresso">
+            {t("inclusive")}
+          </p>
         </Reveal>
         <Reveal className="order-1 md:order-2" delay={100}>
           <ParallaxImage

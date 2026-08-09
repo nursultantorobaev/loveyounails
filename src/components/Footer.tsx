@@ -18,12 +18,6 @@ export default function Footer() {
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/60">
               {t("brandDesc")}
             </p>
-            <a
-              href="mailto:loveyounailsalon@gmail.com"
-              className="mt-4 inline-block text-sm text-gold transition-colors hover:text-cream"
-            >
-              loveyounailsalon@gmail.com
-            </a>
           </div>
 
           {/* Explore */}
