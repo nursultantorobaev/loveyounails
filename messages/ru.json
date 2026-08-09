@@ -197,7 +197,11 @@
     "openingSoonBody": "Мы открываем Love You Nail Salon в городе {city}. Загляните чуть позже — или посмотрите другие наши студии.",
     "viewOther": "Другие локации",
     "memberships": "Абонементы",
-    "giftCard": "Подарочная карта"
+    "giftCard": "Подарочная карта",
+    "contact": "Контакты",
+    "booking": "Запись",
+    "email": "Эл. почта",
+    "giftAndSocial": "Подарочная карта и соцсети"
   },
   "SalonCard": {
     "workingHours": "Часы работы",

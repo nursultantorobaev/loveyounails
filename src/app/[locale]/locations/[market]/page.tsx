@@ -70,89 +70,115 @@ export default async function MarketPage({ params }: MarketParams) {
         </div>
       </div>
 
-      {/* Intro */}
-      <header className="mt-8 max-w-2xl">
+      {/* Intro + contact */}
+      <header className="mt-8 max-w-3xl">
         <p className="text-brown leading-relaxed">{tm(`taglines.${m.slug}`)}</p>
+
         {!m.comingSoon && (
-          <p className="mt-4 text-sm text-brown-soft">
-            <span className="text-espresso">
-              {t("bookingThrough", { system: bookingLabel[m.bookingSystem] })}
-            </span>
-          </p>
-        )}
-        {m.email && (
-          <a
-            href={`mailto:${m.email}`}
-            className="mt-2 inline-block text-sm text-gold-dark transition-colors hover:text-espresso"
-          >
-            {m.email}
-          </a>
-        )}
-        {!m.comingSoon && (
-          <div className="mt-8 space-y-5">
+          <div className="mt-10 space-y-9">
+            {/* Contact & booking */}
+            <section>
+              <SectionLabel>{t("contact")}</SectionLabel>
+              <dl className="mt-4 grid gap-6 sm:grid-cols-2">
+                <div>
+                  <dt className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-brown-soft">
+                    {t("booking")}
+                  </dt>
+                  <dd className="mt-1 text-espresso">
+                    {bookingLabel[m.bookingSystem]}
+                  </dd>
+                </div>
+                {m.email && (
+                  <div>
+                    <dt className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-brown-soft">
+                      {t("email")}
+                    </dt>
+                    <dd className="mt-1">
+                      <a
+                        href={`mailto:${m.email}`}
+                        className="break-all text-espresso transition-colors hover:text-gold-dark"
+                      >
+                        {m.email}
+                      </a>
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </section>
+
+            {/* Memberships */}
             {(m.membership?.gold || m.membership?.diamond) && (
-              <MembershipJoin
-                heading={t("memberships")}
-                options={
-                  [
-                    m.membership?.gold && {
-                      key: "gold",
-                      label: "Gold",
-                      cityName: m.name,
-                      tierName: "Gold",
-                      url: m.membership.gold,
-                    },
-                    m.membership?.diamond && {
-                      key: "diamond",
-                      label: "Diamond",
-                      cityName: m.name,
-                      tierName: "Diamond",
-                      url: m.membership.diamond,
-                    },
-                  ].filter(Boolean) as JoinOption[]
-                }
-              />
+              <section>
+                <MembershipJoin
+                  heading={t("memberships")}
+                  options={
+                    [
+                      m.membership?.gold && {
+                        key: "gold",
+                        label: "Gold",
+                        cityName: m.name,
+                        tierName: "Gold",
+                        url: m.membership.gold,
+                      },
+                      m.membership?.diamond && {
+                        key: "diamond",
+                        label: "Diamond",
+                        cityName: m.name,
+                        tierName: "Diamond",
+                        url: m.membership.diamond,
+                      },
+                    ].filter(Boolean) as JoinOption[]
+                  }
+                />
+              </section>
             )}
-            <div className="flex flex-wrap gap-3">
-              {m.giftCardUrl && (
-                <a
-                  href={m.giftCardUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full bg-espresso px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
-                >
-                  {t("giftCard")}
-                </a>
-              )}
-              {m.instagram && (
-                <a
-                  href={m.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
-                >
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                  </svg>
-                  @{m.instagram.replace(/\/+$/, "").split("/").pop()}
-                </a>
-              )}
-              {m.tiktok && (
-                <a
-                  href={m.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
-                >
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-                    <path d="M16.5 3c.3 2.1 1.6 3.6 3.5 3.9v2.5c-1.3.1-2.5-.3-3.5-1v5.9c0 3.3-2.4 5.7-5.5 5.7A5.4 5.4 0 0 1 5.5 14c0-3 2.3-5.4 5.5-5.4.3 0 .6 0 .9.1v2.6a2.9 2.9 0 0 0-1-.2 2.8 2.8 0 0 0 0 5.6c1.6 0 2.7-1.2 2.7-2.9V3h2.9z" />
-                  </svg>
-                  TikTok
-                </a>
-              )}
-            </div>
+
+            {/* Gift card & social */}
+            {(m.giftCardUrl || m.instagram || m.tiktok) && (
+              <section>
+                <SectionLabel>{t("giftAndSocial")}</SectionLabel>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {m.giftCardUrl && (
+                    <a
+                      href={m.giftCardUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-full bg-espresso px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-cream transition-colors hover:bg-gold-dark"
+                    >
+                      {t("giftCard")}
+                    </a>
+                  )}
+                  {m.instagram && (
+                    <a
+                      href={m.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" />
+                        <circle cx="12" cy="12" r="4" />
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                      </svg>
+                      @{m.instagram.replace(/\/+$/, "").split("/").pop()}
+                    </a>
+                  )}
+                  {m.tiktok && (
+                    <a
+                      href={m.tiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-espresso/25 px-5 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.14em] text-espresso transition-colors hover:border-gold-dark hover:text-gold-dark"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                        <path d="M16.5 3c.3 2.1 1.6 3.6 3.5 3.9v2.5c-1.3.1-2.5-.3-3.5-1v5.9c0 3.3-2.4 5.7-5.5 5.7A5.4 5.4 0 0 1 5.5 14c0-3 2.3-5.4 5.5-5.4.3 0 .6 0 .9.1v2.6a2.9 2.9 0 0 0-1-.2 2.8 2.8 0 0 0 0 5.6c1.6 0 2.7-1.2 2.7-2.9V3h2.9z" />
+                      </svg>
+                      TikTok
+                    </a>
+                  )}
+                </div>
+              </section>
+            )}
           </div>
         )}
       </header>
@@ -183,5 +209,13 @@ export default async function MarketPage({ params }: MarketParams) {
       <InstagramFeed feedId={m.beholdFeedId} profileUrl={m.instagram} />
     )}
     </>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-gold-dark">
+      {children}
+    </p>
   );
 }

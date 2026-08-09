@@ -197,7 +197,11 @@
     "openingSoonBody": "We're bringing Love You Nail Salon to {city}. Check back shortly — or explore our other studios in the meantime.",
     "viewOther": "View Other Locations",
     "memberships": "Memberships",
-    "giftCard": "Gift Card"
+    "giftCard": "Gift Card",
+    "contact": "Contact",
+    "booking": "Booking",
+    "email": "Email",
+    "giftAndSocial": "Gift Card & Social"
   },
   "SalonCard": {
     "workingHours": "Working Hours",
