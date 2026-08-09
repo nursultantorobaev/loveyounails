@@ -139,8 +139,10 @@ export const REVIEWS: Review[] = [
       "The precision is unreal. My gel lasted almost a month without a single chip. Easily the best work I've had in the city.",
   },
   {
-    name: "Aaliyah W.",
+    // Real Google review — Lake View, Chicago (Local Guide).
+    // TODO: add avatar "/media/reviews/dajsha.jpg" once the client sends her photo.
+    name: "Dajsha Byrd",
     quote:
-      "From the welcome to the final result, everything felt calm and premium. The team made me feel completely at home.",
+      "This was my first time getting a Russian manicure, and Anna was absolutely amazing. She was incredibly neat and paid attention to every detail — and fast, too. The customer service was immaculate, right down to a free coffee and making sure I was set for my next appointment. I'll definitely be back soon!",
   },
 ];
