@@ -157,7 +157,7 @@ export const MARKETS: Market[] = [
     slug: "santa-monica",
     name: "Santa Monica",
     state: "California",
-    bookingSystem: "fresha",
+    bookingSystem: "square",
     tagline: "Our California home, steps from 3rd Street Promenade.",
     email: "lynailsalonsantamonica@gmail.com",
     instagram: "https://www.instagram.com/loveyou_santamonica/",
@@ -180,7 +180,7 @@ export const MARKETS: Market[] = [
         phones: ["+1 424-508-5044"],
         hours: SANTA_MONICA_HOURS,
         bookingUrl:
-          "https://www.fresha.com/a/love-you-nail-salon-santa-monica-1422-2nd-street-l6llnycz",
+          "https://book.squareup.com/appointments/kbamfopputrxms/location/LSCP032C4B8VV/services",
       },
     ],
   },
