@@ -180,7 +180,7 @@ export const MARKETS: Market[] = [
         phones: ["+1 424-508-5044"],
         hours: SANTA_MONICA_HOURS,
         bookingUrl:
-          "https://book.squareup.com/appointments/kbamfopputrxms/location/LSCP032C4B8VV/services",
+          "https://app.squareup.com/appointments/book/ye75ckcte0n71r/LRAPJ8PSM2R3R/start",
       },
     ],
   },
