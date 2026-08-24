@@ -164,7 +164,7 @@ export const MARKETS: Market[] = [
     beholdFeedId: "ZLHTmMwoF1FoS3CWpbgt",
     tiktok: "https://www.tiktok.com/@loveyou_santamonica",
     // Santa Monica sells memberships & gift cards through Fresha (not Square).
-    giftCardUrl: "https://www.fresha.com/en/buy-fresha-gift-card",
+    giftCardUrl: "https://app.squareup.com/gift/ML4BDQ9E5R0NB/order",
     membership: {
       gold: "https://www.fresha.com/en/a/love-you-nail-salon-santa-monica-1422-2nd-street-l6llnycz/paid-plans/details?menu=true&pId=3026442&routeCtx=en&selected=3285910&share=true&skipFirstStep=true",
       diamond: "https://www.fresha.com/en/a/love-you-nail-salon-santa-monica-1422-2nd-street-l6llnycz/paid-plans/details?menu=true&pId=3026442&routeCtx=en&selected=3285911&share=true&skipFirstStep=true",
