@@ -594,5 +594,116 @@
         ]
       }
     ]
+  },
+  "Faq": {
+    "heading": "Preguntas frecuentes",
+    "markets": {
+      "chicago": [
+        {
+          "q": "¿Aceptan clientes sin cita?",
+          "a": "Sí. Aceptamos clientes sin cita siempre que haya una técnica disponible. Para asegurar tu horario, reserva en línea con anticipación."
+        },
+        {
+          "q": "¿Qué es una manicura rusa?",
+          "a": "Es una manicura en seco realizada con torno profesional (e-file), sin remojo. El trabajo de cutícula es preciso e indoloro, y una capa de gel fortalecedor protege la uña natural. Suele durar 3–4+ semanas sin astillarse. Los precios comienzan en $90 e incluyen la remoción de gel; el precio final depende del largo de las uñas."
+        },
+        {
+          "q": "¿Qué pasa si una uña se astilla o se levanta después de mi cita?",
+          "a": "Si una uña se astilla o se levanta dentro de los 7 días posteriores a tu cita, la reparamos sin costo. Solo contáctanos para agendar el arreglo."
+        },
+        {
+          "q": "¿Cuál es su política de cancelación?",
+          "a": "Por favor avísanos con al menos 24 horas de anticipación si necesitas cancelar o reprogramar, para poder ofrecer ese horario a otro cliente."
+        },
+        {
+          "q": "¿Qué ubicaciones tienen en Chicago?",
+          "a": "Tenemos cinco estudios en Chicago: West Loop (118 N Halsted St), Lake View (2829 N Clark St), Wicker Park (1843 W North Ave), River North (353 W Chicago Ave) y Downtown (180 N Jefferson St). Elige el más cercano al reservar."
+        },
+        {
+          "q": "¿Ofrecen servicios para niños?",
+          "a": "Sí. Los niños de cualquier edad son bienvenidos acompañados de un padre o tutor, y ofrecemos Kids Mani & Pedi desde $60."
+        },
+        {
+          "q": "¿Ofrecen extensiones de gel?",
+          "a": "Sí. Las extensiones de gel comienzan en $180 para agregar largo o reconstruir una uña, y la remoción de gel cuesta $20."
+        },
+        {
+          "q": "¿Tienen tarjetas de regalo y membresías?",
+          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio. Una membresía de Chicago es válida en nuestros estudios de Chicago."
+        }
+      ],
+      "new-york": [
+        {
+          "q": "¿Aceptan clientes sin cita?",
+          "a": "Sí. Aceptamos clientes sin cita siempre que haya una técnica disponible. Para asegurar tu horario, reserva en línea con anticipación."
+        },
+        {
+          "q": "¿Qué es una manicura rusa?",
+          "a": "Es una manicura en seco realizada con torno profesional (e-file), sin remojo. El trabajo de cutícula es preciso e indoloro, y una capa de gel fortalecedor protege la uña natural. Suele durar 3–4+ semanas sin astillarse. Los precios comienzan en $90 e incluyen la remoción de gel; el precio final depende del largo de las uñas."
+        },
+        {
+          "q": "¿Hacen pestañas y cejas además de uñas?",
+          "a": "Sí. Ofrecemos extensiones de pestañas clásicas desde $89, híbridas y de volumen desde $99, laminado de pestañas desde $85, laminado de cejas desde $85, y diseño y tinte de cejas desde $50."
+        },
+        {
+          "q": "¿Qué pasa si una uña se astilla o se levanta después de mi cita?",
+          "a": "Si una uña se astilla o se levanta dentro de los 7 días posteriores a tu cita, la reparamos sin costo. Solo contáctanos para agendar el arreglo."
+        },
+        {
+          "q": "¿Cuál es su política de cancelación?",
+          "a": "Por favor avísanos con al menos 24 horas de anticipación si necesitas cancelar o reprogramar, para poder ofrecer ese horario a otro cliente."
+        },
+        {
+          "q": "¿Ofrecen servicios para niños?",
+          "a": "Sí. Los niños de cualquier edad son bienvenidos acompañados de un padre o tutor."
+        },
+        {
+          "q": "¿Dónde puedo estacionar?",
+          "a": "Estamos en 148 W 37th St en Manhattan. El estacionamiento en la calle es muy limitado; hay varios estacionamientos de pago a poca distancia."
+        },
+        {
+          "q": "¿Tienen tarjetas de regalo y membresías?",
+          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio. Una membresía de New York es válida en nuestro estudio de New York."
+        }
+      ],
+      "santa-monica": [
+        {
+          "q": "¿Aceptan clientes sin cita?",
+          "a": "Sí. Aceptamos clientes sin cita siempre que haya una técnica disponible. Para asegurar tu horario, reserva en línea con anticipación."
+        },
+        {
+          "q": "¿Qué es una manicura rusa?",
+          "a": "Es una manicura en seco realizada con torno profesional (e-file), sin remojo. El trabajo de cutícula es preciso e indoloro, y una capa de gel fortalecedor protege la uña natural. Suele durar 3–4+ semanas sin astillarse. Los precios comienzan en $80 e incluyen la remoción de gel; el precio final depende del largo de las uñas."
+        },
+        {
+          "q": "¿Ofrecen extensiones de gel o Gel X?",
+          "a": "Sí. Las extensiones de gel y Gel X comienzan en $130 para agregar largo o reconstruir una uña, y la remoción de gel cuesta $20."
+        },
+        {
+          "q": "¿Qué pasa si una uña se astilla o se levanta después de mi cita?",
+          "a": "Si una uña se astilla o se levanta dentro de los 7 días posteriores a tu cita, la reparamos sin costo. Solo contáctanos para agendar el arreglo."
+        },
+        {
+          "q": "¿Cuál es su política de cancelación?",
+          "a": "Por favor avísanos con al menos 24 horas de anticipación si necesitas cancelar o reprogramar, para poder ofrecer ese horario a otro cliente."
+        },
+        {
+          "q": "¿Hacen pestañas y cejas además de uñas?",
+          "a": "Sí. Ofrecemos extensiones de pestañas clásicas, híbridas y de volumen desde $120, laminado de pestañas desde $60, laminado de cejas desde $99, y diseño y tinte de cejas desde $40."
+        },
+        {
+          "q": "¿Ofrecen servicios para niños?",
+          "a": "Sí. Los niños de cualquier edad son bienvenidos acompañados de un padre o tutor."
+        },
+        {
+          "q": "¿Dónde puedo estacionar?",
+          "a": "No hay estacionamiento gratuito en el estudio. La opción más cercana es el estacionamiento público de Santa Monica por alrededor de $1 por hora, a poca distancia de 1422 2nd Street."
+        },
+        {
+          "q": "¿Tienen tarjetas de regalo, membresías u oferta de primera visita?",
+          "a": "Sí a las tres. Hay tarjetas de regalo, nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio (una membresía de Santa Monica es válida en nuestro estudio de Santa Monica), y los clientes nuevos reciben 20% de descuento en su primera visita."
+        }
+      ]
+    }
   }
 }

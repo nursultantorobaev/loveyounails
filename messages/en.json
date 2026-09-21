@@ -594,5 +594,116 @@
         ]
       }
     ]
+  },
+  "Faq": {
+    "heading": "Frequently asked questions",
+    "markets": {
+      "chicago": [
+        {
+          "q": "Do you accept walk-ins?",
+          "a": "Yes. Walk-ins are welcome whenever a technician is free. To guarantee your time, book online in advance."
+        },
+        {
+          "q": "What is a Russian manicure?",
+          "a": "A dry manicure done with a professional e-file instead of soaking. The cuticle work is precise and painless, and a strengthening gel layer protects the natural nail. It typically wears 3–4+ weeks without chipping. Prices start at $90 and include gel removal; the final price depends on nail length."
+        },
+        {
+          "q": "What if a nail chips or lifts after my appointment?",
+          "a": "If a nail chips or lifts within 7 days of your appointment, we repair it free of charge. Just contact us to book the fix."
+        },
+        {
+          "q": "What is your cancellation policy?",
+          "a": "Please give at least 24 hours' notice if you need to cancel or reschedule, so we can offer the time to another client."
+        },
+        {
+          "q": "Which Chicago locations do you have?",
+          "a": "We have five Chicago studios: West Loop (118 N Halsted St), Lake View (2829 N Clark St), Wicker Park (1843 W North Ave), River North (353 W Chicago Ave) and Downtown (180 N Jefferson St). Choose the studio nearest you when you book."
+        },
+        {
+          "q": "Do you offer services for children?",
+          "a": "Yes. Children of any age are welcome when accompanied by a parent or guardian, and we offer a Kids Mani & Pedi from $60."
+        },
+        {
+          "q": "Do you offer gel extensions?",
+          "a": "Yes. Gel Extensions start at $180 to add length or rebuild a nail, and Gel Removal is $20."
+        },
+        {
+          "q": "Do you have gift cards and memberships?",
+          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service. A Chicago membership is valid at our Chicago studios."
+        }
+      ],
+      "new-york": [
+        {
+          "q": "Do you accept walk-ins?",
+          "a": "Yes. Walk-ins are welcome whenever a technician is free. To guarantee your time, book online in advance."
+        },
+        {
+          "q": "What is a Russian manicure?",
+          "a": "A dry manicure done with a professional e-file instead of soaking. The cuticle work is precise and painless, and a strengthening gel layer protects the natural nail. It typically wears 3–4+ weeks without chipping. Prices start at $90 and include gel removal; the final price depends on nail length."
+        },
+        {
+          "q": "Do you do lashes and brows as well as nails?",
+          "a": "Yes. We offer classic lash extensions from $89, hybrid and volume from $99, lash lamination from $85, brow lamination from $85, and brow shaping and tinting from $50."
+        },
+        {
+          "q": "What if a nail chips or lifts after my appointment?",
+          "a": "If a nail chips or lifts within 7 days of your appointment, we repair it free of charge. Just contact us to book the fix."
+        },
+        {
+          "q": "What is your cancellation policy?",
+          "a": "Please give at least 24 hours' notice if you need to cancel or reschedule, so we can offer the time to another client."
+        },
+        {
+          "q": "Do you offer services for children?",
+          "a": "Yes. Children of any age are welcome when accompanied by a parent or guardian."
+        },
+        {
+          "q": "Where do I park?",
+          "a": "We're at 148 W 37th St in Manhattan. Street parking is very limited; several paid parking garages are within a short walk."
+        },
+        {
+          "q": "Do you have gift cards and memberships?",
+          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service. A New York membership is valid at our New York studio."
+        }
+      ],
+      "santa-monica": [
+        {
+          "q": "Do you accept walk-ins?",
+          "a": "Yes. Walk-ins are welcome whenever a technician is free. To guarantee your time, book online in advance."
+        },
+        {
+          "q": "What is a Russian manicure?",
+          "a": "A dry manicure done with a professional e-file instead of soaking. The cuticle work is precise and painless, and a strengthening gel layer protects the natural nail. It typically wears 3–4+ weeks without chipping. Prices start at $80 and include gel removal; the final price depends on nail length."
+        },
+        {
+          "q": "Do you offer gel extensions or Gel X?",
+          "a": "Yes. Gel Extensions and Gel X start at $130 to add length or rebuild a nail, and Gel Removal is $20."
+        },
+        {
+          "q": "What if a nail chips or lifts after my appointment?",
+          "a": "If a nail chips or lifts within 7 days of your appointment, we repair it free of charge. Just contact us to book the fix."
+        },
+        {
+          "q": "What is your cancellation policy?",
+          "a": "Please give at least 24 hours' notice if you need to cancel or reschedule, so we can offer the time to another client."
+        },
+        {
+          "q": "Do you do lashes and brows as well as nails?",
+          "a": "Yes. We offer classic, hybrid and volume lash extensions from $120, lash lamination from $60, brow lamination from $99, and brow shaping and tinting from $40."
+        },
+        {
+          "q": "Do you offer services for children?",
+          "a": "Yes. Children of any age are welcome when accompanied by a parent or guardian."
+        },
+        {
+          "q": "Where do I park?",
+          "a": "There is no free parking at the studio. The nearest option is Santa Monica public parking at about $1 per hour, a short walk from 1422 2nd Street."
+        },
+        {
+          "q": "Do you have gift cards, memberships or a first-visit offer?",
+          "a": "Yes to all three. Gift cards are available, our Gold and Diamond memberships give 10% and 15% off every service (a Santa Monica membership is valid at our Santa Monica studio), and first-time clients receive 20% off their first visit."
+        }
+      ]
+    }
   }
 }

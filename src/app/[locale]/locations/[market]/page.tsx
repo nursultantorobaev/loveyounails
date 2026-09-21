@@ -6,6 +6,7 @@ import SalonCard from "@/components/SalonCard";
 import CityPhoto from "@/components/CityPhoto";
 import MembershipJoin, { type JoinOption } from "@/components/MembershipJoin";
 import InstagramFeed from "@/components/InstagramFeed";
+import Faq from "@/components/Faq";
 import { MARKETS, getMarket } from "@/lib/locations";
 
 type MarketParams = { params: Promise<{ locale: string; market: string }> };
@@ -204,6 +205,8 @@ export default async function MarketPage({ params }: MarketParams) {
           ))}
         </div>
       )}
+
+      {!m.comingSoon && <Faq market={m.slug} />}
     </div>
     {!m.comingSoon && (
       <InstagramFeed feedId={m.beholdFeedId} profileUrl={m.instagram} />
