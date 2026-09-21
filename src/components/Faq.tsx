@@ -3,10 +3,11 @@ import { getTranslations } from "next-intl/server";
 type FaqItem = { q: string; a: string };
 
 /**
- * Per-market FAQ for a location page. Content lives in messages/*.json under
- * `Faq.markets.<market-slug>` (translated per locale). Renders the visible Q&A
- * plus FAQPage JSON-LD (server-rendered so crawlers and AI assistants read it).
- * Returns null when the market has no FAQ configured.
+ * Per-market FAQ for a location page, as an accordion (click a question to
+ * expand/collapse). Uses native <details>/<summary> so it works without client
+ * JS and keeps every answer in the DOM (good for the FAQPage JSON-LD, crawlers
+ * and AI assistants). Content lives in messages/*.json under
+ * `Faq.markets.<market-slug>` (translated per locale). Null when no FAQ.
  */
 export default async function Faq({ market }: { market: string }) {
   const t = await getTranslations("Faq");
@@ -28,14 +29,26 @@ export default async function Faq({ market }: { market: string }) {
       <h2 className="font-display text-3xl uppercase leading-tight text-espresso md:text-4xl">
         {t("heading")}
       </h2>
-      <dl className="mt-8 divide-y divide-sand">
+      <div className="mt-8 border-t border-sand">
         {items.map((it, i) => (
-          <div key={i} className="py-5">
-            <dt className="font-medium text-espresso">{it.q}</dt>
-            <dd className="mt-2 text-brown leading-relaxed">{it.a}</dd>
-          </div>
+          <details key={i} className="group border-b border-sand">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-medium text-espresso transition-colors hover:text-gold-dark [&::-webkit-details-marker]:hidden">
+              <span>{it.q}</span>
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 flex-shrink-0 text-brown-soft transition-transform duration-200 group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </summary>
+            <p className="pb-5 pr-8 text-brown leading-relaxed">{it.a}</p>
+          </details>
         ))}
-      </dl>
+      </div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
