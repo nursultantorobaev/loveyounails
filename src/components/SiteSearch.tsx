@@ -168,7 +168,9 @@ export default function SiteSearch() {
                       type="button"
                       role="option"
                       aria-selected={i === active}
-                      onMouseEnter={() => setActive(i)}
+                      // mousemove, not mouseenter: a resting pointer that results appear
+                      // under must not steal the selection from the top match.
+                      onMouseMove={() => { if (i !== active) setActive(i); }}
                       onClick={() => go(r)}
                       className={`block w-full rounded-2xl px-4 py-2.5 text-left transition-colors ${i === active ? "bg-ivory" : ""}`}
                     >
