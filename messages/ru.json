@@ -718,17 +718,18 @@
     }
   },
   "Promo": {
-    "bar": "Новым клиентам: −20% на первый визит в студиях New York и Chicago Downtown",
+    "bar": "Новым клиентам: −20% на первый визит в студиях New York, Chicago Downtown и Santa Monica",
     "details": "Подробнее",
     "eyebrow": "Новым клиентам",
     "headline": "−20%",
     "subhead": "на первый визит",
-    "body": "Добро пожаловать в Love You Nail Salon. Скидка 20% на первый визит в наших студиях в Нью-Йорке (Манхэттен) и Чикаго Downtown (Jefferson St).",
+    "body": "Добро пожаловать в Love You Nail Salon. Скидка 20% на первый визит в наших студиях в Нью-Йорке (Манхэттен), Чикаго Downtown (Jefferson St) и Санта-Монике (2nd Street).",
     "book": {
       "new-york_manhattan": "Записаться в Нью-Йорке",
-      "chicago_downtown": "Записаться в Chicago Downtown"
+      "chicago_downtown": "Записаться в Chicago Downtown",
+      "santa-monica_2nd-street": "Записаться в Санта-Монике"
     },
-    "terms": "Только для новых клиентов. Действует в двух студиях выше.",
+    "terms": "Только для новых клиентов. Действует в трёх студиях выше.",
     "close": "Закрыть"
   },
   "GiftCards": {
