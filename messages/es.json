@@ -823,5 +823,21 @@
     "title": "Celebren juntas",
     "body": "Cumpleaños, despedidas, días de chicas y eventos corporativos: coordinamos a todo el grupo, con bebidas de cortesía. 10% de descuento para grupos de 4+ en West Loop, Chicago.",
     "cta": "Planear visita en grupo"
+  },
+  "Search": {
+    "open": "Buscar",
+    "placeholder": "Busca servicios, estudios, preguntas…",
+    "close": "Cerrar",
+    "suggested": "Populares",
+    "noResults": "No encontramos nada para «{query}». Prueba otra palabra, por ejemplo: gel, estacionamiento, tarjeta regalo.",
+    "hint": "Tip: presiona / para buscar desde cualquier página · ↑ ↓ para moverte · Enter para abrir · Esc para cerrar",
+    "groups": {
+      "pages": "Páginas",
+      "locations": "Ubicaciones",
+      "services": "Servicios y membresías",
+      "faq": "Preguntas",
+      "shop": "Tienda",
+      "policies": "Políticas"
+    }
   }
 }

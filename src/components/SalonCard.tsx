@@ -32,7 +32,7 @@ export default function SalonCard({ salon }: { salon: Salon }) {
   const hourRows = groupHours(salon.hours);
 
   return (
-    <article className="grid gap-8 rounded-3xl border border-sand bg-cream p-7 md:grid-cols-[1fr_auto] md:p-9">
+    <article id={salon.slug} className="scroll-mt-28 grid gap-8 rounded-3xl border border-sand bg-cream p-7 md:grid-cols-[1fr_auto] md:p-9">
       <div>
         <h3 className="text-3xl text-espresso">{salon.name}</h3>
 

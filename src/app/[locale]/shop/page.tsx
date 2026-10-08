@@ -49,7 +49,8 @@ function ShopContent() {
           return (
             <article
               key={p.slug}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-sand bg-cream"
+              id={p.slug}
+              className="scroll-mt-28 group flex flex-col overflow-hidden rounded-3xl border border-sand bg-cream"
             >
               <div className="relative">
                 <ProductImage kind={p.kind} className="aspect-square w-full" />

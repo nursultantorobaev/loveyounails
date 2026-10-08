@@ -37,6 +37,13 @@ export default function Promo() {
   const [open, setOpen] = useState(false);
   const salons = promoSalons();
 
+  // Search results can open the popup directly.
+  useEffect(() => {
+    const show = () => setOpen(true);
+    window.addEventListener("lyn:open-promo", show);
+    return () => window.removeEventListener("lyn:open-promo", show);
+  }, []);
+
   useEffect(() => {
     if (!PROMO.enabled || recentlyClosed()) return;
     const timer = setTimeout(() => setOpen(true), OPEN_DELAY_MS);

@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BrandIntro from "@/components/BrandIntro";
 import Promo from "@/components/Promo";
+import SiteSearch from "@/components/SiteSearch";
 
 // Match the original Love You sites: Cormorant (display) + Manrope (body/nav).
 const cormorant = Cormorant({
@@ -80,6 +81,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <BrandIntro />
           <Promo />
+          <SiteSearch />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

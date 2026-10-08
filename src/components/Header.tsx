@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Wordmark from "./Wordmark";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { SearchButton } from "./SiteSearch";
 
 const NAV = [
   { key: "about", href: "/#about" },
@@ -38,6 +39,7 @@ export default function Header() {
           {NAV.slice(3).map((item) => (
             <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
+          <SearchButton className="-mx-2" />
           <Link
             href="/locations"
             className="rounded-full bg-espresso px-5 py-2.5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-cream transition-colors hover:bg-gold-dark"
@@ -47,7 +49,9 @@ export default function Header() {
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile: search + menu toggle */}
+        <div className="flex items-center lg:hidden">
+        <SearchButton />
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -73,6 +77,7 @@ export default function Header() {
             />
           </span>
         </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
