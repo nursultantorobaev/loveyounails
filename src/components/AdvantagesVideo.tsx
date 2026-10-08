@@ -2,13 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
+// Sterility leads (client request) and opens the full sterilization page when tapped.
 const WORDS = [
+  { key: "sterility", src: "/media/sterilization/sterilization.mp4", href: "/sterilization" },
   { key: "accuracy", src: "/media/advantages/adv1.mp4" },
   { key: "palette", src: "/media/advantages/adv2.mp4" },
   { key: "technique", src: "/media/advantages/adv3.mp4" },
   { key: "details", src: "/media/advantages/adv4.mp4" },
-  { key: "sterility", src: "/media/advantages/adv5.mp4" },
   { key: "manicure", src: "/media/advantages/adv6.mp4" },
 ] as const;
 
@@ -92,23 +94,40 @@ export default function AdvantagesVideo() {
           {t("title")}
         </h2>
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-          {WORDS.map((w, i) => (
-            <button
-              key={w.key}
-              type="button"
-              onMouseEnter={() => setActive(i)}
-              onFocus={() => setActive(i)}
-              onClick={() => setActive(i)}
-              className={`font-display text-2xl uppercase tracking-wide transition-colors duration-300 md:text-3xl ${
-                i === active
-                  ? "text-gold"
-                  : "text-cream/55 hover:text-cream"
-              }`}
-            >
-              {t(`words.${w.key}`)}
-            </button>
-          ))}
+          {WORDS.map((w, i) => {
+            const cls = `font-display text-2xl uppercase tracking-wide transition-colors duration-300 md:text-3xl ${
+              i === active ? "text-gold" : "text-cream/55 hover:text-cream"
+            }`;
+            return "href" in w ? (
+              <Link
+                key={w.key}
+                href={w.href}
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                className={`${cls} underline decoration-gold/60 decoration-1 underline-offset-8`}
+              >
+                {t(`words.${w.key}`)}
+              </Link>
+            ) : (
+              <button
+                key={w.key}
+                type="button"
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                onClick={() => setActive(i)}
+                className={cls}
+              >
+                {t(`words.${w.key}`)}
+              </button>
+            );
+          })}
         </div>
+        <Link
+          href="/sterilization"
+          className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-cream/50 px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cream backdrop-blur-sm transition-colors hover:bg-cream hover:text-espresso"
+        >
+          {t("sterilityCta")} →
+        </Link>
       </div>
     </section>
   );

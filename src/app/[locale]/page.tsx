@@ -31,6 +31,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <AdvantagesVideo />
       <ProductsTeaser />
       <Memberships />
+      <GroupsTeaser />
       <Reviews />
       <InstagramFeed
         feedId={MARKETS.find((m) => m.slug === "chicago")?.beholdFeedId}
@@ -303,6 +304,29 @@ function Perk({ value, label }: { value: string; label: string }) {
       <div className="font-display text-3xl text-gold">{value}</div>
       <div className="mt-1 text-xs uppercase tracking-[0.14em] text-cream/60">{label}</div>
     </div>
+  );
+}
+
+/* ----------------------------- Group bookings ---------------------------- */
+function GroupsTeaser() {
+  const t = useTranslations("GroupsTeaser");
+  return (
+    <Section id="groups" tone="ivory">
+      <Reveal>
+        <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
+          <div>
+            <p className="eyebrow">{t("eyebrow")}</p>
+            <h2 className="mt-4 text-4xl uppercase leading-tight text-espresso md:text-5xl">
+              {t("title")}
+            </h2>
+            <p className="mt-5 max-w-xl text-brown leading-relaxed">{t("body")}</p>
+          </div>
+          <div className="md:text-right">
+            <Button href="/group-bookings">{t("cta")}</Button>
+          </div>
+        </div>
+      </Reveal>
+    </Section>
   );
 }
 

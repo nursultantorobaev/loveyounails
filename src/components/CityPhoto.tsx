@@ -10,8 +10,9 @@ const CITY_PHOTO: Record<
     alt: "Chicago skyline",
   },
   "new-york": {
-    src: "/media/cities/new-york.jpg",
-    alt: "Manhattan skyline, New York",
+    src: "/media/cities/new-york-sunset.jpg",
+    alt: "Manhattan skyline at sunset with the Empire State Building, New York",
+    position: "44% center", // keep the Empire State Building in narrow crops
   },
   "santa-monica": {
     src: "/media/cities/santa-monica.jpg",
