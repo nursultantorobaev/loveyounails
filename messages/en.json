@@ -705,5 +705,19 @@
         }
       ]
     }
+  },
+  "Promo": {
+    "bar": "New clients: 20% off your first visit at our New York & Chicago Downtown studios",
+    "details": "Details",
+    "eyebrow": "New clients",
+    "headline": "20% off",
+    "subhead": "your first visit",
+    "body": "Welcome to Love You Nail Salon. Enjoy 20% off your first visit at our New York (Manhattan) and Chicago Downtown (Jefferson St) studios.",
+    "book": {
+      "new-york_manhattan": "Book in New York",
+      "chicago_downtown": "Book Chicago Downtown"
+    },
+    "terms": "For new clients only. Valid at the two studios above.",
+    "close": "Close"
   }
 }
