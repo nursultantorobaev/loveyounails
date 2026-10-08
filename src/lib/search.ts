@@ -63,6 +63,7 @@ const KW = {
   portfolio: "portfolio gallery photos work designs nail art портфолио галерея фото работы дизайн portafolio galeria fotos disenos",
   advantages: "advantages why us difference accuracy palette technique details преимущества почему мы ventajas",
   credits: "credits image photo license авторы изображения creditos",
+  careers: "careers career jobs job hiring hire work vacancy vacancies apply employment position nail technician lash artist front desk работа вакансия вакансии карьера мастер администратор резюме трудоустройство empleo trabajo vacantes puesto contratacion",
 } as const;
 
 // FAQ topics: extra words in all three languages, matched on the question text.
@@ -104,6 +105,7 @@ export function buildSearchIndex(m: Msgs): SearchEntry[] {
     entry({ id: "gift-cards", group: "pages", title: str(m.GiftCards?.title), snippet: clip(str(m.GiftCards?.intro)), href: "/gift-cards", keywords: `${nav.giftCards} ${KW.giftCards}`, body: str(m.GiftCards?.note) }),
     entry({ id: "sterilization", group: "pages", title: str(m.Sterilization?.title), snippet: clip(str(m.Sterilization?.intro1)), href: "/sterilization", keywords: KW.sterilization, body: `${str(m.Sterilization?.intro2)} ${str(m.Sterilization?.freshBody)}` }),
     entry({ id: "groups", group: "pages", title: str(m.Groups?.title), snippet: clip(str(m.Groups?.intro)), href: "/group-bookings", keywords: `${str(m.Groups?.eyebrow)} ${KW.groups}`, body: `${str(m.Groups?.offerTitle)} ${str(m.Groups?.offerBody)} ${(m.Groups?.occasions ?? []).join(" ")}` }),
+    entry({ id: "careers", group: "pages", title: str(m.Careers?.title), snippet: clip(str(m.Careers?.intro)), href: "/careers", keywords: `${str(m.Footer?.careers)} ${KW.careers}`, body: ((m.Careers?.defaults ?? []) as { position: string }[]).map((o) => o.position).join(" ") }),
     entry({ id: "shop", group: "pages", title: str(m.Shop?.title), snippet: clip(str(m.Shop?.intro)), href: "/shop", keywords: `${nav.shop} ${KW.shop}` }),
     entry({ id: "salon-policy", group: "policies", title: str(m.Salon?.title), snippet: clip(str(m.Salon?.intro)), href: "/salon-policy", keywords: KW.salonPolicy }),
     entry({ id: "privacy", group: "policies", title: str(m.Privacy?.title), snippet: clip(str(m.Privacy?.intro)), href: "/privacy-policy", keywords: KW.privacy }),

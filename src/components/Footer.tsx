@@ -30,6 +30,7 @@ export default function Footer() {
             <FooterLink href="/group-bookings">{t("groups")}</FooterLink>
             <FooterLink href="/sterilization">{t("sterilization")}</FooterLink>
             <FooterLink href="/#reviews">{tn("reviews")}</FooterLink>
+            <FooterLink href="/careers">{t("careers")}</FooterLink>
           </FooterCol>
 
           {/* Locations */}
