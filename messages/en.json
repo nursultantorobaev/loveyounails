@@ -823,5 +823,21 @@
     "title": "Celebrate together",
     "body": "Birthdays, bridal parties, girls' days and corporate events — we coordinate the whole group, with complimentary drinks. 10% off for groups of 4+ at West Loop, Chicago.",
     "cta": "Plan a group visit"
+  },
+  "Search": {
+    "open": "Search",
+    "placeholder": "Search services, studios, FAQ…",
+    "close": "Close",
+    "suggested": "Popular",
+    "noResults": "Nothing found for “{query}”. Try another word, e.g. gel, parking, gift card.",
+    "hint": "Tip: press / to search from anywhere · ↑ ↓ to move · Enter to open · Esc to close",
+    "groups": {
+      "pages": "Pages",
+      "locations": "Locations",
+      "services": "Services & memberships",
+      "faq": "Questions",
+      "shop": "Shop",
+      "policies": "Policies"
+    }
   }
 }

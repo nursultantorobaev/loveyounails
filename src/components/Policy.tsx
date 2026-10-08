@@ -24,8 +24,8 @@ export default function Policy({
       )}
 
       <div className="mt-12 space-y-10">
-        {sections.map((s) => (
-          <section key={s.title}>
+        {sections.map((s, i) => (
+          <section key={s.title} id={`section-${i}`} className="scroll-mt-28">
             <h2 className="text-2xl text-espresso">{s.title}</h2>
             <div className="mt-3 space-y-3 text-brown leading-relaxed">
               {s.paragraphs.map((p, i) => (

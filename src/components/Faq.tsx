@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import FaqHashOpener from "./FaqHashOpener";
 
 type FaqItem = { q: string; a: string };
 
@@ -31,7 +32,7 @@ export default async function Faq({ market }: { market: string }) {
       </h2>
       <div className="mt-8 border-t border-sand">
         {items.map((it, i) => (
-          <details key={i} className="group border-b border-sand">
+          <details key={i} id={`faq-${i}`} className="group scroll-mt-28 border-b border-sand">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-medium text-espresso transition-colors hover:text-gold-dark [&::-webkit-details-marker]:hidden">
               <span>{it.q}</span>
               <svg
@@ -49,6 +50,7 @@ export default async function Faq({ market }: { market: string }) {
           </details>
         ))}
       </div>
+      <FaqHashOpener />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
