@@ -902,10 +902,22 @@
     "errors": {
       "file": "El archivo es muy grande o no es compatible: usa PDF, Word o una foto de hasta 4 MB.",
       "invalid": "Completa tu nombre, un email válido y el puesto.",
-      "send": "No pudimos enviar el formulario ahora. Envía tu solicitud a {email}."
+      "send": "No pudimos enviar el formulario ahora. Envía tu solicitud a {email}.",
+      "work": "Agrega al menos un salón donde trabajaste (nombre y dirección), o marca «Todavía no tengo experiencia en salones»."
     },
     "emailUs": "Abrir un email con tus datos",
     "metaTitle": "Empleo | Love You Nail Salon",
-    "metaDescription": "Trabaja en Love You Nail Salon en Chicago, New York o Santa Monica: técnicas de uñas, artistas de pestañas y cejas y recepción. Postúlate en línea."
+    "metaDescription": "Trabaja en Love You Nail Salon en Chicago, New York o Santa Monica: técnicas de uñas, artistas de pestañas y cejas y recepción. Postúlate en línea.",
+    "work": {
+      "title": "¿Dónde has trabajado en los últimos 1–3 años?",
+      "hint": "Indica los salones: nombre y dirección. Puedes agregar hasta 3.",
+      "salon": "Nombre del salón",
+      "address": "Dirección del salón",
+      "addressPlaceholder": "Calle, ciudad",
+      "period": "Cuándo",
+      "add": "Agregar otro salón",
+      "remove": "Quitar",
+      "none": "Todavía no tengo experiencia en salones"
+    }
   }
 }
