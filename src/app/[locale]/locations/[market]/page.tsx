@@ -206,6 +206,18 @@ export default async function MarketPage({ params }: MarketParams) {
         </div>
       )}
 
+      {m.slug === "chicago" && (
+        <Link
+          href="/group-bookings"
+          className="mt-14 flex flex-col gap-3 rounded-3xl border border-gold/50 bg-ivory px-6 py-5 text-espresso transition-colors hover:border-gold-dark sm:flex-row sm:items-center sm:justify-between"
+        >
+          <span>{t("groupOffer")}</span>
+          <span className="text-[0.72rem] font-medium uppercase tracking-[0.18em] text-gold-dark">
+            {t("groupOfferCta")} →
+          </span>
+        </Link>
+      )}
+
       {!m.comingSoon && <Faq market={m.slug} />}
     </div>
     {!m.comingSoon && (

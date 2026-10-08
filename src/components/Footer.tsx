@@ -26,6 +26,9 @@ export default function Footer() {
             <FooterLink href="/#services">{t("services")}</FooterLink>
             <FooterLink href="/shop">{tn("shop")}</FooterLink>
             <FooterLink href="/memberships">{tn("memberships")}</FooterLink>
+            <FooterLink href="/gift-cards">{t("giftCards")}</FooterLink>
+            <FooterLink href="/group-bookings">{t("groups")}</FooterLink>
+            <FooterLink href="/sterilization">{t("sterilization")}</FooterLink>
             <FooterLink href="/#reviews">{tn("reviews")}</FooterLink>
           </FooterCol>
 

@@ -35,7 +35,8 @@
       "details": "Detalles",
       "sterility": "Esterilidad",
       "manicure": "Manicura"
-    }
+    },
+    "sterilityCta": "Nuestro proceso de esterilización"
   },
   "Hero": {
     "eyebrow": "Salón de belleza premium",
@@ -170,7 +171,10 @@
     "salon": "Política del salón",
     "credits": "Créditos de imágenes",
     "rights": "Todos los derechos reservados.",
-    "tagline": "Beauty. Elevated."
+    "tagline": "Beauty. Elevated.",
+    "groups": "Fiestas y grupos",
+    "sterilization": "Esterilización",
+    "giftCards": "Tarjetas regalo"
   },
   "Markets": {
     "states": {
@@ -202,7 +206,9 @@
     "contact": "Contacto",
     "booking": "Reservas",
     "email": "Correo",
-    "giftAndSocial": "Tarjeta regalo y redes"
+    "giftAndSocial": "Tarjeta regalo y redes",
+    "groupOffer": "¿Planeas una visita en grupo? 10% de descuento para 4+ personas en West Loop.",
+    "groupOfferCta": "Citas en grupo"
   },
   "SalonCard": {
     "workingHours": "Horario",
@@ -738,5 +744,83 @@
     "note": "Cada ciudad tiene sus propias tarjetas regalo: una tarjeta comprada para una ciudad se puede usar en los estudios de esa ciudad.",
     "metaTitle": "Tarjetas regalo | Love You Nail Salon",
     "metaDescription": "Compra una tarjeta regalo de Love You Nail Salon para nuestros estudios de Chicago, New York o Santa Monica."
+  },
+  "Sterilization": {
+    "eyebrow": "Esterilidad",
+    "title": "Nuestro proceso de esterilización",
+    "lead": "Tu seguridad e higiene son nuestra máxima prioridad.",
+    "intro1": "En LOVE YOU Nail Salon, cada estudio cuenta con una zona de esterilización designada, donde nuestras herramientas profesionales pasan por un proceso completo de limpieza, desinfección y esterilización.",
+    "intro2": "Usamos autoclaves profesionales Tuttnauer, que esterilizan con vapor saturado a alta presión nuestros instrumentos metálicos reutilizables después de cada clienta, siguiendo protocolos establecidos de higiene y seguridad.",
+    "stepsTitle": "Nuestro proceso de esterilización, paso a paso",
+    "steps": [
+      {
+        "title": "Limpieza previa",
+        "body": "Inmediatamente después de cada servicio, los instrumentos metálicos reutilizables se recogen y se limpian a fondo para eliminar residuos visibles, polvo y materia orgánica."
+      },
+      {
+        "title": "Desinfección",
+        "body": "Los instrumentos limpios pasan por un proceso de desinfección con soluciones de grado profesional para herramientas de salón, con la concentración y el tiempo de contacto recomendados por el fabricante."
+      },
+      {
+        "title": "Secado y empaquetado",
+        "body": "Tras la limpieza y desinfección, los instrumentos se enjuagan cuando es necesario, se secan, se inspeccionan y se sellan en bolsas especiales de esterilización para mantener su esterilidad después del proceso."
+      },
+      {
+        "title": "Esterilización en autoclave",
+        "body": "Los instrumentos empaquetados se colocan en nuestros autoclaves de vapor Tuttnauer, donde pasan por un ciclo de esterilización con vapor a presión y temperatura controlada que elimina los microorganismos, incluidas las esporas bacterianas."
+      },
+      {
+        "title": "Almacenamiento seguro",
+        "body": "Una vez completado el ciclo de esterilización y secos los instrumentos, las bolsas selladas se guardan en un área limpia y designada hasta su próximo uso."
+      }
+    ],
+    "freshTitle": "Un set nuevo para cada clienta",
+    "freshBody": "Cada clienta recibe un set recién esterilizado de instrumentos metálicos reutilizables. Las bolsas de esterilización permanecen selladas hasta el momento de usarlas, manteniendo condiciones higiénicas durante toda la cita.",
+    "closing": "Porque unas uñas bonitas siempre deben empezar con un cuidado seguro y profesional.",
+    "cta": "Reservar cita",
+    "metaTitle": "Nuestro proceso de esterilización | Love You Nail Salon",
+    "metaDescription": "Cómo Love You Nail Salon esteriliza cada instrumento metálico reutilizable: limpieza, desinfección, bolsas selladas y autoclaves de vapor Tuttnauer — un set nuevo para cada clienta."
+  },
+  "Groups": {
+    "eyebrow": "Fiestas privadas y citas en grupo",
+    "title": "Celebren juntas en Love You",
+    "intro": "¿Planeas un cumpleaños, una despedida de soltera, un día de chicas, un evento corporativo o simplemente un día de uñas con amigas? En Love You Nail Salon las visitas en grupo y los eventos son fáciles, organizados y agradables.",
+    "points": [
+      {
+        "title": "Ayuda personal con la reserva",
+        "body": "Nuestro equipo coordina los servicios y horarios de todo el grupo para que haya la menor espera posible y todo fluya."
+      },
+      {
+        "title": "Bebidas de cortesía",
+        "body": "Durante su visita, el grupo disfrutará de bebidas de cortesía mientras se relajan y se consienten."
+      },
+      {
+        "title": "Depósito del 50% para 3+ personas",
+        "body": "Para grupos de 3 o más personas, pedimos un depósito del 50% del valor total de todos los servicios programados para asegurar las citas."
+      }
+    ],
+    "offerEyebrow": "Oferta para grupos por tiempo limitado",
+    "offerTitle": "10% de descuento para grupos de 4+",
+    "offerBody": "Disfruten un 10% de descuento en el total de servicios del grupo al reservar para 4 o más personas en nuestro estudio de West Loop — 118 N Halsted St, Chicago.",
+    "perfectFor": "Ideal para",
+    "occasions": [
+      "Despedidas de soltera",
+      "Cumpleaños",
+      "Eventos corporativos",
+      "Días de chicas",
+      "Celebraciones especiales"
+    ],
+    "contactTitle": "Llama al estudio para planear tu visita en grupo",
+    "contactBody": "Nuestro equipo te ayudará con los horarios, la elección de servicios y toda la organización para que la visita en grupo sea fácil y memorable. ¡Nos encantará celebrar contigo!",
+    "offerBadge": "10% off para 4+",
+    "metaTitle": "Fiestas privadas y citas en grupo | Love You Nail Salon",
+    "metaDescription": "Despedidas, cumpleaños, eventos corporativos y días de chicas en Love You Nail Salon. Ayuda con la reserva, bebidas de cortesía y 10% de descuento para grupos de 4+ en West Loop, Chicago.",
+    "call": "Llamar"
+  },
+  "GroupsTeaser": {
+    "eyebrow": "Fiestas y grupos",
+    "title": "Celebren juntas",
+    "body": "Cumpleaños, despedidas, días de chicas y eventos corporativos: coordinamos a todo el grupo, con bebidas de cortesía. 10% de descuento para grupos de 4+ en West Loop, Chicago.",
+    "cta": "Planear visita en grupo"
   }
 }

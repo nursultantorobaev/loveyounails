@@ -35,7 +35,8 @@
       "details": "Details",
       "sterility": "Sterility",
       "manicure": "Manicure"
-    }
+    },
+    "sterilityCta": "Our sterilization process"
   },
   "Hero": {
     "eyebrow": "Premium Beauty Salon",
@@ -170,7 +171,10 @@
     "salon": "Salon Policy",
     "credits": "Image Credits",
     "rights": "All rights reserved.",
-    "tagline": "Beauty. Elevated."
+    "tagline": "Beauty. Elevated.",
+    "groups": "Private parties & groups",
+    "sterilization": "Sterilization",
+    "giftCards": "Gift cards"
   },
   "Markets": {
     "states": {
@@ -202,7 +206,9 @@
     "contact": "Contact",
     "booking": "Booking",
     "email": "Email",
-    "giftAndSocial": "Gift Card & Social"
+    "giftAndSocial": "Gift Card & Social",
+    "groupOffer": "Planning a group visit? 10% off for 4+ guests at West Loop.",
+    "groupOfferCta": "Group bookings"
   },
   "SalonCard": {
     "workingHours": "Working Hours",
@@ -738,5 +744,83 @@
     "note": "Each city has its own gift cards: a card bought for one city can be used at the studios in that city.",
     "metaTitle": "Gift Cards | Love You Nail Salon",
     "metaDescription": "Buy a Love You Nail Salon gift card for our Chicago, New York or Santa Monica studios."
+  },
+  "Sterilization": {
+    "eyebrow": "Sterility",
+    "title": "Our Sterilization Process",
+    "lead": "Your safety and hygiene are our top priorities.",
+    "intro1": "At LOVE YOU Nail Salon, every location is equipped with a designated sterilization zone, where our professional tools undergo a thorough cleaning, disinfection, and sterilization process.",
+    "intro2": "We use professional Tuttnauer autoclaves, which use high-pressure saturated steam to sterilize our reusable metal instruments after every client, following established hygiene and safety protocols.",
+    "stepsTitle": "Our step-by-step sterilization process",
+    "steps": [
+      {
+        "title": "Pre-Cleaning",
+        "body": "Immediately after each service, reusable metal instruments are collected and thoroughly cleaned to remove visible residue, dust, and organic matter."
+      },
+      {
+        "title": "Disinfection",
+        "body": "The cleaned instruments undergo a disinfection process using professional-grade solutions designed for salon tools, following the manufacturer's recommended concentration and contact time."
+      },
+      {
+        "title": "Drying & Packaging",
+        "body": "After cleaning and disinfection, instruments are thoroughly rinsed when required, dried, inspected, and sealed in specialized sterilization pouches to help maintain their sterility after processing."
+      },
+      {
+        "title": "Autoclave Sterilization",
+        "body": "The packaged instruments are placed inside our Tuttnauer steam autoclaves, where they undergo a sterilization cycle using pressurized steam at controlled temperatures to eliminate microorganisms, including bacterial spores."
+      },
+      {
+        "title": "Safe Storage",
+        "body": "Once the sterilization cycle is successfully completed and the instruments are dry, sealed pouches are stored in a clean, designated area until their next use."
+      }
+    ],
+    "freshTitle": "A fresh set for every client",
+    "freshBody": "Every client receives a freshly sterilized set of reusable metal instruments. Sterilization pouches remain sealed until the tools are ready to be used, helping maintain hygienic conditions throughout every appointment.",
+    "closing": "Because beautiful nails should always begin with safe, professional care.",
+    "cta": "Book an appointment",
+    "metaTitle": "Our Sterilization Process | Love You Nail Salon",
+    "metaDescription": "How Love You Nail Salon sterilizes every reusable metal tool: pre-cleaning, disinfection, sealed pouches and Tuttnauer steam autoclaves — a fresh set for every client."
+  },
+  "Groups": {
+    "eyebrow": "Private Parties & Group Appointments",
+    "title": "Celebrate together at Love You",
+    "intro": "Planning a birthday, bridal celebration, girls' day, corporate gathering, or simply a nail day with friends? Love You Nail Salon makes group visits and event planning easy, organized, and enjoyable.",
+    "points": [
+      {
+        "title": "Personal booking help",
+        "body": "Our team coordinates services and appointment times for your whole group, so there's minimal waiting and everyone enjoys a seamless experience."
+      },
+      {
+        "title": "Complimentary drinks",
+        "body": "During your visit, your group will enjoy complimentary beverages while you relax and get pampered."
+      },
+      {
+        "title": "50% deposit for 3+ guests",
+        "body": "For groups of 3 or more guests, we require a 50% deposit based on the total value of all scheduled services to secure your appointments."
+      }
+    ],
+    "offerEyebrow": "Limited-time group offer",
+    "offerTitle": "10% off for groups of 4+",
+    "offerBody": "Enjoy 10% off your group's total service bill when you book for 4 or more guests at our West Loop studio — 118 N Halsted St, Chicago.",
+    "perfectFor": "Perfect for",
+    "occasions": [
+      "Bridal parties",
+      "Birthdays",
+      "Corporate events",
+      "Girls' days",
+      "Special celebrations"
+    ],
+    "contactTitle": "Call the studio to plan your group visit",
+    "contactBody": "Our team will help with scheduling, service selection, and all the arrangements to make your group visit effortless and memorable. We look forward to celebrating with you!",
+    "offerBadge": "10% off for 4+",
+    "metaTitle": "Private Parties & Group Appointments | Love You Nail Salon",
+    "metaDescription": "Bridal parties, birthdays, corporate events and girls' days at Love You Nail Salon. Personal booking help, complimentary drinks, and 10% off for groups of 4+ at West Loop, Chicago.",
+    "call": "Call"
+  },
+  "GroupsTeaser": {
+    "eyebrow": "Private parties & groups",
+    "title": "Celebrate together",
+    "body": "Birthdays, bridal parties, girls' days and corporate events — we coordinate the whole group, with complimentary drinks. 10% off for groups of 4+ at West Loop, Chicago.",
+    "cta": "Plan a group visit"
   }
 }
