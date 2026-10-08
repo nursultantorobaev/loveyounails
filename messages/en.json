@@ -174,7 +174,8 @@
     "tagline": "Beauty. Elevated.",
     "groups": "Private parties & groups",
     "sterilization": "Sterilization",
-    "giftCards": "Gift cards"
+    "giftCards": "Gift cards",
+    "careers": "Careers"
   },
   "Markets": {
     "states": {
@@ -839,5 +840,72 @@
       "shop": "Shop",
       "policies": "Policies"
     }
+  },
+  "Careers": {
+    "eyebrow": "Careers",
+    "title": "Join the Love You team",
+    "intro": "We're growing across our studios in Chicago, New York and Santa Monica and looking for talented people who care about detail, hygiene and a warm client experience. See our open positions below and apply in a couple of minutes.",
+    "openingsTitle": "Open positions",
+    "allCities": "All cities",
+    "apply": "Apply",
+    "noOpenings": "There are no open positions right now, but we're always happy to meet talented people. Send us a general application below.",
+    "defaults": [
+      {
+        "position": "Nail Technician",
+        "city": "Chicago · New York · Santa Monica",
+        "studio": "",
+        "type": "Full-time / Part-time",
+        "description": "Manicures, pedicures and gel services. Experience with dry (Russian e-file) manicure is a plus."
+      },
+      {
+        "position": "Lash & Brow Artist",
+        "city": "New York · Santa Monica",
+        "studio": "",
+        "type": "Full-time / Part-time",
+        "description": "Classic, hybrid and volume lash extensions, lash and brow lamination, brow shaping and tinting."
+      },
+      {
+        "position": "Front Desk / Salon Administrator",
+        "city": "Chicago · New York · Santa Monica",
+        "studio": "",
+        "type": "Full-time / Part-time",
+        "description": "Welcome clients, manage appointments in Square, answer calls and messages, and keep the studio running smoothly."
+      }
+    ],
+    "formTitle": "Apply now",
+    "formIntro": "Fill in the form and attach your résumé — it goes straight to our hiring team. You can also email us at {email}.",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "position": "Position",
+      "city": "Preferred city",
+      "experience": "Experience",
+      "portfolio": "Portfolio or Instagram",
+      "message": "Tell us about yourself",
+      "resume": "Résumé (optional)"
+    },
+    "choose": "Choose a position",
+    "general": "General application",
+    "anyCity": "Any city",
+    "experience": {
+      "lt1": "Less than 1 year",
+      "y1_3": "1–3 years",
+      "y3_5": "3–5 years",
+      "y5": "5+ years"
+    },
+    "resumeHint": "PDF, Word or photo, up to 4 MB.",
+    "submit": "Send application",
+    "sending": "Sending…",
+    "sentTitle": "Thank you! Your application has been sent.",
+    "sentBody": "Our hiring team will review it and get back to you by email or phone.",
+    "errors": {
+      "file": "The file is too large or not supported — please use a PDF, Word or photo up to 4 MB.",
+      "invalid": "Please fill in your name, a valid email and the position.",
+      "send": "We couldn't send the form right now. Please email your application to {email}."
+    },
+    "emailUs": "Open an email with your details",
+    "metaTitle": "Careers | Love You Nail Salon",
+    "metaDescription": "Join Love You Nail Salon in Chicago, New York or Santa Monica. Open positions for nail technicians, lash & brow artists and front desk — apply online."
   }
 }

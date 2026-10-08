@@ -174,7 +174,8 @@
     "tagline": "Beauty. Elevated.",
     "groups": "Fiestas y grupos",
     "sterilization": "Esterilización",
-    "giftCards": "Tarjetas regalo"
+    "giftCards": "Tarjetas regalo",
+    "careers": "Empleo"
   },
   "Markets": {
     "states": {
@@ -839,5 +840,72 @@
       "shop": "Tienda",
       "policies": "Políticas"
     }
+  },
+  "Careers": {
+    "eyebrow": "Empleo",
+    "title": "Únete al equipo Love You",
+    "intro": "Estamos creciendo en nuestros estudios de Chicago, New York y Santa Monica y buscamos personas talentosas a quienes les importen los detalles, la higiene y un trato cálido. Mira las vacantes abiertas y postúlate en un par de minutos.",
+    "openingsTitle": "Vacantes abiertas",
+    "allCities": "Todas las ciudades",
+    "apply": "Postularme",
+    "noOpenings": "Ahora mismo no hay vacantes abiertas, pero siempre nos alegra conocer a personas talentosas. Envíanos una solicitud general abajo.",
+    "defaults": [
+      {
+        "position": "Técnica de uñas",
+        "city": "Chicago · New York · Santa Monica",
+        "studio": "",
+        "type": "Tiempo completo / parcial",
+        "description": "Manicura, pedicura y servicios de gel. La experiencia en manicura en seco (rusa con torno) es un plus."
+      },
+      {
+        "position": "Artista de pestañas y cejas",
+        "city": "New York · Santa Monica",
+        "studio": "",
+        "type": "Tiempo completo / parcial",
+        "description": "Extensiones de pestañas clásicas, híbridas y de volumen, laminado de pestañas y cejas, diseño y tinte de cejas."
+      },
+      {
+        "position": "Recepción / administración del salón",
+        "city": "Chicago · New York · Santa Monica",
+        "studio": "",
+        "type": "Tiempo completo / parcial",
+        "description": "Recibir a las clientas, gestionar citas en Square, responder llamadas y mensajes y mantener el estudio en orden."
+      }
+    ],
+    "formTitle": "Postúlate",
+    "formIntro": "Completa el formulario y adjunta tu currículum: llega directo a nuestro equipo de contratación. También puedes escribirnos a {email}.",
+    "fields": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "position": "Puesto",
+      "city": "Ciudad preferida",
+      "experience": "Experiencia",
+      "portfolio": "Portafolio o Instagram",
+      "message": "Cuéntanos sobre ti",
+      "resume": "Currículum (opcional)"
+    },
+    "choose": "Elige un puesto",
+    "general": "Solicitud general",
+    "anyCity": "Cualquier ciudad",
+    "experience": {
+      "lt1": "Menos de 1 año",
+      "y1_3": "1–3 años",
+      "y3_5": "3–5 años",
+      "y5": "5+ años"
+    },
+    "resumeHint": "PDF, Word o foto, hasta 4 MB.",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "sentTitle": "¡Gracias! Tu solicitud fue enviada.",
+    "sentBody": "Nuestro equipo la revisará y te contactará por email o teléfono.",
+    "errors": {
+      "file": "El archivo es muy grande o no es compatible: usa PDF, Word o una foto de hasta 4 MB.",
+      "invalid": "Completa tu nombre, un email válido y el puesto.",
+      "send": "No pudimos enviar el formulario ahora. Envía tu solicitud a {email}."
+    },
+    "emailUs": "Abrir un email con tus datos",
+    "metaTitle": "Empleo | Love You Nail Salon",
+    "metaDescription": "Trabaja en Love You Nail Salon en Chicago, New York o Santa Monica: técnicas de uñas, artistas de pestañas y cejas y recepción. Postúlate en línea."
   }
 }
