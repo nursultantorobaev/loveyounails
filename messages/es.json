@@ -718,17 +718,18 @@
     }
   },
   "Promo": {
-    "bar": "Nuevos clientes: 20% de descuento en tu primera visita en New York y Chicago Downtown",
+    "bar": "Nuevos clientes: 20% de descuento en tu primera visita en New York, Chicago Downtown y Santa Monica",
     "details": "Detalles",
     "eyebrow": "Nuevos clientes",
     "headline": "20% off",
     "subhead": "en tu primera visita",
-    "body": "Bienvenida a Love You Nail Salon. Disfruta un 20% de descuento en tu primera visita en nuestros estudios de New York (Manhattan) y Chicago Downtown (Jefferson St).",
+    "body": "Bienvenida a Love You Nail Salon. Disfruta un 20% de descuento en tu primera visita en nuestros estudios de New York (Manhattan), Chicago Downtown (Jefferson St) y Santa Monica (2nd Street).",
     "book": {
       "new-york_manhattan": "Reservar en New York",
-      "chicago_downtown": "Reservar en Chicago Downtown"
+      "chicago_downtown": "Reservar en Chicago Downtown",
+      "santa-monica_2nd-street": "Reservar en Santa Monica"
     },
-    "terms": "Solo para nuevos clientes. Válido en los dos estudios indicados.",
+    "terms": "Solo para nuevos clientes. Válido en los tres estudios indicados.",
     "close": "Cerrar"
   },
   "GiftCards": {
