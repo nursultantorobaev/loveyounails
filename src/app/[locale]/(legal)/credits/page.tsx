@@ -10,7 +10,7 @@ interface Credit {
   author: string;
   license: string;
   licenseUrl?: string;
-  sourceUrl: string;
+  sourceUrl?: string;
 }
 
 const CREDITS: Credit[] = [
@@ -23,12 +23,9 @@ const CREDITS: Credit[] = [
       "https://commons.wikimedia.org/wiki/File:Chicago-skyline-lake-burnham.jpg",
   },
   {
-    subject: "Manhattan skyline, New York",
-    author: "Percival Kestreltail",
-    license: "CC BY-SA 3.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Lower_Manhattan,_New_York_skyline_from_Liberty_Island_2021.jpg",
+    subject: "Manhattan skyline at sunset, New York",
+    author: "Adobe Stock #178909435",
+    license: "Adobe Stock license",
   },
   {
     subject: "Santa Monica Pier",
@@ -64,15 +61,20 @@ export default function CreditsPage() {
             ) : (
               c.license
             )}
-            .{" "}
-            <a
-              href={c.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold-dark underline underline-offset-4"
-            >
-              {t("source")}
-            </a>
+            .
+            {c.sourceUrl && (
+              <>
+                {" "}
+                <a
+                  href={c.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold-dark underline underline-offset-4"
+                >
+                  {t("source")}
+                </a>
+              </>
+            )}
           </li>
         ))}
       </ul>

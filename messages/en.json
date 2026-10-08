@@ -8,7 +8,8 @@
     "memberships": "Memberships",
     "reviews": "Reviews",
     "book": "Book",
-    "bookAppointment": "Book Appointment"
+    "bookAppointment": "Book Appointment",
+    "giftCards": "Gift Cards"
   },
   "Common": {
     "exploreServices": "Explore Services",
@@ -262,7 +263,7 @@
   "Credits": {
     "eyebrow": "Credits",
     "title": "Image Credits",
-    "intro": "City photography is used under the licenses below, via Wikimedia Commons.",
+    "intro": "Photography and video on this site are used under the licenses below.",
     "source": "Source"
   },
   "Instagram": {
@@ -620,6 +621,10 @@
           "a": "We have five Chicago studios: West Loop (118 N Halsted St), Lake View (2829 N Clark St), Wicker Park (1843 W North Ave), River North (353 W Chicago Ave) and Downtown (180 N Jefferson St). Choose the studio nearest you when you book."
         },
         {
+          "q": "Where can I park at your Chicago locations?",
+          "a": "All of our Chicago studios have paid street parking nearby, 7 days a week. You can pay through the ParkChicago app or at a nearby pay box. Parking zone numbers: Wicker Park 640307, West Loop 905406, River North 244401, Downtown 385402, Lakeview 441201. We don't have private or designated parking lots, and street parking availability varies, so please allow a few extra minutes to find a spot. Always check the posted signs and confirm the zone number before you pay."
+        },
+        {
           "q": "Do you offer services for children?",
           "a": "Yes. Children of any age are welcome when accompanied by a parent or guardian, and we offer a Kids Mani & Pedi from $60."
         },
@@ -719,5 +724,19 @@
     },
     "terms": "For new clients only. Valid at the two studios above.",
     "close": "Close"
+  },
+  "GiftCards": {
+    "eyebrow": "Gift Cards",
+    "title": "Give the gift of Love You",
+    "intro": "A Love You gift card is always the perfect choice — for a birthday, a thank-you, or just because. Choose the city where it will be used.",
+    "buy": "Buy a {city} gift card",
+    "cityNote": {
+      "chicago": "Valid at all 5 Chicago studios",
+      "new-york": "Valid at our Manhattan studio",
+      "santa-monica": "Valid at our Santa Monica studio"
+    },
+    "note": "Each city has its own gift cards: a card bought for one city can be used at the studios in that city.",
+    "metaTitle": "Gift Cards | Love You Nail Salon",
+    "metaDescription": "Buy a Love You Nail Salon gift card for our Chicago, New York or Santa Monica studios."
   }
 }

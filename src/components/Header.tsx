@@ -13,6 +13,7 @@ const NAV = [
   { key: "locations", href: "/locations" },
   { key: "shop", href: "/shop" },
   { key: "memberships", href: "/memberships" },
+  { key: "giftCards", href: "/gift-cards" },
 ] as const;
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-sand/70 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
         {/* Left: nav (desktop) */}
-        <nav className="hidden flex-1 items-center gap-6 md:flex">
+        <nav className="hidden flex-1 items-center gap-4 lg:flex xl:gap-6">
           {NAV.slice(0, 3).map((item) => (
             <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
@@ -33,7 +34,7 @@ export default function Header() {
         <Wordmark variant="black" kind="mark" className="h-12 md:h-16" />
 
         {/* Right: nav + CTA + switcher (desktop) */}
-        <div className="hidden flex-1 items-center justify-end gap-6 md:flex">
+        <div className="hidden flex-1 items-center justify-end gap-4 lg:flex xl:gap-6">
           {NAV.slice(3).map((item) => (
             <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
@@ -50,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center text-espresso md:hidden"
+          className="flex h-10 w-10 items-center justify-center text-espresso lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -76,7 +77,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-sand/70 bg-cream px-5 pb-6 pt-2 md:hidden">
+        <nav className="border-t border-sand/70 bg-cream px-5 pb-6 pt-2 lg:hidden">
           {NAV.map((item) => (
             <Link
               key={item.href}
@@ -105,7 +106,7 @@ function NavLink({ label, href }: { label: string; href: string }) {
   return (
     <Link
       href={href}
-      className="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-brown transition-colors hover:text-gold-dark"
+      className="whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-[0.16em] text-brown transition-colors hover:text-gold-dark"
     >
       {label}
     </Link>

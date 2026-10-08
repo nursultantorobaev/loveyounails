@@ -8,7 +8,8 @@
     "memberships": "Membresías",
     "reviews": "Reseñas",
     "book": "Reservar",
-    "bookAppointment": "Reservar cita"
+    "bookAppointment": "Reservar cita",
+    "giftCards": "Tarjetas regalo"
   },
   "Common": {
     "exploreServices": "Ver servicios",
@@ -262,7 +263,7 @@
   "Credits": {
     "eyebrow": "Créditos",
     "title": "Créditos de imágenes",
-    "intro": "La fotografía urbana se usa bajo las licencias indicadas abajo, vía Wikimedia Commons.",
+    "intro": "Las fotos y videos de este sitio se usan bajo las licencias indicadas abajo.",
     "source": "Fuente"
   },
   "Instagram": {
@@ -620,6 +621,10 @@
           "a": "Tenemos cinco estudios en Chicago: West Loop (118 N Halsted St), Lake View (2829 N Clark St), Wicker Park (1843 W North Ave), River North (353 W Chicago Ave) y Downtown (180 N Jefferson St). Elige el más cercano al reservar."
         },
         {
+          "q": "¿Dónde puedo estacionar en sus estudios de Chicago?",
+          "a": "Todos nuestros estudios de Chicago tienen estacionamiento pagado en la calle, los 7 días de la semana. Puedes pagar con la app ParkChicago o en una máquina de pago cercana. Números de zona: Wicker Park 640307, West Loop 905406, River North 244401, Downtown 385402, Lakeview 441201. No tenemos estacionamiento privado ni reservado, y la disponibilidad en la calle varía, así que te recomendamos llegar unos minutos antes para encontrar lugar. Revisa siempre las señales y confirma el número de zona antes de pagar."
+        },
+        {
           "q": "¿Ofrecen servicios para niños?",
           "a": "Sí. Los niños de cualquier edad son bienvenidos acompañados de un padre o tutor, y ofrecemos Kids Mani & Pedi desde $60."
         },
@@ -719,5 +724,19 @@
     },
     "terms": "Solo para nuevos clientes. Válido en los dos estudios indicados.",
     "close": "Cerrar"
+  },
+  "GiftCards": {
+    "eyebrow": "Tarjetas regalo",
+    "title": "Regala Love You",
+    "intro": "Una tarjeta regalo de Love You siempre es una gran elección: para un cumpleaños, para dar las gracias o simplemente porque sí. Elige la ciudad donde se usará.",
+    "buy": "Comprar tarjeta regalo — {city}",
+    "cityNote": {
+      "chicago": "Válida en los 5 estudios de Chicago",
+      "new-york": "Válida en nuestro estudio de Manhattan",
+      "santa-monica": "Válida en nuestro estudio de Santa Monica"
+    },
+    "note": "Cada ciudad tiene sus propias tarjetas regalo: una tarjeta comprada para una ciudad se puede usar en los estudios de esa ciudad.",
+    "metaTitle": "Tarjetas regalo | Love You Nail Salon",
+    "metaDescription": "Compra una tarjeta regalo de Love You Nail Salon para nuestros estudios de Chicago, New York o Santa Monica."
   }
 }
