@@ -70,6 +70,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "invalid" }, { status: 400 });
   }
 
+  // Where they worked in the last 1–3 years: at least one salon (name + address)
+  // unless they ticked "no salon experience yet".
+  const noSalonExperience = fd.get("noSalonExperience") === "on";
+  const salons = Array.from({ length: 3 }, (_, i) => ({
+    salon: field(fd, `work_${i}_salon`, 120),
+    address: field(fd, `work_${i}_address`, 200),
+    period: field(fd, `work_${i}_period`, 40),
+  })).filter((w) => w.salon || w.address);
+  if (!noSalonExperience && !salons.some((w) => w.salon && w.address)) {
+    return NextResponse.json({ ok: false, error: "work" }, { status: 400 });
+  }
+
   const attachments: { filename: string; content: string }[] = [];
   const resume = fd.get("resume");
   if (resume instanceof File && resume.size > 0) {
@@ -98,6 +110,13 @@ export async function POST(req: Request) {
     `<table cellpadding="6" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">` +
     rows.map(([k, v]) => `<tr><td style="color:#8c7b6a">${k}</td><td>${esc(v || "—")}</td></tr>`).join("") +
     `</table>` +
+    `<h3 style="font-family:Georgia,serif;margin-top:18px">Salons worked at (last 1–3 years)</h3>` +
+    (noSalonExperience
+      ? `<p style="font-family:Arial,sans-serif;font-size:14px">No salon experience yet.</p>`
+      : `<table cellpadding="6" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">` +
+        `<tr style="color:#8c7b6a"><td>Salon</td><td>Address</td><td>Period</td></tr>` +
+        salons.map((w) => `<tr><td>${esc(w.salon || "—")}</td><td>${esc(w.address || "—")}</td><td>${esc(w.period || "—")}</td></tr>`).join("") +
+        `</table>`) +
     (app.message ? `<p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap">${esc(app.message)}</p>` : "") +
     `<p style="font-family:Arial,sans-serif;font-size:12px;color:#8c7b6a">Sent from the Careers page on loveyou.club. Reply to this email to answer the candidate.</p>`;
 

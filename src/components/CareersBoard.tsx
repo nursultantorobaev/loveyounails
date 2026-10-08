@@ -6,7 +6,9 @@ import type { Opening } from "@/lib/careers";
 
 export const HIRING_EMAIL = "loveyouhires@gmail.com";
 
-type Status = "idle" | "sending" | "sent" | "not_configured" | "file" | "invalid" | "error";
+type Status = "idle" | "sending" | "sent" | "not_configured" | "file" | "invalid" | "work" | "error";
+
+const MAX_SALONS = 3;
 
 const inputCls =
   "mt-1.5 w-full rounded-2xl border border-sand bg-cream px-4 py-3 text-sm text-espresso placeholder:text-brown-soft/70 focus:border-gold-dark focus:outline-none";
@@ -22,6 +24,9 @@ export default function CareersBoard({ openings, cities }: { openings: Opening[]
   const [status, setStatus] = useState<Status>("idle");
   const [startedAt] = useState(() => Date.now());
   const [mailto, setMailto] = useState("");
+  // Recent salons (last 1–3 years): how many rows are shown, and the "no experience yet" opt-out.
+  const [salonRows, setSalonRows] = useState(1);
+  const [noSalons, setNoSalons] = useState(false);
   const positions = [...new Set(openings.map((o) => o.position))];
 
   function apply(o: Opening) {
@@ -38,7 +43,14 @@ export default function CareersBoard({ openings, cities }: { openings: Opening[]
     const body = [
       `Name: ${get("name")}`, `Email: ${get("email")}`, `Phone: ${get("phone")}`,
       `Position: ${get("position")}`, `City: ${get("city")}`, `Experience: ${get("experience")}`,
-      `Portfolio / Instagram: ${get("portfolio")}`, "", get("message"), "", "(Please attach your résumé)",
+      `Portfolio / Instagram: ${get("portfolio")}`, "",
+      "Salons worked at (last 1–3 years):",
+      ...(get("noSalonExperience")
+        ? ["- No salon experience yet"]
+        : Array.from({ length: MAX_SALONS }, (_, i) => [get(`work_${i}_salon`), get(`work_${i}_address`), get(`work_${i}_period`)])
+            .filter(([n]) => n)
+            .map(([n, a, p]) => `- ${n}, ${a}${p ? ` (${p})` : ""}`)),
+      "", get("message"), "", "(Please attach your résumé)",
     ].join("\n");
     return `mailto:${HIRING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
@@ -59,6 +71,7 @@ export default function CareersBoard({ openings, cities }: { openings: Opening[]
       else if (data.error === "not_configured") { setMailto(mailtoHref(fd)); setStatus("not_configured"); }
       else if (data.error === "file") setStatus("file");
       else if (data.error === "invalid") setStatus("invalid");
+      else if (data.error === "work") setStatus("work");
       else { setMailto(mailtoHref(fd)); setStatus("error"); }
     } catch {
       setMailto(mailtoHref(fd));
@@ -150,6 +163,62 @@ export default function CareersBoard({ openings, cities }: { openings: Opening[]
                     ))}
                   </select>
                 </label>
+                {/* Recent salons — where they worked in the last 1–3 years */}
+                <fieldset className="md:col-span-2 rounded-2xl border border-sand bg-cream/60 p-5">
+                  <legend className="px-1 text-sm font-medium text-espresso">{t("work.title")}{!noSalons && " *"}</legend>
+                  <p className="text-xs text-brown-soft">{t("work.hint")}</p>
+                  {!noSalons && (
+                    <div className="mt-3 space-y-4">
+                      {Array.from({ length: salonRows }, (_, i) => (
+                        <div key={i} className="grid gap-3 md:grid-cols-[1.1fr_1.4fr_0.8fr_auto] md:items-end">
+                          <label className="block">
+                            <span className={labelCls}>{t("work.salon")}{i === 0 && " *"}</span>
+                            <input name={`work_${i}_salon`} required={i === 0} maxLength={120} className={inputCls} />
+                          </label>
+                          <label className="block">
+                            <span className={labelCls}>{t("work.address")}{i === 0 && " *"}</span>
+                            <input name={`work_${i}_address`} required={i === 0} maxLength={200} placeholder={t("work.addressPlaceholder")} className={inputCls} />
+                          </label>
+                          <label className="block">
+                            <span className={labelCls}>{t("work.period")}</span>
+                            <input name={`work_${i}_period`} maxLength={40} placeholder="2023 – 2025" className={inputCls} />
+                          </label>
+                          {i > 0 && i === salonRows - 1 ? (
+                            <button
+                              type="button"
+                              onClick={() => setSalonRows((n) => n - 1)}
+                              aria-label={t("work.remove")}
+                              className="h-[46px] px-2 text-xl leading-none text-brown-soft hover:text-espresso"
+                            >
+                              ×
+                            </button>
+                          ) : (
+                            <span className="hidden md:block md:w-[30px]" />
+                          )}
+                        </div>
+                      ))}
+                      {salonRows < MAX_SALONS && (
+                        <button
+                          type="button"
+                          onClick={() => setSalonRows((n) => n + 1)}
+                          className="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-gold-dark hover:text-espresso"
+                        >
+                          + {t("work.add")}
+                        </button>
+                      )}
+                    </div>
+                  )}
+                  <label className="mt-4 flex items-center gap-2 text-sm text-brown">
+                    <input
+                      type="checkbox"
+                      name="noSalonExperience"
+                      checked={noSalons}
+                      onChange={(e) => setNoSalons(e.target.checked)}
+                      className="h-4 w-4 accent-[var(--color-gold-dark)]"
+                    />
+                    {t("work.none")}
+                  </label>
+                </fieldset>
                 <label className="block md:col-span-2">
                   <span className={labelCls}>{t("fields.portfolio")}</span>
                   <input name="portfolio" maxLength={300} placeholder="@yourinstagram / https://…" className={inputCls} />
@@ -177,7 +246,7 @@ export default function CareersBoard({ openings, cities }: { openings: Opening[]
 
               {status !== "idle" && status !== "sending" && (
                 <div className="mt-6 rounded-2xl border border-gold/50 bg-cream p-4 text-sm text-espresso" role="alert">
-                  {status === "file" ? t("errors.file") : status === "invalid" ? t("errors.invalid") : t("errors.send", { email: HIRING_EMAIL })}{" "}
+                  {status === "file" ? t("errors.file") : status === "invalid" ? t("errors.invalid") : status === "work" ? t("errors.work") : t("errors.send", { email: HIRING_EMAIL })}{" "}
                   {(status === "not_configured" || status === "error") && (
                     <a href={mailto} className="font-medium text-gold-dark underline underline-offset-4">
                       {t("emailUs")}
