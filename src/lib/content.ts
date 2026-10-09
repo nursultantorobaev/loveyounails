@@ -81,7 +81,15 @@ export const MEMBERSHIP_TIERS: MembershipTier[] = [
     tagline: "Perfect for maintaining your beauty routine with added savings.",
     perks: [
       "10% off every service",
-      "Complimentary nail fix within 10 days of your appointment",
+      "Free nail fix within 14 days",
+      "Priority booking",
+      "Birthday gift — free nail design (up to $10)",
+      "Free simple nail art after 5 visits",
+      "VIP welcome drink",
+      "Bring a Friend — $10 credit for every new client you refer, after their first paid visit",
+      "5% off retail products",
+      "Exclusive member-only events & offers",
+      "Benefits valid at all participating locations",
     ],
   },
   {
@@ -90,7 +98,15 @@ export const MEMBERSHIP_TIERS: MembershipTier[] = [
     tagline: "Elevated perks for clients who want the ultimate Love You experience.",
     perks: [
       "15% off every service",
-      "Complimentary nail fix within 2 weeks of your appointment",
+      "Free nail fix within 14 days",
+      "Priority booking",
+      "Birthday gift — free nail design (up to $15)",
+      "Free simple nail art after 3 visits",
+      "VIP welcome drink",
+      "Bring a Friend — $10 credit for every new client you refer, after their first paid visit",
+      "10% off retail products",
+      "Exclusive member-only events & offers",
+      "Benefits valid at all participating locations",
     ],
   },
   {

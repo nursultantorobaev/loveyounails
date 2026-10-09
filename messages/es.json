@@ -133,7 +133,7 @@
   "MembershipsTeaser": {
     "eyebrow": "Programa de membresías",
     "title": "La experiencia Love You definitiva",
-    "body": "Únete una vez al año y disfruta de descuentos exclusivos para socios en cada servicio, además de retoques de cortesía entre visitas. Tres niveles, vinculados a tu estudio.",
+    "body": "Únete por un año: descuento en cada servicio, arreglo de uña gratis dentro de 14 días, reserva prioritaria y más. Válida en todos los estudios participantes.",
     "gold": "Gold",
     "goldPerk": "10% de descuento en cada servicio",
     "diamond": "Diamond",
@@ -283,35 +283,57 @@
   "Memberships": {
     "eyebrow": "Programa de membresías",
     "title": "La belleza, recompensada",
-    "intro": "Únete una vez al año y disfruta de descuentos exclusivos para socios en cada visita. Tu membresía está vinculada a tu estudio y el descuento se aplica automáticamente al pagar.",
+    "intro": "Únete una vez al año y disfruta descuentos y beneficios exclusivos en cada visita. Tus beneficios valen en todos los estudios Love You participantes de Chicago, New York y Santa Monica.",
     "tiers": {
       "gold": {
         "tagline": "Perfecta para mantener tu rutina de belleza y ahorrar.",
-        "perk0": "10% de descuento en cada servicio",
-        "perk1": "Retoque de cortesía dentro de los 10 días de tu cita"
+        "perks": [
+          "10% de descuento en todos los servicios",
+          "Arreglo de uña gratis dentro de 14 días",
+          "Reserva prioritaria",
+          "Regalo de cumpleaños — diseño de uñas gratis (hasta $10)",
+          "Nail art sencillo gratis después de 5 visitas",
+          "Bebida VIP de bienvenida",
+          "Trae a una amiga — $10 de crédito por cada nueva clienta referida, después de su primera visita pagada",
+          "5% de descuento en productos",
+          "Eventos y ofertas exclusivas para miembros",
+          "Beneficios válidos en todos los estudios participantes"
+        ]
       },
       "diamond": {
         "tagline": "Ventajas superiores para quienes quieren la experiencia Love You definitiva.",
-        "perk0": "15% de descuento en cada servicio",
-        "perk1": "Retoque de cortesía dentro de las 2 semanas de tu cita"
+        "perks": [
+          "15% de descuento en todos los servicios",
+          "Arreglo de uña gratis dentro de 14 días",
+          "Reserva prioritaria",
+          "Regalo de cumpleaños — diseño de uñas gratis (hasta $15)",
+          "Nail art sencillo gratis después de 3 visitas",
+          "Bebida VIP de bienvenida",
+          "Trae a una amiga — $10 de crédito por cada nueva clienta referida, después de su primera visita pagada",
+          "10% de descuento en productos",
+          "Eventos y ofertas exclusivas para miembros",
+          "Beneficios válidos en todos los estudios participantes"
+        ]
       },
       "vip": {
         "tagline": "Nuestro nivel más exclusivo: solo por invitación.",
-        "perk0": "Solo por invitación",
-        "perk1": "Condiciones personalizadas"
+        "perks": [
+          "Solo por invitación",
+          "Condiciones personalizadas"
+        ]
       }
     },
     "howItWorksTitle": "Cómo funciona",
     "step0Title": "Compra",
     "step0Body": "Adquiere tu membresía en línea o en el salón: se cobra una vez al año.",
-    "step1Title": "Vinculada a tu estudio",
-    "step1Body": "Tu membresía está vinculada a la ciudad donde la compraste.",
+    "step1Title": "En cualquier ciudad",
+    "step1Body": "Tus beneficios valen en todos los estudios Love You participantes: Chicago, New York y Santa Monica.",
     "step2Title": "Regístrate",
     "step2Body": "En tu visita te localizamos por nombre, teléfono o email.",
-    "step3Title": "Descuento aplicado",
-    "step3Body": "Square aplica tu descuento de socio automáticamente al pagar.",
-    "tiedTitle": "Vinculada a tu ubicación.",
-    "tiedBody": "Una membresía solo es válida en la ciudad donde la compraste: una membresía de Chicago no puede usarse en Nueva York ni en Santa Monica, y viceversa. Se cobra una vez al año.",
+    "step3Title": "Beneficios al pagar",
+    "step3Body": "Tu descuento y beneficios de miembro se aplican al pagar.",
+    "tiedTitle": "Válida en todos los estudios participantes.",
+    "tiedBody": "Compra tu membresía en cualquier ciudad y usa tus beneficios en cada estudio Love You participante. Se cobra una vez al año.",
     "giftEyebrow": "Tarjetas regalo",
     "giftTitle": "Regala Love You",
     "giftBody": "Una tarjeta regalo de Love You siempre es un acierto. Compra una para tu ciudad abajo.",
@@ -641,7 +663,7 @@
         },
         {
           "q": "¿Tienen tarjetas de regalo y membresías?",
-          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio. Una membresía de Chicago es válida en nuestros estudios de Chicago."
+          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio, arreglo de uña gratis dentro de 14 días, reserva prioritaria y más. Las membresías son válidas en todos los estudios Love You participantes."
         }
       ],
       "new-york": [
@@ -675,7 +697,7 @@
         },
         {
           "q": "¿Tienen tarjetas de regalo y membresías?",
-          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio. Una membresía de New York es válida en nuestro estudio de New York."
+          "a": "Sí. Hay tarjetas de regalo, y nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio, arreglo de uña gratis dentro de 14 días, reserva prioritaria y más. Las membresías son válidas en todos los estudios Love You participantes."
         }
       ],
       "santa-monica": [
@@ -713,7 +735,7 @@
         },
         {
           "q": "¿Tienen tarjetas de regalo, membresías u oferta de primera visita?",
-          "a": "Sí a las tres. Hay tarjetas de regalo, nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio (una membresía de Santa Monica es válida en nuestro estudio de Santa Monica), y los clientes nuevos reciben 20% de descuento en su primera visita."
+          "a": "Sí a las tres. Hay tarjetas de regalo, nuestras membresías Gold y Diamond dan 10% y 15% de descuento en cada servicio más arreglo de uña gratis dentro de 14 días (válidas en todos los estudios Love You participantes), y los clientes nuevos reciben 20% de descuento en su primera visita."
         }
       ]
     }

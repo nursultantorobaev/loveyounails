@@ -41,7 +41,7 @@ export interface Market {
   /** Square gift-card order link for this market. */
   giftCardUrl?: string;
   /**
-   * Membership is tied to its city. Gold/Diamond are Square purchase links;
+   * Gold/Diamond are Square purchase links (sold per city, valid at all participating studios);
    * VIP is invitation-only (contact, no link). Empty/undefined = not published.
    */
   membership?: { gold?: string; diamond?: string };
