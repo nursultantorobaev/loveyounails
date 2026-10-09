@@ -17,7 +17,7 @@ const NAV = [
   { key: "giftCards", href: "/gift-cards" },
 ] as const;
 
-// Mobile menu only — the desktop bar has no room for more items.
+// Careers: end of the mobile menu, and of the desktop left group from xl (see below).
 const MOBILE_NAV = [...NAV, { key: "careers", href: "/careers" }] as const;
 
 export default function Header() {
@@ -32,6 +32,8 @@ export default function Header() {
           {NAV.slice(0, 3).map((item) => (
             <NavLink key={item.href} href={item.href} label={t(item.key)} />
           ))}
+          {/* Only from xl: at lg widths the bar is already full (it would overflow). */}
+          <NavLink href="/careers" label={t("careers")} className="hidden xl:inline" />
         </nav>
 
         {/* Center: wordmark */}
@@ -110,11 +112,11 @@ export default function Header() {
   );
 }
 
-function NavLink({ label, href }: { label: string; href: string }) {
+function NavLink({ label, href, className = "" }: { label: string; href: string; className?: string }) {
   return (
     <Link
       href={href}
-      className="whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-[0.16em] text-brown transition-colors hover:text-gold-dark"
+      className={`${className} whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-[0.16em] text-brown transition-colors hover:text-gold-dark`}
     >
       {label}
     </Link>
