@@ -17,6 +17,9 @@ const NAV = [
   { key: "giftCards", href: "/gift-cards" },
 ] as const;
 
+// Mobile menu only — the desktop bar has no room for more items.
+const MOBILE_NAV = [...NAV, { key: "careers", href: "/careers" }] as const;
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("Nav");
@@ -83,7 +86,7 @@ export default function Header() {
       {/* Mobile menu */}
       {open && (
         <nav className="border-t border-sand/70 bg-cream px-5 pb-6 pt-2 lg:hidden">
-          {NAV.map((item) => (
+          {MOBILE_NAV.map((item) => (
             <Link
               key={item.href}
               href={item.href}
