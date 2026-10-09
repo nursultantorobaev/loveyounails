@@ -6,11 +6,14 @@
 //   Position | City | Studio | Type | Description | Active
 // "Active" = yes/да/true/1 (blank also counts as active). Rows with Active = no are hidden.
 //
-// Until the tab exists (CAREERS_CSV_URL unset) or if the sheet can't be read,
-// the page shows the default openings from messages/*.json instead.
+// If the tab has no rows at all, or the sheet can't be read, the page shows the
+// default openings from messages/*.json. To show "no open positions", keep the
+// rows and set Active = no.
 
-/** Published CSV of the Careers tab: .../export?format=csv&gid=<tab id>. */
-const CAREERS_CSV_URL = process.env.CAREERS_CSV_URL ?? "";
+/** CSV export of the "Careers" tab (same file as promos/hours). Override with CAREERS_CSV_URL. */
+const CAREERS_CSV_URL =
+  process.env.CAREERS_CSV_URL ??
+  "https://docs.google.com/spreadsheets/d/1UwWAaKHOJ1RsQ3SZ9SVqLktjZBaovflr/export?format=csv&gid=1772101724";
 
 export interface Opening {
   position: string;
@@ -52,8 +55,8 @@ const COLUMNS: Record<keyof Opening | "active", RegExp> = {
 
 /**
  * Openings from the sheet, or `null` when the sheet isn't set up / can't be
- * read / doesn't look like a Careers tab — the page then uses its defaults.
- * An empty array means the tab is set up but nothing is open right now.
+ * read / doesn't look like a Careers tab / has no rows yet — the page then uses
+ * its defaults. An empty array means rows exist but all are Active = no.
  */
 export async function getOpenings(): Promise<Opening[] | null> {
   if (!CAREERS_CSV_URL) return null;
@@ -67,8 +70,9 @@ export async function getOpenings(): Promise<Opening[] | null> {
     ) as Record<keyof typeof COLUMNS, number>;
     if (col.position < 0) return null; // not a Careers tab
     const cell = (r: string[], i: number) => (i >= 0 ? (r[i] ?? "").trim() : "");
-    return rows
-      .filter((r) => cell(r, col.position))
+    const listed = rows.filter((r) => cell(r, col.position));
+    if (!listed.length) return null; // empty tab → defaults
+    return listed
       .filter((r) => !/^(no|нет|false|0)$/i.test(cell(r, col.active)))
       .map((r) => ({
         position: cell(r, col.position),
