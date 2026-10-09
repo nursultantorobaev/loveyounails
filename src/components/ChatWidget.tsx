@@ -45,6 +45,12 @@ function save(s: Saved) {
   }
 }
 
+/** Link text: short links as-is, long ones (Square booking pages) as "host/…". */
+function shortLink(url: string): string {
+  const bare = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  return bare.length <= 36 ? bare : `${bare.split("/")[0]}/…`;
+}
+
 /** Turns URLs (and bare loveyou.club/… links) into links, **bold** into bold. */
 function RichText({ text }: { text: string }) {
   const parts = text.split(/(https?:\/\/[^\s)]+|loveyou\.club\/[^\s),.]*[^\s),.!?]|\*\*[^*]+\*\*)/g);
@@ -54,8 +60,8 @@ function RichText({ text }: { text: string }) {
         if (/^https?:\/\//.test(p) || /^loveyou\.club\//.test(p)) {
           const href = p.startsWith("http") ? p : `https://${p}`;
           return (
-            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="break-all underline underline-offset-2">
-              {p.replace(/^https?:\/\//, "")}
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap underline underline-offset-2">
+              {shortLink(p)}
             </a>
           );
         }
@@ -84,13 +90,15 @@ export default function ChatWidget() {
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Restore a recent conversation once the panel opens.
+  // Restore a recent conversation the first time the panel opens (only then — later a
+  // null chat means the visitor chose "change city" and should see the picker).
+  const restored = useRef(false);
   useEffect(() => {
-    if (!open || chat) return;
+    if (!open || restored.current) return;
+    restored.current = true;
     const saved = load();
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time restore from localStorage
     setChat(saved ?? (pageCity ? { sessionId: newSessionId(), city: pageCity, messages: [], at: Date.now() } : null));
-  }, [open, chat, pageCity]);
+  }, [open, pageCity]);
 
   useEffect(() => {
     if (chat) save(chat);
@@ -112,9 +120,14 @@ export default function ChatWidget() {
     setChat({ sessionId: newSessionId(), city: slug, messages: [], at: Date.now() });
   }
 
-  function startOver() {
+  /** Back to the city picker (a different city is a different team, so a new chat). */
+  function changeCity() {
     setChat(null);
     try { localStorage.removeItem(STORE_KEY); } catch { /* ignore */ }
+  }
+
+  function startOver() {
+    changeCity();
     if (pageCity) pickCity(pageCity);
   }
 
@@ -170,7 +183,7 @@ export default function ChatWidget() {
             <div>
               <p className="font-display text-xl text-espresso">{t("title")}</p>
               {cityName && (
-                <button type="button" onClick={() => setChat(null)} className="text-xs text-brown-soft underline-offset-2 hover:underline">
+                <button type="button" onClick={changeCity} className="text-xs text-brown-soft underline-offset-2 hover:underline">
                   {cityName} · {t("changeCity")}
                 </button>
               )}
