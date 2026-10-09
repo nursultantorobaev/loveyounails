@@ -141,7 +141,14 @@
     "diamondPerk": "15% de descuento en cada servicio",
     "vip": "VIP",
     "vipPerk": "por invitación",
-    "cta": "Ver membresías"
+    "cta": "Ver membresías",
+    "offEvery": "de descuento en cada servicio",
+    "topTier": "Máximas ventajas",
+    "yearly": "Pago una vez al año",
+    "cities": "Chicago · New York · Santa Monica",
+    "vipLine": "VIP — solo por invitación",
+    "join": "Unirme a {tier}",
+    "andMore": "+ bebida de bienvenida, crédito «Trae a una amiga» y eventos para miembros"
   },
   "Reviews": {
     "eyebrow": "Opiniones de nuestras clientas",

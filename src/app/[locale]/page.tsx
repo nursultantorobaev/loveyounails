@@ -269,41 +269,101 @@ function ProductsTeaser() {
 }
 
 /* ------------------------------ Memberships ----------------------------- */
+// Discount per tier; the perk lines come from the Memberships page copy so both stay in sync.
+const TEASER_TIERS = [
+  { key: "gold", pct: 10, top: false },
+  { key: "diamond", pct: 15, top: true },
+] as const;
+// Indexes into Memberships.tiers.<key>.perks: nail fix, priority booking, birthday gift,
+// free nail art after N visits, retail discount.
+const TEASER_PERKS = [1, 2, 3, 4, 7];
+
 function Memberships() {
   const t = useTranslations("MembershipsTeaser");
+  const tm = useTranslations("Memberships");
   return (
     <Section id="memberships">
       <Reveal>
-        <div className="overflow-hidden rounded-3xl bg-espresso px-6 py-14 text-center text-cream md:px-16 md:py-20">
-          <p className="eyebrow text-gold">{t("eyebrow")}</p>
-          <h2 className="mx-auto mt-4 max-w-2xl text-4xl uppercase leading-tight md:text-5xl">
-            {t("title")}
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-cream/70 leading-relaxed">{t("body")}</p>
-          <div className="mx-auto mt-9 flex max-w-2xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            <Perk value={t("gold")} label={t("goldPerk")} />
-            <span className="hidden h-8 w-px bg-cream/20 sm:block" />
-            <Perk value={t("diamond")} label={t("diamondPerk")} />
-            <span className="hidden h-8 w-px bg-cream/20 sm:block" />
-            <Perk value={t("vip")} label={t("vipPerk")} />
-          </div>
-          <div className="mt-10">
-            <Button href="/memberships" variant="light">
-              {t("cta")}
-            </Button>
+        <div className="relative overflow-hidden rounded-3xl bg-espresso px-6 py-14 text-cream md:px-12 md:py-16 lg:px-16 lg:py-20">
+          {/* soft gold glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/15 blur-3xl"
+          />
+          <div className="relative grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
+            <div className="text-center lg:text-left">
+              <p className="eyebrow text-gold">{t("eyebrow")}</p>
+              <h2 className="mx-auto mt-4 max-w-xl text-4xl uppercase leading-tight md:text-5xl lg:mx-0">
+                {t("title")}
+              </h2>
+              <p className="mx-auto mt-5 max-w-xl leading-relaxed text-cream/70 lg:mx-0">{t("body")}</p>
+              <ul className="mx-auto mt-6 flex max-w-xl flex-wrap justify-center gap-2 lg:mx-0 lg:justify-start">
+                {[t("yearly"), t("cities"), t("vipLine")].map((chip) => (
+                  <li
+                    key={chip}
+                    className="rounded-full border border-cream/15 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-cream/70"
+                  >
+                    {chip}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-9">
+                <Button href="/memberships" variant="light">
+                  {t("cta")}
+                </Button>
+              </div>
+            </div>
+
+            <div className="grid gap-6 pt-3 sm:grid-cols-2 sm:gap-4">
+              {TEASER_TIERS.map((tier) => {
+                const perks = tm.raw(`tiers.${tier.key}.perks`) as string[];
+                return (
+                  <Link
+                    key={tier.key}
+                    href="/memberships"
+                    className={`group relative flex flex-col rounded-2xl border p-6 transition-colors md:p-7 ${
+                      tier.top
+                        ? "border-gold/60 bg-gradient-to-b from-gold/15 to-gold/[0.03] hover:border-gold"
+                        : "border-cream/15 bg-cream/[0.04] hover:border-cream/35"
+                    }`}
+                  >
+                    {tier.top && (
+                      <span className="absolute -top-3 left-6 whitespace-nowrap rounded-full bg-gold px-3 py-1 text-[0.6rem] font-medium uppercase tracking-[0.14em] text-espresso md:left-7">
+                        {t("topTier")}
+                      </span>
+                    )}
+                    <p className="font-display text-3xl text-gold">{t(tier.key)}</p>
+                    <p className="mt-1 min-h-[2.5rem] text-xs leading-relaxed text-cream/60">
+                      {tm(`tiers.${tier.key}.tagline`)}
+                    </p>
+                    <p className="mt-5 flex items-baseline gap-2">
+                      <span className="font-display text-6xl leading-none text-cream">{tier.pct}%</span>
+                      <span className="text-[0.65rem] uppercase tracking-[0.14em] text-cream/60">
+                        {t("offEvery")}
+                      </span>
+                    </p>
+                    <ul className="mt-6 flex-1 space-y-2.5 border-t border-cream/10 pt-5">
+                      {TEASER_PERKS.map((i) => perks[i]).filter(Boolean).map((perk) => (
+                        <li key={perk} className="flex gap-2.5 text-sm leading-snug text-cream/85">
+                          <svg viewBox="0 0 16 16" className="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                            <path d="M3 8.5l3 3 7-7" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                          {perk}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-4 text-xs leading-relaxed text-cream/50">{t("andMore")}</p>
+                    <span className="mt-6 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-gold transition-colors group-hover:text-cream">
+                      {t("join", { tier: t(tier.key) })} →
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </Reveal>
     </Section>
-  );
-}
-
-function Perk({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <div className="font-display text-3xl text-gold">{value}</div>
-      <div className="mt-1 text-xs uppercase tracking-[0.14em] text-cream/60">{label}</div>
-    </div>
   );
 }
 
