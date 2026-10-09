@@ -941,5 +941,21 @@
       "remove": "Remove",
       "none": "I don't have salon experience yet"
     }
+  },
+  "Chat": {
+    "button": "Chat",
+    "open": "Chat with Love You",
+    "title": "Love You assistant",
+    "greeting": "Hi! 💕 I can help with prices, services, memberships, gift cards and booking links. Ask me anything!",
+    "pickCity": "Which city are you visiting?",
+    "pickCityFirst": "Pick a city to start",
+    "changeCity": "change city",
+    "placeholder": "Type your message…",
+    "send": "Send",
+    "close": "Close chat",
+    "newChat": "New chat",
+    "typing": "Typing",
+    "error": "Sorry — something went wrong. Please try again, or call your studio.",
+    "disclaimer": "AI assistant · bookings are made on the Square page it links to"
   }
 }

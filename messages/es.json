@@ -941,5 +941,21 @@
       "remove": "Quitar",
       "none": "Todavía no tengo experiencia en salones"
     }
+  },
+  "Chat": {
+    "button": "Chat",
+    "open": "Chatea con Love You",
+    "title": "Asistente Love You",
+    "greeting": "¡Hola! 💕 Te ayudo con precios, servicios, membresías, tarjetas regalo y enlaces para reservar. ¡Pregúntame lo que quieras!",
+    "pickCity": "¿En qué ciudad quieres tu cita?",
+    "pickCityFirst": "Elige una ciudad para empezar",
+    "changeCity": "cambiar ciudad",
+    "placeholder": "Escribe tu mensaje…",
+    "send": "Enviar",
+    "close": "Cerrar chat",
+    "newChat": "Nuevo chat",
+    "typing": "Escribiendo",
+    "error": "Lo siento, algo salió mal. Inténtalo de nuevo o llama a tu estudio.",
+    "disclaimer": "Asistente IA · las citas se reservan en la página de Square del enlace"
   }
 }
