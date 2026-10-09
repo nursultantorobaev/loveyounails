@@ -150,7 +150,7 @@ export function buildSearchIndex(m: Msgs): SearchEntry[] {
   for (const tier of MEMBERSHIP_TIERS) {
     const tm = m.Memberships?.tiers?.[tier.key];
     if (!tm) continue;
-    out.push(entry({ id: `tier-${tier.key}`, group: "services", title: `${tier.name} — ${str(m.Nav?.memberships)}`, snippet: clip(`${str(tm.tagline)} ${str(tm.perk0)}`), href: "/memberships", keywords: KW.memberships, body: str(tm.perk1) }));
+    out.push(entry({ id: `tier-${tier.key}`, group: "services", title: `${tier.name} — ${str(m.Nav?.memberships)}`, snippet: clip(`${str(tm.tagline)} ${str((tm.perks ?? [])[0])}`), href: "/memberships", keywords: KW.memberships, body: (tm.perks ?? []).join(" ") }));
   }
 
   // --- FAQ (per city) -------------------------------------------------------

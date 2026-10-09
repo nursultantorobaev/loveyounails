@@ -133,7 +133,7 @@
   "MembershipsTeaser": {
     "eyebrow": "Membership Program",
     "title": "The ultimate Love You experience",
-    "body": "Join once a year for members-only savings on every service, plus complimentary touch-ups between visits. Three tiers, tied to your home studio.",
+    "body": "Join once a year for members-only savings on every service, a free nail fix within 14 days, priority booking and more. Valid at all participating studios.",
     "gold": "Gold",
     "goldPerk": "10% off every service",
     "diamond": "Diamond",
@@ -283,35 +283,57 @@
   "Memberships": {
     "eyebrow": "Membership Program",
     "title": "Beauty, rewarded",
-    "intro": "Join once a year and enjoy members-only savings on every visit. Your membership is tied to your home studio, and your discount is applied automatically at checkout.",
+    "intro": "Join once a year and enjoy members-only savings and perks on every visit. Your benefits work at all participating Love You studios in Chicago, New York and Santa Monica.",
     "tiers": {
       "gold": {
         "tagline": "Perfect for maintaining your beauty routine with added savings.",
-        "perk0": "10% off every service",
-        "perk1": "Complimentary nail fix within 10 days of your appointment"
+        "perks": [
+          "10% off every service",
+          "Free nail fix within 14 days",
+          "Priority booking",
+          "Birthday gift — free nail design (up to $10)",
+          "Free simple nail art after 5 visits",
+          "VIP welcome drink",
+          "Bring a Friend — $10 credit for every new client you refer, after their first paid visit",
+          "5% off retail products",
+          "Exclusive member-only events & offers",
+          "Benefits valid at all participating locations"
+        ]
       },
       "diamond": {
         "tagline": "Elevated perks for clients who want the ultimate Love You experience.",
-        "perk0": "15% off every service",
-        "perk1": "Complimentary nail fix within 2 weeks of your appointment"
+        "perks": [
+          "15% off every service",
+          "Free nail fix within 14 days",
+          "Priority booking",
+          "Birthday gift — free nail design (up to $15)",
+          "Free simple nail art after 3 visits",
+          "VIP welcome drink",
+          "Bring a Friend — $10 credit for every new client you refer, after their first paid visit",
+          "10% off retail products",
+          "Exclusive member-only events & offers",
+          "Benefits valid at all participating locations"
+        ]
       },
       "vip": {
         "tagline": "Our most exclusive tier — by invitation only.",
-        "perk0": "By invitation only",
-        "perk1": "Individual, personalized terms"
+        "perks": [
+          "By invitation only",
+          "Individual, personalized terms"
+        ]
       }
     },
     "howItWorksTitle": "How it works",
     "step0Title": "Purchase",
     "step0Body": "Buy your membership online or in the salon — billed once a year.",
-    "step1Title": "Linked to your studio",
-    "step1Body": "Your membership is tied to the city where you bought it.",
+    "step1Title": "Use it in any city",
+    "step1Body": "Your benefits work at all participating Love You studios — Chicago, New York and Santa Monica.",
     "step2Title": "Check in",
     "step2Body": "On your visit, we find you by name, phone or email.",
-    "step3Title": "Discount applied",
-    "step3Body": "Square automatically applies your member discount at checkout.",
-    "tiedTitle": "Tied to your location.",
-    "tiedBody": "A membership is valid only at the city where you purchased it — a Chicago membership can't be used in New York or Santa Monica, and vice versa. Billed once per year.",
+    "step3Title": "Perks applied",
+    "step3Body": "Your member discount and perks are applied at checkout.",
+    "tiedTitle": "Valid at all participating locations.",
+    "tiedBody": "Buy your membership in any city and use your benefits at every participating Love You studio. Billed once per year.",
     "giftEyebrow": "Gift Cards",
     "giftTitle": "Give the gift of Love You",
     "giftBody": "A Love You gift card is always the perfect choice. Purchase one for your city below.",
@@ -641,7 +663,7 @@
         },
         {
           "q": "Do you have gift cards and memberships?",
-          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service. A Chicago membership is valid at our Chicago studios."
+          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service, a free nail fix within 14 days, priority booking and more. Memberships are valid at all participating Love You studios."
         }
       ],
       "new-york": [
@@ -675,7 +697,7 @@
         },
         {
           "q": "Do you have gift cards and memberships?",
-          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service. A New York membership is valid at our New York studio."
+          "a": "Yes. Gift cards are available, and our Gold and Diamond memberships give 10% and 15% off every service, a free nail fix within 14 days, priority booking and more. Memberships are valid at all participating Love You studios."
         }
       ],
       "santa-monica": [
@@ -713,7 +735,7 @@
         },
         {
           "q": "Do you have gift cards, memberships or a first-visit offer?",
-          "a": "Yes to all three. Gift cards are available, our Gold and Diamond memberships give 10% and 15% off every service (a Santa Monica membership is valid at our Santa Monica studio), and first-time clients receive 20% off their first visit."
+          "a": "Yes to all three. Gift cards are available, our Gold and Diamond memberships give 10% and 15% off every service plus a free nail fix within 14 days (valid at all participating Love You studios), and first-time clients receive 20% off their first visit."
         }
       ]
     }

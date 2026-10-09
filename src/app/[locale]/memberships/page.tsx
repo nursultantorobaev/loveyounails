@@ -130,13 +130,13 @@ function TierCard({ tier }: { tier: MembershipTier }) {
       </p>
 
       <ul className="mt-6 space-y-3">
-        {["perk0", "perk1"].map((p) => (
+        {(t.raw(`tiers.${tier.key}.perks`) as string[]).map((perk) => (
           <li
-            key={p}
+            key={perk}
             className={`flex gap-3 text-sm ${isVip ? "text-cream/85" : "text-brown"}`}
           >
             <span className={isVip ? "text-gold" : "text-gold-dark"}>◆</span>
-            {t(`tiers.${tier.key}.${p}`)}
+            {perk}
           </li>
         ))}
       </ul>
