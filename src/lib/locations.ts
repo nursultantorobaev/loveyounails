@@ -27,6 +27,8 @@ export interface Salon {
   bookingUrl: string;
   /** Optional exact Google Maps link (overrides the address-based search). */
   mapUrl?: string;
+  /** ParkChicago street-parking zone number nearby (Chicago studios). */
+  parkingZone?: string;
 }
 
 export interface Market {
@@ -98,6 +100,7 @@ export const MARKETS: Market[] = [
         state: "IL",
         zip: "60661",
         phones: ["+1 (773) 707-1747"],
+        parkingZone: "905406",
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/LZDZBECNK192R/services",
@@ -110,6 +113,7 @@ export const MARKETS: Market[] = [
         state: "IL",
         zip: "60657",
         phones: ["+1 (773) 707-7031"],
+        parkingZone: "441201",
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/L9B6FFKFB3FKE/services",
@@ -122,6 +126,7 @@ export const MARKETS: Market[] = [
         state: "IL",
         zip: "60622",
         phones: ["+1 (773) 707-7174"],
+        parkingZone: "640307",
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/LYD9R7TF34JF3/services",
@@ -134,6 +139,7 @@ export const MARKETS: Market[] = [
         state: "IL",
         zip: "60654",
         phones: ["+1 (312) 764-9974"],
+        parkingZone: "244401",
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/LDBCA9SJV11ZW/services",
@@ -146,6 +152,7 @@ export const MARKETS: Market[] = [
         state: "IL",
         zip: "60661",
         phones: ["+1 (917) 881-0212"],
+        parkingZone: "385402",
         hours: STANDARD_HOURS,
         bookingUrl:
           "https://book.squareup.com/appointments/kbamfopputrxms/location/LYVY53FF244JH/services",
@@ -224,9 +231,9 @@ export function getMarket(slug: string): Market | undefined {
 /** Google Maps directions link — exact override if set, else built from address. */
 export function mapsUrl(salon: Salon): string {
   if (salon.mapUrl) return salon.mapUrl;
-  const q = encodeURIComponent(
-    `Love You Nail Salon, ${salon.address}, ${salon.city}, ${salon.state} ${salon.zip}`,
-  );
+  // Address only — with the brand name, Google can resolve to a *different* Love You
+  // studio nearby (e.g. West Loop → the Downtown listing).
+  const q = encodeURIComponent(`${salon.address}, ${salon.city}, ${salon.state} ${salon.zip}`);
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
 

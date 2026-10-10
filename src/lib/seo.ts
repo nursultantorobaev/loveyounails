@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { MARKETS, type DayHours, type Market, type Salon } from "@/lib/locations";
+import { studioPath } from "@/lib/studios";
 
 export const SITE_URL = "https://loveyou.club";
 export const SITE_NAME = "Love You Nail Salon";
@@ -112,9 +113,11 @@ export function websiteLd(locale: string) {
   };
 }
 
-/** One NailSalon (LocalBusiness) per studio — address, phone, hours, booking link. */
-function salonLd(market: Market, salon: Salon, locale: string) {
-  const url = `${pageUrl(locale, `/locations/${market.slug}`)}#${salon.slug}`;
+/** One NailSalon (LocalBusiness) per studio — address, phone, hours, booking link. Its
+ *  url is the studio's own page (or the city page for one-studio cities); @id stays
+ *  locale-free so all language versions describe the same business. */
+export function salonLd(market: Market, salon: Salon, locale: string) {
+  const url = pageUrl(locale, studioPath(market, salon));
   return {
     "@context": "https://schema.org",
     "@type": "NailSalon",

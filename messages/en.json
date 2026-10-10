@@ -232,7 +232,8 @@
       "fri": "Fri",
       "sat": "Sat",
       "sun": "Sun"
-    }
+    },
+    "studioDetails": "Studio details"
   },
   "Shop": {
     "eyebrow": "Professional Products",
@@ -1062,6 +1063,73 @@
     "credits": {
       "title": "Image Credits | Love You Nail Salon",
       "description": "Credits for photography and video used on the Love You Nail Salon website."
+    }
+  },
+  "Studio": {
+    "h1": "Love You Nail Salon {name}",
+    "book": "Book at {name}",
+    "call": "Call the studio",
+    "address": "Address",
+    "phone": "Phone",
+    "mapTitle": "Map: Love You Nail Salon {name}",
+    "gettingHere": "Getting here",
+    "parkingTitle": "Parking",
+    "parkingBody": "Paid street parking is available nearby 7 days a week — pay in the ParkChicago app or at a pay box. Parking zone: {zone}. There's no private lot, so allow a few extra minutes to find a spot and always check the posted signs.",
+    "transitTitle": "Public transit",
+    "servicesTitle": "Popular services & prices",
+    "servicesNote": "“From” prices vary with nail length and design; your final price is confirmed when you book. Same-time combos are done by two technicians.",
+    "from": "from",
+    "whyTitle": "Why clients choose Love You {name}",
+    "why": {
+      "technique": "Russian e-file manicure by trained specialists — precise, gentle cuticle work and a long-lasting, glossy finish.",
+      "sterility": "Medical-grade hygiene: every metal tool is cleaned, sealed and autoclaved after each client.",
+      "sterilityLink": "Our sterilization",
+      "membership": "Members save 10–15% on every service and get a free nail fix within 14 days — valid at all participating studios.",
+      "membershipLink": "Memberships"
+    },
+    "faqTitle": "{name} studio — FAQ",
+    "faq": {
+      "parkingQ": "Where can I park near the {name} studio?",
+      "transitQ": "How do I get to the {name} studio by public transit?",
+      "hoursQ": "What are the {name} studio's hours?",
+      "bookQ": "How do I book an appointment at {name}?",
+      "bookA": "Book online 24/7: tap “Book at {name}” on this page and choose your service and time. You can also call the studio at {phone}.",
+      "memberQ": "Does my Love You membership work at the {name} studio?",
+      "memberA": "Yes. Gold and Diamond memberships are valid at all participating Love You studios in Chicago, New York and Santa Monica."
+    },
+    "otherStudios": "Other studios in {city}",
+    "viewStudio": "View studio",
+    "studios": {
+      "west-loop": {
+        "seoTitle": "Nail Salon in West Loop, Chicago — Russian Manicure | Love You",
+        "seoDescription": "Love You Nail Salon West Loop at 118 N Halsted St, near Randolph Street & Fulton Market. Russian e-file manicure and smart pedicure, open 7 days. Book online.",
+        "intro": "Our West Loop studio is on Halsted Street, a short walk from Randolph Street's Restaurant Row and the Fulton Market district — easy to fit in before dinner or after work. Come in for a Russian e-file manicure, a smart pedicure or a full mani-pedi with two technicians at once.",
+        "transit": "The closest “L” station is Morgan (Green & Pink Lines), about a 7-minute walk. The #8 Halsted bus stops near the studio."
+      },
+      "lake-view": {
+        "seoTitle": "Nail Salon in Lakeview, Chicago — Russian Manicure | Love You",
+        "seoDescription": "Love You Nail Salon Lakeview at 2829 N Clark St, near Clark & Diversey. Russian e-file manicure and smart pedicure, open 7 days. Book online.",
+        "intro": "Our Lakeview studio sits on Clark Street just north of Diversey Parkway, among the neighborhood's shops and cafés and a few minutes from the lakefront. It's an easy weekend stop for a fresh set or a relaxing smart pedicure.",
+        "transit": "CTA buses #22 Clark and #76 Diversey stop nearby; the Diversey Brown Line station is about a 10-minute walk."
+      },
+      "wicker-park": {
+        "seoTitle": "Nail Salon in Wicker Park, Chicago — Russian Manicure | Love You",
+        "seoDescription": "Love You Nail Salon Wicker Park at 1843 W North Ave, near North, Damen & Milwaukee. Russian e-file manicure and smart pedicure, open 7 days. Book online.",
+        "intro": "Our Wicker Park studio is on North Avenue, just east of the six-corner intersection of North, Damen and Milwaukee — the heart of the neighborhood's boutiques, coffee shops and restaurants. Pair your nail appointment with an afternoon in one of Chicago's liveliest neighborhoods.",
+        "transit": "The Damen Blue Line station is about a 5-minute walk. The #72 North bus stops nearby."
+      },
+      "river-north": {
+        "seoTitle": "Nail Salon in River North, Chicago — Russian Manicure | Love You",
+        "seoDescription": "Love You Nail Salon River North at 353 W Chicago Ave, steps from the Chicago Brown Line station. Russian e-file manicure and smart pedicure, open 7 days.",
+        "intro": "Our River North studio is on Chicago Avenue in one of the city's busiest dining and gallery neighborhoods, close to downtown offices and hotels. It's a convenient spot for a lunchtime manicure or a polished look before an evening out.",
+        "transit": "The Chicago station (Brown & Purple Lines) is about a 2-minute walk. The #66 Chicago bus stops nearby."
+      },
+      "downtown": {
+        "seoTitle": "Nail Salon in Downtown Chicago — Russian Manicure | Love You",
+        "seoDescription": "Love You Nail Salon Downtown at 180 N Jefferson St, near Ogilvie Transportation Center. Russian e-file manicure and smart pedicure, open 7 days. Book online.",
+        "intro": "Our Downtown studio is at Jefferson and Lake Street on the west edge of the Loop, a short walk from Ogilvie Transportation Center — convenient for commuters and anyone working downtown. Book a quick manicure before your train or a full mani-pedi after work.",
+        "transit": "The Clinton station (Green & Pink Lines) is about a 2-minute walk, and Ogilvie Transportation Center (Metra) about 6 minutes."
+      }
     }
   }
 }

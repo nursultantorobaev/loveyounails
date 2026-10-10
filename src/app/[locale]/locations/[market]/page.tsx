@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { localizedMeta, marketSalonsLd, breadcrumbLd, pageUrl } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
+import { hasStudioPages } from "@/lib/studios";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -210,7 +211,11 @@ export default async function MarketPage({ params }: MarketParams) {
       ) : (
         <div className="mt-14 space-y-6">
           {m.salons.map((s) => (
-            <SalonCard key={s.slug} salon={s} />
+            <SalonCard
+              key={s.slug}
+              salon={s}
+              detailsHref={hasStudioPages(m) ? `/locations/${m.slug}/${s.slug}` : undefined}
+            />
           ))}
         </div>
       )}

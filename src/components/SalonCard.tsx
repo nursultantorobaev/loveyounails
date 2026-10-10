@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { bookingHref, mapsUrl, type DayHours, type Salon } from "@/lib/locations";
 
 /** Collapse consecutive days that share the same hours; returns day-key ranges. */
-function groupHours(hours: DayHours[]) {
+export function groupHours(hours: DayHours[]) {
   const key = (d: string) => d.slice(0, 3).toLowerCase();
   const out: { startKey: string; endKey: string | null; time: string }[] = [];
   let i = 0;
@@ -25,7 +26,8 @@ function groupHours(hours: DayHours[]) {
   return out;
 }
 
-export default function SalonCard({ salon }: { salon: Salon }) {
+/** `detailsHref`: the studio's own page, when the city has one per studio. */
+export default function SalonCard({ salon, detailsHref }: { salon: Salon; detailsHref?: string }) {
   const t = useTranslations("SalonCard");
   const href = bookingHref(salon);
   const isLink = href.startsWith("http");
@@ -34,7 +36,13 @@ export default function SalonCard({ salon }: { salon: Salon }) {
   return (
     <article id={salon.slug} className="scroll-mt-28 grid gap-8 rounded-3xl border border-sand bg-cream p-7 md:grid-cols-[1fr_auto] md:p-9">
       <div>
-        <h3 className="text-3xl text-espresso">{salon.name}</h3>
+        <h3 className="text-3xl text-espresso">
+          {detailsHref ? (
+            <Link href={detailsHref} className="transition-colors hover:text-gold-dark">{salon.name}</Link>
+          ) : (
+            salon.name
+          )}
+        </h3>
 
         {/* Address */}
         <p className="mt-4 flex items-start gap-3 text-brown">
@@ -112,6 +120,14 @@ export default function SalonCard({ salon }: { salon: Salon }) {
         >
           {t("directions")}
         </a>
+        {detailsHref && (
+          <Link
+            href={detailsHref}
+            className="text-center text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gold-dark underline-offset-4 hover:underline"
+          >
+            {t("studioDetails")} →
+          </Link>
+        )}
       </div>
     </article>
   );

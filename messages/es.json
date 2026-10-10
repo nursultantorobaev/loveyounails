@@ -232,7 +232,8 @@
       "fri": "Vie",
       "sat": "Sáb",
       "sun": "Dom"
-    }
+    },
+    "studioDetails": "Ver estudio"
   },
   "Shop": {
     "eyebrow": "Productos profesionales",
@@ -1062,6 +1063,73 @@
     "credits": {
       "title": "Créditos de imágenes | Love You Nail Salon",
       "description": "Créditos de las fotos y videos usados en el sitio de Love You Nail Salon."
+    }
+  },
+  "Studio": {
+    "h1": "Love You Nail Salon {name}",
+    "book": "Reservar en {name}",
+    "call": "Llamar al estudio",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "mapTitle": "Mapa: Love You Nail Salon {name}",
+    "gettingHere": "Cómo llegar",
+    "parkingTitle": "Estacionamiento",
+    "parkingBody": "Hay estacionamiento pagado en la calle cerca, los 7 días — paga con la app ParkChicago o en el parquímetro. Zona de estacionamiento: {zone}. No tenemos estacionamiento propio, así que calcula unos minutos extra y revisa siempre las señales.",
+    "transitTitle": "Transporte público",
+    "servicesTitle": "Servicios populares y precios",
+    "servicesNote": "Los precios “desde” varían según el largo y el diseño; el precio final se confirma al reservar. Los combos simultáneos los hacen dos técnicas.",
+    "from": "desde",
+    "whyTitle": "Por qué eligen Love You {name}",
+    "why": {
+      "technique": "Manicura rusa con torno por especialistas capacitadas — trabajo de cutícula preciso y suave, y un acabado brillante y duradero.",
+      "sterility": "Higiene de grado médico: cada herramienta metálica se limpia, se sella y pasa por autoclave después de cada clienta.",
+      "sterilityLink": "Nuestra esterilización",
+      "membership": "Las miembros ahorran 10–15% en cada servicio y tienen arreglo de uña gratis en 14 días — válido en todos los estudios participantes.",
+      "membershipLink": "Membresías"
+    },
+    "faqTitle": "Estudio {name} — preguntas frecuentes",
+    "faq": {
+      "parkingQ": "¿Dónde puedo estacionar cerca del estudio {name}?",
+      "transitQ": "¿Cómo llego al estudio {name} en transporte público?",
+      "hoursQ": "¿Cuál es el horario del estudio {name}?",
+      "bookQ": "¿Cómo reservo una cita en {name}?",
+      "bookA": "Reserva online 24/7: toca “Reservar en {name}” en esta página y elige tu servicio y horario. También puedes llamar al estudio al {phone}.",
+      "memberQ": "¿Mi membresía Love You es válida en el estudio {name}?",
+      "memberA": "Sí. Las membresías Gold y Diamond son válidas en todos los estudios Love You participantes en Chicago, Nueva York y Santa Monica."
+    },
+    "otherStudios": "Otros estudios en {city}",
+    "viewStudio": "Ver estudio",
+    "studios": {
+      "west-loop": {
+        "seoTitle": "Salón de uñas en West Loop, Chicago — Manicura rusa | Love You",
+        "seoDescription": "Love You Nail Salon West Loop en 118 N Halsted St, cerca de Randolph Street y Fulton Market. Manicura rusa y pedicura smart, abierto 7 días. Reserva online.",
+        "intro": "Nuestro estudio de West Loop está en Halsted Street, a pocos pasos del Restaurant Row de Randolph Street y del distrito de Fulton Market — ideal antes de cenar o después del trabajo. Ven por una manicura rusa con torno, una pedicura smart o mani-pedi con dos técnicas a la vez.",
+        "transit": "La estación de “L” más cercana es Morgan (líneas Verde y Rosa), a unos 7 minutos a pie. El autobús #8 Halsted para cerca del estudio."
+      },
+      "lake-view": {
+        "seoTitle": "Salón de uñas en Lakeview, Chicago — Manicura rusa | Love You",
+        "seoDescription": "Love You Nail Salon Lakeview en 2829 N Clark St, cerca de Clark y Diversey. Manicura rusa y pedicura smart, abierto 7 días. Reserva online.",
+        "intro": "Nuestro estudio de Lakeview está en Clark Street, justo al norte de Diversey Parkway, entre tiendas y cafés del barrio y a pocos minutos del lago. Perfecto para renovar tus uñas el fin de semana o relajarte con una pedicura smart.",
+        "transit": "Los autobuses #22 Clark y #76 Diversey paran cerca; la estación Diversey (línea Café) está a unos 10 minutos a pie."
+      },
+      "wicker-park": {
+        "seoTitle": "Salón de uñas en Wicker Park, Chicago — Manicura rusa | Love You",
+        "seoDescription": "Love You Nail Salon Wicker Park en 1843 W North Ave, cerca de North, Damen y Milwaukee. Manicura rusa y pedicura smart, abierto 7 días. Reserva online.",
+        "intro": "Nuestro estudio de Wicker Park está en North Avenue, justo al este del cruce de North, Damen y Milwaukee — el corazón del barrio, con boutiques, cafeterías y restaurantes. Combina tu cita de uñas con una tarde en uno de los barrios más animados de Chicago.",
+        "transit": "La estación Damen (línea Azul) está a unos 5 minutos a pie. El autobús #72 North para cerca."
+      },
+      "river-north": {
+        "seoTitle": "Salón de uñas en River North, Chicago — Manicura rusa | Love You",
+        "seoDescription": "Love You Nail Salon River North en 353 W Chicago Ave, a pasos de la estación Chicago (línea Café). Manicura rusa y pedicura smart, abierto 7 días.",
+        "intro": "Nuestro estudio de River North está en Chicago Avenue, en uno de los barrios con más restaurantes y galerías de la ciudad, cerca de oficinas y hoteles del centro. Ideal para una manicura al mediodía o un look impecable antes de salir de noche.",
+        "transit": "La estación Chicago (líneas Café y Morada) está a unos 2 minutos a pie. El autobús #66 Chicago para cerca."
+      },
+      "downtown": {
+        "seoTitle": "Salón de uñas en Downtown Chicago — Manicura rusa | Love You",
+        "seoDescription": "Love You Nail Salon Downtown en 180 N Jefferson St, cerca de Ogilvie Transportation Center. Manicura rusa y pedicura smart, abierto 7 días. Reserva online.",
+        "intro": "Nuestro estudio de Downtown está en Jefferson y Lake Street, en el borde oeste del Loop, a pocos minutos de Ogilvie Transportation Center — cómodo para quienes viajan en tren o trabajan en el centro. Reserva una manicura rápida antes de tu tren o un mani-pedi después del trabajo.",
+        "transit": "La estación Clinton (líneas Verde y Rosa) está a unos 2 minutos a pie, y Ogilvie Transportation Center (Metra) a unos 6 minutos."
+      }
     }
   }
 }
