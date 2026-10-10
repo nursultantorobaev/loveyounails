@@ -965,5 +965,39 @@
     "typing": "Typing",
     "error": "Sorry — something went wrong. Please try again, or call your studio.",
     "disclaimer": "AI assistant · bookings are made on the Square page it links to"
+  },
+  "Halloween": {
+    "button": "Trick or treat?",
+    "eyebrow": "Halloween at Love You",
+    "title": "Trick or treat?",
+    "intro": "Pick your city, then tap the pumpkin to reveal your treat.",
+    "tapPumpkin": "Tap the pumpkin",
+    "pickCityFirst": "Pick your city first",
+    "trick": "Trick… 👻",
+    "gotcha": "Just kidding — here's your treat!",
+    "until": "Valid through October 31.",
+    "magicWords": "Your magic words",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "again": "Try another city",
+    "close": "Close",
+    "book": "Book now",
+    "treats": {
+      "chicago": {
+        "deal": "$10 OFF",
+        "what": "any service at all our Chicago studios",
+        "how": "Say “Halloween Nails” when you book or at checkout."
+      },
+      "new-york": {
+        "deal": "$10 OFF",
+        "what": "your first manicure at our Manhattan studio",
+        "how": "First visit only — mention this offer at checkout."
+      },
+      "santa-monica": {
+        "deal": "20% OFF",
+        "what": "manicure & pedicure on your first visit",
+        "how": "First visit only — mention this offer at checkout."
+      }
+    }
   }
 }
