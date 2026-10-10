@@ -11,6 +11,7 @@ import BrandIntro from "@/components/BrandIntro";
 import Promo from "@/components/Promo";
 import SiteSearch from "@/components/SiteSearch";
 import ChatWidget from "@/components/ChatWidget";
+import TrickOrTreat from "@/components/TrickOrTreat";
 
 // Match the original Love You sites: Cormorant (display) + Manrope (body/nav).
 const cormorant = Cormorant({
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <ChatWidget />
+          <TrickOrTreat />
         </NextIntlClientProvider>
       </body>
     </html>

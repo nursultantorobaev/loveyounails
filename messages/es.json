@@ -965,5 +965,39 @@
     "typing": "Escribiendo",
     "error": "Lo siento, algo salió mal. Inténtalo de nuevo o llama a tu estudio.",
     "disclaimer": "Asistente IA · las citas se reservan en la página de Square del enlace"
+  },
+  "Halloween": {
+    "button": "¿Truco o trato?",
+    "eyebrow": "Halloween en Love You",
+    "title": "¿Truco o trato?",
+    "intro": "Elige tu ciudad y toca la calabaza para descubrir tu regalo.",
+    "tapPumpkin": "Toca la calabaza",
+    "pickCityFirst": "Primero elige tu ciudad",
+    "trick": "Truco… 👻",
+    "gotcha": "¡Es broma! Aquí está tu trato",
+    "until": "Válido hasta el 31 de octubre.",
+    "magicWords": "Tus palabras mágicas",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "again": "Otra ciudad",
+    "close": "Cerrar",
+    "book": "Reservar",
+    "treats": {
+      "chicago": {
+        "deal": "$10 MENOS",
+        "what": "en cualquier servicio en todos nuestros estudios de Chicago",
+        "how": "Di “Halloween Nails” al reservar o al pagar."
+      },
+      "new-york": {
+        "deal": "$10 MENOS",
+        "what": "en tu primera manicura en nuestro estudio de Manhattan",
+        "how": "Solo primera visita — menciona esta oferta al pagar."
+      },
+      "santa-monica": {
+        "deal": "20% MENOS",
+        "what": "en manicura y pedicura en tu primera visita",
+        "how": "Solo primera visita — menciona esta oferta al pagar."
+      }
+    }
   }
 }
