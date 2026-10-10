@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 
-export const metadata: Metadata = {
-  title: "Image Credits | Love You Nail Salon",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "credits", "/credits");
+}
 
 interface Credit {
   subject: string;

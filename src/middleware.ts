@@ -24,6 +24,15 @@ export default function middleware(req: NextRequest) {
   if (target) {
     return NextResponse.redirect(target, 301);
   }
+  // One canonical host: www.loveyou.club → loveyou.club (same path), so Google
+  // doesn't index two copies of every page.
+  if (host === "www.loveyou.club") {
+    const url = req.nextUrl.clone();
+    url.protocol = "https";
+    url.host = "loveyou.club";
+    url.port = "";
+    return NextResponse.redirect(url, 301);
+  }
   return intlMiddleware(req);
 }
 

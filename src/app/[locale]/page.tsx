@@ -15,12 +15,21 @@ import AdvantagesVideo from "@/components/AdvantagesVideo";
 import { MARKETS } from "@/lib/locations";
 import { REVIEWS } from "@/lib/content";
 import { PRODUCTS } from "@/lib/products";
+import JsonLd from "@/components/JsonLd";
+import { localizedMeta, organizationLd, websiteLd } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "home", "");
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   return (
     <>
+      <JsonLd data={[organizationLd(), websiteLd(locale)]} />
       <VideoHero />
       <About />
       <Stats />

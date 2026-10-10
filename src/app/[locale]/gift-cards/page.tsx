@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { MARKETS } from "@/lib/locations";
 import CityPhoto from "@/components/CityPhoto";
 
@@ -10,8 +11,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "GiftCards" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return localizedMeta(locale, "giftCards", "/gift-cards");
 }
 
 export default async function GiftCardsPage({

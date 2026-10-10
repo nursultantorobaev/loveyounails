@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import type { PolicySection } from "@/components/Policy";
 
-export const metadata: Metadata = {
-  title: "Membership Terms & Conditions | Love You Nail Salon",
-  description:
-    "Love You Nail Salon membership terms & conditions — 12-month commitment, no-refund policy, non-transferable, and acknowledgment.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "membershipTerms", "/memberships/terms");
+}
 
 export default async function MembershipTermsPage({
   params,

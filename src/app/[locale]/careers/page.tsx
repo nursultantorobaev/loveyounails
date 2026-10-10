@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MARKETS } from "@/lib/locations";
 import { getOpenings, type Opening } from "@/lib/careers";
@@ -13,8 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Careers" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return localizedMeta(locale, "careers", "/careers");
 }
 
 export default async function CareersPage({

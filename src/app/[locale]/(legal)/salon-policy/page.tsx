@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Policy, { type PolicySection } from "@/components/Policy";
 
-export const metadata: Metadata = {
-  title: "Salon Policy | Love You Nail Salon",
-  description:
-    "Love You Nail Salon appointment, cancellation, payment, refund and salon policies.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "salonPolicy", "/salon-policy");
+}
 
 export default async function SalonPolicyPage({
   params,

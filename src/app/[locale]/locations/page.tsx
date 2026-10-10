@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import CityPhoto from "@/components/CityPhoto";
 import { MARKETS } from "@/lib/locations";
 
-export const metadata: Metadata = {
-  title: "Locations | Love You Nail Salon",
-  description:
-    "Find a Love You Nail Salon near you. Studios in Chicago, Santa Monica, and coming soon to New York. Choose your location and book online.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "locations", "/locations");
+}
 
 export default async function LocationsPage({
   params,
