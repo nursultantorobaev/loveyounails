@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { MARKETS } from "@/lib/locations";
 import { languageAlternates, pageUrl } from "@/lib/seo";
+import { allStudioPages } from "@/lib/studios";
 
 // Every public page × every language, with hreflang alternates so Google links the
 // en/ru/es versions of the same page instead of treating them as duplicates.
@@ -10,6 +11,11 @@ const PAGES: { path: string; priority: number; changeFrequency: "weekly" | "mont
   { path: "/locations", priority: 0.9, changeFrequency: "monthly" },
   ...MARKETS.filter((m) => !m.comingSoon).map((m) => ({
     path: `/locations/${m.slug}`,
+    priority: 0.9,
+    changeFrequency: "monthly" as const,
+  })),
+  ...allStudioPages().map(({ market, salon }) => ({
+    path: `/locations/${market.slug}/${salon.slug}`,
     priority: 0.9,
     changeFrequency: "monthly" as const,
   })),
