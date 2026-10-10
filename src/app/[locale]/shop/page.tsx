@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import ProductImage from "@/components/ProductImage";
 import { PRODUCTS } from "@/lib/products";
 
-export const metadata: Metadata = {
-  title: "Shop | Love You Nail Salon",
-  description:
-    "The Love You professional product line — premium gel polish, nail care and tools. Launching soon.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "shop", "/shop");
+}
 
 const CONTACT_EMAIL = "loveyounailsalon@gmail.com";
 

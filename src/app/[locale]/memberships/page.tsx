@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { MARKETS } from "@/lib/locations";
 import { MEMBERSHIP_TIERS, type MembershipTier } from "@/lib/content";
 import MembershipJoin from "@/components/MembershipJoin";
 
-export const metadata: Metadata = {
-  title: "Memberships | Love You Nail Salon",
-  description:
-    "Love You Nail Salon membership program — Gold (10% off), Diamond (15% off) and invitation-only VIP. Billed once a year, valid at your home location.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedMeta(locale, "memberships", "/memberships");
+}
 
 const CONTACT_EMAIL = "loveyounailsalon@gmail.com";
 

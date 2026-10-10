@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { MARKETS, type Salon } from "@/lib/locations";
 
 export async function generateMetadata({
@@ -9,8 +10,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Groups" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return localizedMeta(locale, "groupBookings", "/group-bookings");
 }
 
 export default async function GroupBookingsPage({

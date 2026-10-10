@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { localizedMeta, marketSalonsLd, breadcrumbLd, pageUrl } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -18,13 +20,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: MarketParams): Promise<Metadata> {
-  const { market } = await params;
-  const m = getMarket(market);
-  if (!m) return { title: "Locations | Love You Nail Salon" };
-  return {
-    title: `${m.name} | Love You Nail Salon`,
-    description: `Love You Nail Salon in ${m.name}, ${m.state}. ${m.tagline} View addresses, hours and book online.`,
-  };
+  const { locale, market } = await params;
+  if (!getMarket(market)) return { title: "Locations | Love You Nail Salon" };
+  return localizedMeta(locale, `market.${market}`, `/locations/${market}`);
 }
 
 const bookingLabel: Record<string, string> = {
@@ -40,9 +38,20 @@ export default async function MarketPage({ params }: MarketParams) {
 
   const t = await getTranslations("MarketPage");
   const tm = await getTranslations("Markets");
+  const tn = await getTranslations("Nav");
 
   return (
     <>
+    <JsonLd
+      data={[
+        ...marketSalonsLd(m, locale),
+        breadcrumbLd([
+          { name: "Love You Nail Salon", url: pageUrl(locale) },
+          { name: tn("locations"), url: pageUrl(locale, "/locations") },
+          { name: m.name, url: pageUrl(locale, `/locations/${m.slug}`) },
+        ]),
+      ]}
+    />
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       {/* Breadcrumb */}
       <Link

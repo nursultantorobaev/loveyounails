@@ -999,5 +999,69 @@
         "how": "Solo primera visita — menciona esta oferta al pagar."
       }
     }
+  },
+  "Seo": {
+    "home": {
+      "title": "Love You Nail Salon | Manicura rusa en Chicago, NYC y Santa Monica",
+      "description": "Manicura rusa con torno y pedicura smart con esterilización de grado médico. 7 estudios en Chicago, Nueva York y Santa Monica, abiertos todos los días. Reserva online."
+    },
+    "locations": {
+      "title": "Ubicaciones — Chicago, Nueva York, Santa Monica | Love You",
+      "description": "Encuentra tu Love You Nail Salon más cercano: 5 estudios en Chicago, uno en Manhattan y uno en Santa Monica. Direcciones, horarios, estacionamiento y reservas."
+    },
+    "market": {
+      "chicago": {
+        "title": "Salón de uñas en Chicago — Manicura rusa, 5 estudios | Love You",
+        "description": "Love You Nail Salon en Chicago: West Loop, River North, Wicker Park, Lakeview y Downtown. Manicura rusa con torno y pedicura smart, abierto 7 días. Reserva online."
+      },
+      "new-york": {
+        "title": "Salón de uñas en Manhattan — Manicura rusa en NYC | Love You",
+        "description": "Love You Nail Salon en Manhattan, Nueva York (Garment District, W 37th St). Manicura rusa, pedicura smart y pestañas, abierto 7 días. Reserva online."
+      },
+      "santa-monica": {
+        "title": "Salón de uñas en Santa Monica — Manicura rusa | Love You",
+        "description": "Love You Nail Salon en Santa Monica, en 2nd Street. Manicura rusa con torno y pedicura smart con esterilización de grado médico, abierto 7 días."
+      }
+    },
+    "memberships": {
+      "title": "Membresías Gold y Diamond | Love You Nail Salon",
+      "description": "Ahorra 10–15% en cada servicio con una membresía Love You: arreglo de uña gratis en 14 días, reserva prioritaria, regalo de cumpleaños y más."
+    },
+    "membershipTerms": {
+      "title": "Términos de la membresía | Love You Nail Salon",
+      "description": "Términos de las membresías Gold y Diamond de Love You Nail Salon: compromiso de 12 meses, sin reembolsos y cómo funcionan los beneficios."
+    },
+    "sterilization": {
+      "title": "Nuestro proceso de esterilización | Love You Nail Salon",
+      "description": "Cómo Love You Nail Salon esteriliza cada herramienta metálica después de cada clienta: prelimpieza, desinfección, bolsas selladas y autoclaves de vapor Tuttnauer."
+    },
+    "giftCards": {
+      "title": "Tarjetas de regalo de manicura | Love You Nail Salon",
+      "description": "Regala una tarjeta de Love You Nail Salon — cómprala online para nuestros estudios de Chicago, Nueva York o Santa Monica."
+    },
+    "careers": {
+      "title": "Empleo para técnicas de uñas | Love You Nail Salon",
+      "description": "Trabaja en Love You Nail Salon en Chicago, Nueva York o Santa Monica: técnicas de uñas, artistas de pestañas y recepción. Aplica online."
+    },
+    "shop": {
+      "title": "Productos profesionales Love You — Próximamente",
+      "description": "Un primer vistazo a la línea profesional Love You — esmaltes en gel, top coats y cuidado de uñas con nuestro estándar de salón. Próximamente."
+    },
+    "groupBookings": {
+      "title": "Fiestas de uñas y reservas en grupo | Love You Nail Salon",
+      "description": "Reserva una fiesta de uñas en Love You Nail Salon: despedidas de soltera, cumpleaños y eventos en Chicago, Nueva York y Santa Monica."
+    },
+    "privacy": {
+      "title": "Política de privacidad | Love You Nail Salon",
+      "description": "Cómo Love You Nail Salon recopila, usa y protege tu información personal."
+    },
+    "salonPolicy": {
+      "title": "Política del salón — reservas y cancelaciones | Love You",
+      "description": "Políticas de Love You Nail Salon: reservas, llegadas tarde, cancelaciones y depósitos."
+    },
+    "credits": {
+      "title": "Créditos de imágenes | Love You Nail Salon",
+      "description": "Créditos de las fotos y videos usados en el sitio de Love You Nail Salon."
+    }
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { localizedMeta } from "@/lib/seo";
 import { useTranslations } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import Button from "@/components/ui/Button";
 
 export async function generateMetadata({
@@ -9,8 +10,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Sterilization" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return localizedMeta(locale, "sterilization", "/sterilization");
 }
 
 export default async function SterilizationPage({

@@ -999,5 +999,69 @@
         "how": "First visit only — mention this offer at checkout."
       }
     }
+  },
+  "Seo": {
+    "home": {
+      "title": "Love You Nail Salon | Russian Manicure in Chicago, NYC & Santa Monica",
+      "description": "Premium Russian e-file manicure and smart pedicure with medical-grade sterilization. 7 studios in Chicago, New York and Santa Monica — open daily. Book online."
+    },
+    "locations": {
+      "title": "Nail Salon Locations — Chicago, New York, Santa Monica | Love You",
+      "description": "Find your nearest Love You Nail Salon: 5 studios in Chicago, one in Manhattan and one in Santa Monica. Addresses, hours, parking and online booking."
+    },
+    "market": {
+      "chicago": {
+        "title": "Chicago Nail Salon — Russian Manicure, 5 Studios | Love You",
+        "description": "Love You Nail Salon in Chicago: West Loop, River North, Wicker Park, Lakeview and Downtown. Russian e-file manicure, smart pedicure, open 7 days. Book online."
+      },
+      "new-york": {
+        "title": "Manhattan Nail Salon — Russian Manicure in NYC | Love You",
+        "description": "Love You Nail Salon in Manhattan, New York (Garment District, W 37th St). Russian e-file manicure, smart pedicure and lashes, open 7 days. Book online."
+      },
+      "santa-monica": {
+        "title": "Santa Monica Nail Salon — Russian Manicure | Love You",
+        "description": "Love You Nail Salon in Santa Monica on 2nd Street. Russian e-file manicure and smart pedicure with medical-grade sterilization, open 7 days. Book online."
+      }
+    },
+    "memberships": {
+      "title": "Nail Salon Membership — Gold & Diamond | Love You Nail Salon",
+      "description": "Save 10–15% on every service with a Love You membership: free nail fix within 14 days, priority booking, birthday gift and more. Valid at all participating studios."
+    },
+    "membershipTerms": {
+      "title": "Membership Terms & Conditions | Love You Nail Salon",
+      "description": "Terms of the Love You Nail Salon Gold and Diamond memberships: 12-month commitment, no-refund policy and how benefits work."
+    },
+    "sterilization": {
+      "title": "Our Sterilization Process — Medical-Grade Hygiene | Love You",
+      "description": "How Love You Nail Salon sterilizes every reusable metal tool after each client: pre-cleaning, disinfection, sealed pouches and Tuttnauer steam autoclaves."
+    },
+    "giftCards": {
+      "title": "Nail Salon Gift Cards — Chicago, NYC, Santa Monica | Love You",
+      "description": "Give a Love You Nail Salon gift card — buy online for our Chicago, New York or Santa Monica studios and gift a premium manicure or pedicure."
+    },
+    "careers": {
+      "title": "Nail Technician & Salon Jobs | Love You Nail Salon Careers",
+      "description": "Join Love You Nail Salon in Chicago, New York or Santa Monica. Open positions for nail technicians, lash & brow artists and front desk. Apply online."
+    },
+    "shop": {
+      "title": "Love You Professional Nail Products — Coming Soon",
+      "description": "A first look at the Love You professional product line — gel polish, top coats and nail care made to our salon standard. Launching soon."
+    },
+    "groupBookings": {
+      "title": "Nail Parties & Group Bookings — Bridal, Birthday | Love You",
+      "description": "Book a nail party at Love You Nail Salon: bridal parties, birthdays, corporate events and girls' nights in Chicago, New York and Santa Monica."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Love You Nail Salon",
+      "description": "How Love You Nail Salon collects, uses and protects your personal information."
+    },
+    "salonPolicy": {
+      "title": "Salon Policy — Booking & Cancellations | Love You Nail Salon",
+      "description": "Love You Nail Salon policies: booking, late arrivals, cancellations and deposits."
+    },
+    "credits": {
+      "title": "Image Credits | Love You Nail Salon",
+      "description": "Credits for photography and video used on the Love You Nail Salon website."
+    }
   }
 }
