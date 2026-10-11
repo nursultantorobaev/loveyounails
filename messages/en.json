@@ -514,9 +514,23 @@
         ]
       },
       {
+        "title": "Love You Mobile App",
+        "paragraphs": [
+          "When you use the Love You app, you sign in with your phone number and a one-time code we send by text message. We use your phone number to find your client record in our booking system (Square), so you can see, book, reschedule and cancel your appointments, view your membership and loyalty points, and share your Bring a Friend code.",
+          "If you turn on notifications, we store a device token so we can send appointment reminders and a reminder when it may be time for your next visit. You can turn reminders off in the app (Profile → Appointment reminders) or in your phone's settings at any time.",
+          "At checkout you may add your name, email, birthday, an appointment note and a friend's referral code; these are saved to your client record in our booking system. We do not collect your location, contacts, photos or payment card details in the app."
+        ]
+      },
+      {
+        "title": "AI Assistant",
+        "paragraphs": [
+          "Our chat assistant on the website and in the app is powered by an AI model. Messages you send to it are processed to answer your question and may be shared with our team if you ask for help from a person. Please don't share sensitive personal information in the chat. Conversations are not used to build advertising profiles."
+        ]
+      },
+      {
         "title": "Data Sharing",
         "paragraphs": [
-          "We do not sell or share your personal information with third parties, except as necessary to operate our booking systems (such as Square and Fresha) or as required by law."
+          "We do not sell your personal information. We share it only with service providers that help us run our salons and apps — our booking system (Square, and Fresha in Santa Monica), text-message verification (Twilio), push notifications (Expo, Apple and Google), our AI assistant provider (Anthropic) and our hosting providers — or when required by law."
         ]
       },
       {
@@ -529,6 +543,12 @@
         "title": "Your Rights",
         "paragraphs": [
           "You have the right to access, update, or delete your personal information. Please contact us at loveyounailsalon@gmail.com for any data-related inquiries."
+        ]
+      },
+      {
+        "title": "Deleting Your Account",
+        "paragraphs": [
+          "You can delete your app account at any time in the app (Profile → Delete account). This removes your app data (notification settings and devices) and asks our team to delete your client profile and visit history from our booking system, except where we must keep records by law or for an upcoming appointment. You can also email loveyounailsalon@gmail.com to request deletion."
         ]
       },
       {
