@@ -514,9 +514,23 @@
         ]
       },
       {
+        "title": "App móvil Love You",
+        "paragraphs": [
+          "Cuando usas la app Love You, inicias sesión con tu número de teléfono y un código de un solo uso que enviamos por mensaje de texto. Usamos tu número para encontrar tu ficha de clienta en nuestro sistema de reservas (Square), para que puedas ver, reservar, cambiar y cancelar tus citas, ver tu membresía y tus puntos, y compartir tu código Trae a una amiga.",
+          "Si activas las notificaciones, guardamos un identificador del dispositivo para enviarte recordatorios de tus citas y un aviso cuando sea hora de tu próxima visita. Puedes desactivarlos en la app (Perfil → Recordatorios de citas) o en los ajustes de tu teléfono en cualquier momento.",
+          "Al reservar puedes agregar tu nombre, correo electrónico, cumpleaños, una nota y el código de una amiga; se guardan en tu ficha de clienta en nuestro sistema de reservas. La app no recopila tu ubicación, contactos, fotos ni datos de tarjetas de pago."
+        ]
+      },
+      {
+        "title": "Asistente con IA",
+        "paragraphs": [
+          "Nuestro asistente de chat en el sitio web y en la app funciona con un modelo de inteligencia artificial. Los mensajes que envías se procesan para responder tu pregunta y pueden compartirse con nuestro equipo si pides ayuda de una persona. Por favor, no compartas información personal sensible en el chat. Las conversaciones no se usan para crear perfiles publicitarios."
+        ]
+      },
+      {
         "title": "Compartir datos",
         "paragraphs": [
-          "No vendemos ni compartimos tu información personal con terceros, salvo lo necesario para operar nuestros sistemas de reservas (como Square y Fresha) o según lo exija la ley."
+          "No vendemos tu información personal. Solo la compartimos con proveedores que nos ayudan a operar nuestros estudios y apps — nuestro sistema de reservas (Square, y Fresha en Santa Monica), la verificación por mensaje de texto (Twilio), las notificaciones push (Expo, Apple y Google), nuestro proveedor de asistente con IA (Anthropic) y nuestros proveedores de hosting — o cuando la ley lo exija."
         ]
       },
       {
@@ -529,6 +543,12 @@
         "title": "Tus derechos",
         "paragraphs": [
           "Tienes derecho a acceder, actualizar o eliminar tu información personal. Para cualquier consulta sobre tus datos, escríbenos a loveyounailsalon@gmail.com."
+        ]
+      },
+      {
+        "title": "Eliminar tu cuenta",
+        "paragraphs": [
+          "Puedes eliminar tu cuenta de la app en cualquier momento (Perfil → Eliminar cuenta). Esto borra los datos de la app (notificaciones y dispositivos) y le pide a nuestro equipo que elimine tu perfil de clienta y tu historial de visitas del sistema de reservas, salvo cuando debamos conservar registros por ley o tengas una cita próxima. También puedes escribir a loveyounailsalon@gmail.com."
         ]
       },
       {
